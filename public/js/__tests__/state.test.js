@@ -1,10 +1,178 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import {
+  els,
+  state,
+  normalizeCategory,
+  selectedCorpusType,
+  letterToIndex,
+  elapsedQuestionSeconds,
+  elapsedTestSeconds,
+  playTone,
   countByCategory,
   shuffledCopy,
   formatSeconds,
   escapeHtml,
 } from '../state.js'
+
+beforeEach(() => {
+  playTone.ctx = undefined
+  vi.restoreAllMocks()
+})
+
+describe('normalizeCategory', () => {
+  it('normalizes known category aliases', () => {
+    expect(normalizeCategory('Math & Logic')).toBe('Numeric / Logic')
+    expect(normalizeCategory('Spatial Reasoning')).toBe('Spatial')
+    expect(normalizeCategory('Verbal Ability')).toBe('Verbal')
+  })
+
+  it('uses General for missing categories', () => {
+    expect(normalizeCategory(null)).toBe('General')
+    expect(normalizeCategory(undefined)).toBe('General')
+  })
+})
+
+describe('selectedCorpusType', () => {
+  it('prefers selected option dataset type when present', () => {
+    els.corpusSelect = {
+      selectedOptions: [{ dataset: { type: 'txt' } }],
+      value: '/data/questions-visual.json',
+    }
+
+    expect(selectedCorpusType()).toBe('txt')
+  })
+
+  it('falls back to json when value ends with .json', () => {
+    els.corpusSelect = {
+      selectedOptions: [],
+      value: '/data/custom.json',
+    }
+
+    expect(selectedCorpusType()).toBe('json')
+  })
+
+  it('falls back to txt when value does not end with .json', () => {
+    els.corpusSelect = {
+      selectedOptions: [],
+      value: '/data/custom.txt',
+    }
+
+    expect(selectedCorpusType()).toBe('txt')
+  })
+})
+
+describe('letterToIndex', () => {
+  it('maps answer letters to indices', () => {
+    expect(letterToIndex('A')).toBe(0)
+    expect(letterToIndex('b')).toBe(1)
+    expect(letterToIndex('D')).toBe(3)
+  })
+
+  it('returns -1 for invalid values', () => {
+    expect(letterToIndex('Z')).toBe(-1)
+    expect(letterToIndex('')).toBe(0)
+    expect(letterToIndex(null)).toBe(0)
+  })
+})
+
+describe('elapsed time helpers', () => {
+  it('returns elapsed question/test seconds from state timestamps', () => {
+    const nowSpy = vi.spyOn(Date, 'now').mockReturnValue(1_000)
+
+    state.questionStartedAt = 400
+    state.testStartedAt = 100
+
+    expect(elapsedQuestionSeconds()).toBe(0.6)
+    expect(elapsedTestSeconds()).toBe(0.9)
+
+    nowSpy.mockRestore()
+  })
+})
+
+describe('playTone', () => {
+  it('returns early when Web Audio API is unavailable', () => {
+    window.AudioContext = undefined
+    window.webkitAudioContext = undefined
+
+    expect(() => playTone(440)).not.toThrow()
+    expect(playTone.ctx).toBeUndefined()
+  })
+
+  it('creates and caches an AudioContext when available', () => {
+    const oscillator = {
+      connect: vi.fn(),
+      start: vi.fn(),
+      stop: vi.fn(),
+      frequency: { value: 0 },
+      type: 'triangle',
+    }
+    const gainNode = {
+      connect: vi.fn(),
+      gain: {
+        setValueAtTime: vi.fn(),
+        exponentialRampToValueAtTime: vi.fn(),
+      },
+    }
+    const fakeContext = {
+      currentTime: 10,
+      destination: {},
+      createOscillator: vi.fn(() => oscillator),
+      createGain: vi.fn(() => gainNode),
+    }
+    const AudioContextMock = vi.fn(function AudioContextMock() {
+      return fakeContext
+    })
+    window.AudioContext = AudioContextMock
+    window.webkitAudioContext = undefined
+
+    playTone(880, 0.2, 0.1)
+
+    expect(AudioContextMock).toHaveBeenCalledTimes(1)
+    expect(playTone.ctx).toBe(fakeContext)
+    expect(fakeContext.createOscillator).toHaveBeenCalledTimes(1)
+    expect(fakeContext.createGain).toHaveBeenCalledTimes(1)
+    expect(oscillator.type).toBe('sine')
+    expect(oscillator.frequency.value).toBe(880)
+    expect(gainNode.gain.setValueAtTime).toHaveBeenCalled()
+    expect(gainNode.gain.exponentialRampToValueAtTime).toHaveBeenCalledTimes(2)
+    expect(oscillator.start).toHaveBeenCalledWith(10.2)
+    expect(oscillator.stop.mock.calls[0][0]).toBeCloseTo(10.31, 10)
+  })
+
+  it('reuses cached AudioContext on subsequent calls', () => {
+    const oscillator = {
+      connect: vi.fn(),
+      start: vi.fn(),
+      stop: vi.fn(),
+      frequency: { value: 0 },
+      type: 'triangle',
+    }
+    const gainNode = {
+      connect: vi.fn(),
+      gain: {
+        setValueAtTime: vi.fn(),
+        exponentialRampToValueAtTime: vi.fn(),
+      },
+    }
+    const fakeContext = {
+      currentTime: 5,
+      destination: {},
+      createOscillator: vi.fn(() => oscillator),
+      createGain: vi.fn(() => gainNode),
+    }
+    playTone.ctx = fakeContext
+
+    const AudioContextMock = vi.fn(() => {
+      throw new Error('Should not construct a new context when one is cached')
+    })
+    window.AudioContext = AudioContextMock
+    window.webkitAudioContext = undefined
+
+    expect(() => playTone(330)).not.toThrow()
+    expect(AudioContextMock).not.toHaveBeenCalled()
+    expect(fakeContext.createOscillator).toHaveBeenCalledTimes(1)
+  })
+})
 
 describe('countByCategory', () => {
   it('counts questions by category', () => {
