@@ -5,6 +5,7 @@ import {
   setActiveQuestions,
   state,
   els,
+  refreshElements,
   ANSWER_ADVANCE_DELAY_MS,
   QUESTION_BAR_SECONDS,
   QUESTION_YELLOW_SECONDS,
@@ -30,6 +31,47 @@ import {
   updateQuestionFrameHeightForActiveTest,
   updateModalQuestionFrameHeightForReviewSet,
 } from "./rendering.js";
+
+let initialized = false;
+
+function hasRequiredElements() {
+  return Boolean(
+    els.header &&
+    els.timer &&
+    els.startScreen &&
+    els.questionScreen &&
+    els.summaryScreen &&
+    els.corpusSelect &&
+    els.corpusFileInput &&
+    els.testOrderSelect &&
+    els.loadCorpusBtn &&
+    els.startBtn &&
+    els.corpusStatus &&
+    els.stopBtn &&
+    els.headerRestartBtn &&
+    els.loadError &&
+    els.questionCounter &&
+    els.questionContent &&
+    els.answers &&
+    els.progressFill &&
+    els.timingPosition &&
+    els.timingPositionText &&
+    els.summaryStats &&
+    els.categoryControls &&
+    els.summaryContainer &&
+    els.modalBackdrop &&
+    els.prevReviewBtn &&
+    els.nextReviewBtn &&
+    els.closeModalBtn &&
+    els.googleSearchBtn &&
+    els.copyPromptBtn &&
+    els.copyStatus &&
+    els.modalTitle &&
+    els.modalBadges &&
+    els.modalQuestionContent &&
+    els.modalAnswers,
+  );
+}
 
 function startTest() {
   if (!questions.length) {
@@ -621,6 +663,23 @@ function bindEvents() {
   });
 }
 
-renderCorpusOptions();
-bindEvents();
-loadSelectedCorpus();
+function initApp(root = document) {
+  refreshElements(root);
+
+  if (initialized || !hasRequiredElements()) {
+    return initialized;
+  }
+
+  renderCorpusOptions();
+  bindEvents();
+  loadSelectedCorpus();
+  initialized = true;
+
+  return true;
+}
+
+if (typeof document !== "undefined") {
+  initApp();
+}
+
+export { initApp };

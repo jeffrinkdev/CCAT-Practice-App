@@ -28,42 +28,60 @@ const CORPUS_OPTIONS = [
   },
 ];
 
-const els = {
-  header: document.getElementById("header"),
-  timer: document.getElementById("timer"),
-  startScreen: document.getElementById("startScreen"),
-  questionScreen: document.getElementById("questionScreen"),
-  summaryScreen: document.getElementById("summaryScreen"),
-  corpusSelect: document.getElementById("corpusSelect"),
-  corpusFileInput: document.getElementById("corpusFileInput"),
-  testOrderSelect: document.getElementById("testOrderSelect"),
-  loadCorpusBtn: document.getElementById("loadCorpusBtn"),
-  startBtn: document.getElementById("startBtn"),
-  corpusStatus: document.getElementById("corpusStatus"),
-  stopBtn: document.getElementById("stopBtn"),
-  headerRestartBtn: document.getElementById("headerRestartBtn"),
-  loadError: document.getElementById("loadError"),
-  questionCounter: document.getElementById("questionCounter"),
-  questionContent: document.getElementById("questionContent"),
-  answers: document.getElementById("answers"),
-  progressFill: document.getElementById("progressFill"),
-  timingPosition: document.getElementById("timingPosition"),
-  timingPositionText: document.getElementById("timingPositionText"),
-  summaryStats: document.getElementById("summaryStats"),
-  categoryControls: document.getElementById("categoryControls"),
-  summaryContainer: document.getElementById("summaryContainer"),
-  modalBackdrop: document.getElementById("modalBackdrop"),
-  prevReviewBtn: document.getElementById("prevReviewBtn"),
-  nextReviewBtn: document.getElementById("nextReviewBtn"),
-  closeModalBtn: document.getElementById("closeModalBtn"),
-  googleSearchBtn: document.getElementById("googleSearchBtn"),
-  copyPromptBtn: document.getElementById("copyPromptBtn"),
-  copyStatus: document.getElementById("copyStatus"),
-  modalTitle: document.getElementById("modalTitle"),
-  modalBadges: document.getElementById("modalBadges"),
-  modalQuestionContent: document.getElementById("modalQuestionContent"),
-  modalAnswers: document.getElementById("modalAnswers"),
+const elementIds = {
+  header: "header",
+  timer: "timer",
+  startScreen: "startScreen",
+  questionScreen: "questionScreen",
+  summaryScreen: "summaryScreen",
+  corpusSelect: "corpusSelect",
+  corpusFileInput: "corpusFileInput",
+  testOrderSelect: "testOrderSelect",
+  loadCorpusBtn: "loadCorpusBtn",
+  startBtn: "startBtn",
+  corpusStatus: "corpusStatus",
+  stopBtn: "stopBtn",
+  headerRestartBtn: "headerRestartBtn",
+  loadError: "loadError",
+  questionCounter: "questionCounter",
+  questionContent: "questionContent",
+  answers: "answers",
+  progressFill: "progressFill",
+  timingPosition: "timingPosition",
+  timingPositionText: "timingPositionText",
+  summaryStats: "summaryStats",
+  categoryControls: "categoryControls",
+  summaryContainer: "summaryContainer",
+  modalBackdrop: "modalBackdrop",
+  prevReviewBtn: "prevReviewBtn",
+  nextReviewBtn: "nextReviewBtn",
+  closeModalBtn: "closeModalBtn",
+  googleSearchBtn: "googleSearchBtn",
+  copyPromptBtn: "copyPromptBtn",
+  copyStatus: "copyStatus",
+  modalTitle: "modalTitle",
+  modalBadges: "modalBadges",
+  modalQuestionContent: "modalQuestionContent",
+  modalAnswers: "modalAnswers",
 };
+
+const els = Object.fromEntries(Object.keys(elementIds).map((key) => [key, null]));
+
+function refreshElements(root = document) {
+  if (!root?.getElementById) {
+    return els;
+  }
+
+  Object.entries(elementIds).forEach(([key, id]) => {
+    els[key] = root.getElementById(id);
+  });
+
+  return els;
+}
+
+if (typeof document !== "undefined") {
+  refreshElements();
+}
 
 const state = {
   currentIndex: 0,
@@ -89,8 +107,8 @@ function normalizeCategory(category) {
 }
 
 function selectedCorpusType() {
-  const option = els.corpusSelect.selectedOptions[0];
-  return option?.dataset.type || (els.corpusSelect.value.endsWith(".json") ? "json" : "txt");
+  const option = els.corpusSelect?.selectedOptions?.[0];
+  return option?.dataset.type || (els.corpusSelect?.value?.endsWith(".json") ? "json" : "txt");
 }
 
 function letterToIndex(letter) {
@@ -208,6 +226,7 @@ export {
   elapsedTestSeconds,
   playTone,
   escapeHtml,
+  refreshElements,
   setQuestions,
   clearQuestions,
   setActiveQuestions,

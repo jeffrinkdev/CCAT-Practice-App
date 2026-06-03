@@ -34,9 +34,11 @@ npm run preview
 
 ## Project Structure
 
-- `index.html`: app shell
-- `public/styles.css`: stylesheet
-- `public/js/`: app logic split by responsibility
+- `index.html`: Vite shell mounting the React root
+- `src/App.jsx`: React-rendered app shell
+- `src/main.jsx`: React entry point
+- `src/index.css`: application stylesheet
+- `public/js/`: existing app logic, kept intact while the UI is moved onto a React root
 - `public/data/questions-text.txt`: text corpus
 - `public/data/questions-visual.json`: visual/text mixed corpus
 
