@@ -26,8 +26,6 @@ Build static output:
 npm run build
 ```
 
-FOOasdfadsfdsasdfasdfadsfsdafsdafdsafzxcvzxvzxcv
-
 Preview the production build locally:
 
 ```bash
