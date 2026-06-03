@@ -1,3 +1,27 @@
+import {
+  questions,
+  activeQuestions,
+  state,
+  els,
+  ANSWER_ADVANCE_DELAY_MS,
+  TEST_QUESTION_COUNT,
+  CORPUS_OPTIONS,
+  playTone,
+  formatSeconds,
+  elapsedTestSeconds,
+  elapsedQuestionSeconds,
+} from "./state.js";
+import {
+  buildTestQuestions,
+  loadSelectedCorpus,
+} from "./parsing.js";
+import {
+  renderQuestionContent,
+  renderChoiceContent,
+  updateQuestionFrameHeightForActiveTest,
+  updateModalQuestionFrameHeightForReviewSet, measureFrame,
+} from "./rendering.js";
+
 function startTest() {
   if (!questions.length) {
     return;
@@ -37,9 +61,8 @@ function renderQuestion() {
 
   const question = activeQuestions[state.currentIndex];
   els.timer.classList.remove("yellow", "red");
-  els.questionCounter.textContent = `Question ${state.currentIndex + 1} of ${activeQuestions.length} · ${
-    question.category
-  }`;
+  els.questionCounter.textContent = `Question ${state.currentIndex + 1} of ${activeQuestions.length} · ${question.category
+    }`;
 
   renderQuestionContent(question, els.questionContent);
   els.answers.innerHTML = "";
@@ -206,8 +229,8 @@ function renderSummary() {
     <div class="stat"><span class="muted">Answered</span><strong>${answered} / ${total}</strong></div>
     <div class="stat"><span class="muted">Average time</span><strong>${formatMetricSeconds(average)}</strong></div>
     <div class="stat"><span class="muted">Average time, not skipped</span><strong>${formatMetricSeconds(
-      averageNoSkips,
-    )}</strong></div>
+    averageNoSkips,
+  )}</strong></div>
   `;
 
   renderCategoryControls();
@@ -271,9 +294,8 @@ function renderResultGrid(results) {
     const item = document.createElement("button");
     item.type = "button";
     item.className = `summary-item ${result.isCorrect ? "correct" : "incorrect"}`;
-    item.innerHTML = `<strong>#${result.questionIndex + 1}</strong><span>${
-      result.isCorrect ? "Correct" : "Incorrect"
-    }</span><br>${renderTimePill(result.timeSpentSeconds)}<br>${difficultyBadge(activeQuestions[result.questionIndex])}`;
+    item.innerHTML = `<strong>#${result.questionIndex + 1}</strong><span>${result.isCorrect ? "Correct" : "Incorrect"
+      }</span><br>${renderTimePill(result.timeSpentSeconds)}<br>${difficultyBadge(activeQuestions[result.questionIndex])}`;
 
     item.addEventListener("click", () => openReviewModal(result.questionIndex, reviewIndexes));
     grid.appendChild(item);

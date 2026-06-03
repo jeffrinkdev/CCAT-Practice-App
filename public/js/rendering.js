@@ -1,3 +1,5 @@
+import { escapeHtml } from "./state.js";
+
 function renderQuestionContent(question, target) {
   target.innerHTML =
     `<div class="question-text">${escapeHtml(question.prompt)}</div>` +
@@ -251,3 +253,21 @@ function updateModalQuestionFrameHeightForReviewSet() {
     `${measureFrame(sourceQuestions, width)}px`,
   );
 }
+
+export {
+  renderQuestionContent,
+  renderChoiceContent,
+  renderVisual,
+  svgWrap,
+  polygonPoints,
+  svgPolygon,
+  svgBasic,
+  svgArrow,
+  svgDotCell,
+  svgSequence,
+  svgMatrixSides,
+  svgShadingMatrix,
+  measureFrame,
+  updateQuestionFrameHeightForActiveTest,
+  updateModalQuestionFrameHeightForReviewSet,
+};

@@ -1,108 +1,12 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-
-// Test utilities - replicate minimal versions of state.js functions
-function normalizeCategory(category) {
-  return String(category || 'General')
-    .replace(/Math\s*&\s*Logic/i, 'Numeric / Logic')
-    .replace(/Spatial Reasoning/i, 'Spatial')
-    .replace(/Verbal Ability/i, 'Verbal')
-}
-
-function letterToIndex(letter) {
-  return 'ABCD'.indexOf(String(letter || '').toUpperCase())
-}
-
-// Replicate parseJsonCorpus from parsing.js
-function parseJsonCorpus(text) {
-  const data = JSON.parse(text)
-  const raw = Array.isArray(data) ? data : data.questions || []
-
-  return raw
-    .map((item, idx) => ({
-      id: item.id || `Q${idx + 1}`,
-      category: normalizeCategory(item.category),
-      type: item.type || 'text',
-      prompt: item.prompt || item.text || '',
-      choices: (item.choices || []).map((choice) =>
-        typeof choice === 'string' ? { text: choice } : choice
-      ),
-      correctIndex: letterToIndex(item.answer),
-      visual: item.visual || null,
-      difficulty: item.difficulty ?? null,
-      difficultyRationale: item.difficultyRationale || '',
-    }))
-    .filter(
-      (question) =>
-        question.prompt &&
-        question.choices.length === 4 &&
-        question.correctIndex >= 0
-    )
-}
-
-// Replicate parseTextCorpus from parsing.js
-function parseTextCorpus(text) {
-  const keyMatch = text.match(/ANSWER\s*KEY\s*:\s*([\s\S]+)$/i)
-  if (!keyMatch) {
-    throw new Error('Missing ANSWER KEY section.')
-  }
-
-  const keys = keyMatch[1]
-    .split(/[,\s]+/)
-    .map((token) => token.trim().toUpperCase())
-    .filter((token) => /^[A-D]$/.test(token))
-
-  const body = text.slice(0, keyMatch.index).trim()
-  const blocks = body
-    .split(/\n\s*\n(?=\d+\.\s+)/)
-    .map((block) => block.trim())
-    .filter(Boolean)
-
-  return blocks
-    .map((block, index) => {
-      const lines = block
-        .split(/\n/)
-        .map((line) => line.trimEnd())
-        .filter((line) => line.trim() !== '')
-
-      const first = lines[0].match(/^(\d+)\.\s*(.+)$/)
-      if (!first) {
-        throw new Error(`Question ${index + 1} missing header.`)
-      }
-
-      let difficulty = null
-      let difficultyRationale = ''
-      const contentLines = []
-
-      for (const line of lines.slice(1)) {
-        const diffMatch = line.match(/^DIFFICULTY:\s*(\d+)\s*\/\s*10/i)
-        if (diffMatch) {
-          difficulty = Number(diffMatch[1])
-          difficultyRationale = 'Text corpus difficulty annotation'
-          continue
-        }
-        contentLines.push(line)
-      }
-
-      const choiceStart = contentLines.findIndex((line) => /^[A-D]\)\s*/.test(line))
-      if (choiceStart < 0) {
-        throw new Error(`Question ${index + 1} missing choices.`)
-      }
-
-      return {
-        id: `T${index + 1}`,
-        category: normalizeCategory(first[2].trim()),
-        type: 'text',
-        prompt: contentLines.slice(0, choiceStart).join('\n').trim(),
-        choices: contentLines.slice(choiceStart).map((line) => ({
-          text: (line.match(/^[A-D]\)\s*(.*)$/) || [])[1]?.trim() || line.trim(),
-        })),
-        correctIndex: letterToIndex(keys[index]),
-        difficulty,
-        difficultyRationale,
-      }
-    })
-    .filter((question) => question.correctIndex >= 0)
-}
+import {
+  parseJsonCorpus,
+  parseTextCorpus,
+} from '../parsing.js'
+import {
+  normalizeCategory,
+  letterToIndex,
+} from '../state.js'
 
 describe('parseJsonCorpus', () => {
   it('parses valid JSON with 4 choices and correct answer', () => {

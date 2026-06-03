@@ -165,3 +165,33 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
+
+export {
+  questions,
+  activeQuestions,
+  TEST_SECONDS,
+  TEST_QUESTION_COUNT,
+  QUESTION_BAR_SECONDS,
+  QUESTION_YELLOW_SECONDS,
+  QUESTION_RED_SECONDS,
+  SKIPPED_SECONDS,
+  ANSWER_ADVANCE_DELAY_MS,
+  TEST_DISTRIBUTION,
+  CORPUS_OPTIONS,
+  els,
+  state,
+  normalizeCategory,
+  selectedCorpusType,
+  letterToIndex,
+  countByCategory,
+  shuffledCopy,
+  formatSeconds,
+  elapsedQuestionSeconds,
+  elapsedTestSeconds,
+  playTone,
+  escapeHtml,
+};
+
+// Allow mutation of questions from other modules
+window.questions = questions;
+window.activeQuestions = activeQuestions;

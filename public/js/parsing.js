@@ -1,3 +1,15 @@
+import {
+  els,
+  questions,
+  TEST_DISTRIBUTION,
+  TEST_QUESTION_COUNT,
+  normalizeCategory,
+  letterToIndex,
+  countByCategory,
+  shuffledCopy,
+  escapeHtml,
+} from "./state.js";
+
 async function loadSelectedCorpus() {
   els.loadError.classList.add("hidden");
 
@@ -266,3 +278,18 @@ function buildTestQuestions() {
     }),
   );
 }
+
+export {
+  loadSelectedCorpus,
+  parseJsonCorpus,
+  parseTextCorpus,
+  ensureDifficulty,
+  difficultyClass,
+  difficultyLabel,
+  difficultyBadge,
+  estimateDifficulty,
+  difficultyRationale,
+  cloneQuestionWithShuffledChoices,
+  shuffleAnswersForTest,
+  buildTestQuestions,
+};
