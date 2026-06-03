@@ -42,6 +42,50 @@ npm run preview
 - `public/data/questions-text.txt`: text corpus
 - `public/data/questions-visual.json`: visual/text mixed corpus
 
+## Testing
+
+### Framework and Libraries
+
+- **Test runner**: Vitest with jsdom environment
+- **React components**: React Testing Library (RTL) + user-event for user-focused tests
+- **Logic**: Pure Vitest tests for utilities and state management
+
+### Writing Tests
+
+**React components** (use RTL patterns):
+```javascript
+import { render, screen, fireEvent } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+it('handles user interaction', async () => {
+  const user = userEvent.setup()
+  render(<MyComponent />)
+  await user.click(screen.getByRole('button', { name: 'Click me' }))
+  expect(screen.getByText('clicked')).toBeInTheDocument()
+})
+```
+
+See [src/__tests__/app.react.integration.test.jsx](src/__tests__/app.react.integration.test.jsx) for a reference implementation.
+
+**Logic utilities** (pure Vitest):
+```javascript
+import { expect, it } from 'vitest'
+import { parseQuestions } from '../utils/parsing.js'
+
+it('parses text corpus', () => {
+  const result = parseQuestions('1. Question?\nA) A\nB) B')
+  expect(result).toHaveLength(1)
+})
+```
+
+### Running Tests
+
+```bash
+npm run test                # Run all tests once
+npm run test:ui             # Interactive test UI
+npm run test:coverage       # Coverage report
+```
+
 ## Migration Note
 
 - Legacy `public/js/` has been retired.
