@@ -143,6 +143,19 @@ describe('Live App Integration', () => {
     expect(stateModule.state.currentIndex).toBe(1)
   })
 
+  it('does not start when there are no loaded questions', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.clearQuestions()
+    stateModule.els.startBtn.click()
+
+    expect(stateModule.activeQuestions).toEqual([])
+    expect(stateModule.els.questionScreen.classList.contains('hidden')).toBe(true)
+    expect(stateModule.state.intervalId).toBe(null)
+  })
+
   it('handles keyboard answer selection and stop flow', async () => {
     const stateModule = await import('../state.js')
     await import('../app.js')
@@ -160,6 +173,29 @@ describe('Live App Integration', () => {
     expect(stateModule.state.stoppedEarly).toBe(true)
     expect(stateModule.els.summaryScreen.classList.contains('hidden')).toBe(false)
     expect(stateModule.els.questionScreen.classList.contains('hidden')).toBe(true)
+  })
+
+  it('ignores invalid/blocked keypresses and handles missing answer button', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    expect(stateModule.state.results.length).toBe(0)
+
+    stateModule.els.startBtn.click()
+
+    stateModule.state.isAdvancing = true
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    expect(stateModule.state.results.length).toBe(0)
+
+    stateModule.state.isAdvancing = false
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Z' }))
+    expect(stateModule.state.results.length).toBe(0)
+
+    stateModule.els.answers.innerHTML = ''
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'D' }))
+    expect(stateModule.state.results.length).toBe(0)
   })
 
   it('closes modal on backdrop click and Escape key', async () => {
@@ -231,6 +267,76 @@ describe('Live App Integration', () => {
 
     vi.advanceTimersByTime(1900)
     expect(stateModule.els.copyStatus.textContent).toBe('')
+  })
+
+  it('handles null review payload and copy fallback failure path', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.googleSearchBtn.click()
+    expect(window.open).not.toHaveBeenCalled()
+
+    stateModule.els.copyPromptBtn.click()
+    await flushAsyncWork()
+    expect(navigator.clipboard.writeText).not.toHaveBeenCalled()
+
+    stateModule.els.startBtn.click()
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    vi.advanceTimersByTime(stateModule.ANSWER_ADVANCE_DELAY_MS + 10)
+    stateModule.els.stopBtn.click()
+
+    const summaryItem = stateModule.els.summaryContainer.querySelector('.summary-item')
+    summaryItem.click()
+
+    navigator.clipboard.writeText.mockRejectedValueOnce(new Error('denied'))
+
+    const hadExecCommand = typeof document.execCommand === 'function'
+    const originalExecCommand = document.execCommand
+    document.execCommand = vi.fn(() => {
+      throw new Error('execCommand failed')
+    })
+
+    stateModule.els.copyPromptBtn.click()
+    await flushAsyncWork()
+
+    expect(document.execCommand).toHaveBeenCalledWith('copy')
+    expect(stateModule.els.copyStatus.textContent).toBe('Copy failed.')
+
+    vi.advanceTimersByTime(1900)
+    expect(stateModule.els.copyStatus.textContent).toBe('Copy failed.')
+
+    if (hadExecCommand) {
+      document.execCommand = originalExecCommand
+    } else {
+      delete document.execCommand
+    }
+  })
+
+  it('updates timer chimes, timeout finish, and category filtering', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.startBtn.click()
+
+    stateModule.state.questionStartedAt = Date.now() - 46_000
+    stateModule.state.testStartedAt = Date.now() - (stateModule.TEST_SECONDS + 1) * 1000
+    vi.advanceTimersByTime(120)
+
+    expect(stateModule.state.chimed18).toBe(true)
+    expect(stateModule.state.chimed45).toBe(true)
+    expect(stateModule.els.summaryScreen.classList.contains('hidden')).toBe(false)
+    expect(stateModule.state.results.length).toBe(stateModule.activeQuestions.length)
+
+    const verbalBtn = Array.from(stateModule.els.categoryControls.querySelectorAll('.category-btn')).find(
+      (btn) => btn.textContent === 'Verbal'
+    )
+    expect(verbalBtn).toBeTruthy()
+
+    verbalBtn.click()
+    expect(stateModule.state.activeCategory).toBe('Verbal')
+    expect(stateModule.els.summaryContainer.textContent).toContain('not skipped avg')
   })
 
   it('updates frame heights on window resize in question and modal contexts', async () => {
