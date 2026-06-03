@@ -26,7 +26,7 @@ Build static output:
 npm run build
 ```
 
-FOO
+FOOasdfadsfds
 
 Preview the production build locally:
 
