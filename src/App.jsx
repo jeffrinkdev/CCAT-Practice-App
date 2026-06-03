@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { initApp } from './utils/app.js'
+import { QUESTION_BAR_SECONDS } from './utils/state.js'
 
 const DEFAULT_SHELL_STATE = {
   headerHidden: true,
@@ -11,17 +12,31 @@ const DEFAULT_SHELL_STATE = {
   timerSummaryHidden: false,
 }
 
+const DEFAULT_QUESTION_VIEW = {
+  timerText: '15:00',
+  timerYellow: false,
+  timerRed: false,
+  counterText: '',
+  questionHtml: '',
+  progressPct: 0,
+  timingPct: 0,
+  timingText: `0.0s / ${QUESTION_BAR_SECONDS}s`,
+}
+
 function joinClassNames(...parts) {
   return parts.filter(Boolean).join(' ')
 }
 
 function App() {
   const [shellState, setShellState] = useState(DEFAULT_SHELL_STATE)
+  const [questionView, setQuestionView] = useState(DEFAULT_QUESTION_VIEW)
 
   useEffect(() => {
-    initApp(document, (nextState) => {
-      setShellState((currentState) => ({ ...currentState, ...nextState }))
-    })
+    initApp(
+      document,
+      (nextState) => setShellState((cur) => ({ ...cur, ...nextState })),
+      (patch) => setQuestionView((cur) => ({ ...cur, ...patch })),
+    )
   }, [])
 
   return (
@@ -31,9 +46,14 @@ function App() {
         <div className="header-actions">
           <div
             id="timer"
-            className={joinClassNames('timer', shellState.timerSummaryHidden && 'summary-hidden')}
+            className={joinClassNames(
+              'timer',
+              shellState.timerSummaryHidden && 'summary-hidden',
+              questionView.timerYellow && 'yellow',
+              questionView.timerRed && 'red',
+            )}
           >
-            15:00
+            {questionView.timerText}
           </div>
           <div className="stop-holder">
             <button
@@ -103,10 +123,14 @@ function App() {
         <section id="questionScreen" className={joinClassNames(shellState.questionScreenHidden && 'hidden')}>
           <div className="card">
             <div className="question-meta">
-              <span id="questionCounter"></span>
+              <span id="questionCounter">{questionView.counterText}</span>
             </div>
             <div className="question-text-frame">
-              <div id="questionContent" className="question-content"></div>
+              <div
+                id="questionContent"
+                className="question-content"
+                dangerouslySetInnerHTML={{ __html: questionView.questionHtml }}
+              />
             </div>
             <div id="answers" className="answers"></div>
             <p className="muted" style={{ margin: '0.9rem 0 0' }}>
@@ -116,14 +140,14 @@ function App() {
             <div className="timing-wrap">
               <div className="timing-label-row">
                 <span>Question pace</span>
-                <span id="timingPositionText">0.0s / 60s</span>
+                <span id="timingPositionText">{questionView.timingText}</span>
               </div>
               <div className="timing-bar">
                 <div className="timing-marker marker-skip"></div>
                 <div className="timing-marker marker-18"></div>
                 <div className="timing-marker marker-36"></div>
                 <div className="timing-marker marker-45"></div>
-                <div id="timingPosition" className="timing-position"></div>
+                <div id="timingPosition" className="timing-position" style={{ left: `${questionView.timingPct}%` }}></div>
               </div>
               <div className="timing-scale">
                 <span className="timing-marker-label label-skip">3s</span>
@@ -134,7 +158,7 @@ function App() {
             </div>
 
             <div className="progress">
-              <div id="progressFill" className="progress-fill"></div>
+              <div id="progressFill" className="progress-fill" style={{ width: `${questionView.progressPct}%` }}></div>
             </div>
           </div>
         </section>

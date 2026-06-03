@@ -6,6 +6,13 @@ function renderQuestionContent(question, target) {
     (question.visual ? `<div class="visual-stage">${renderVisual(question.visual)}</div>` : "");
 }
 
+function buildQuestionHtml(question) {
+  return (
+    `<div class="question-text">${escapeHtml(question.prompt)}</div>` +
+    (question.visual ? `<div class="visual-stage">${renderVisual(question.visual)}</div>` : "")
+  );
+}
+
 function renderChoiceContent(choice) {
   const visual = choice.visual ? renderVisual(choice.visual, 72, 72) : "";
   return `<div class="answer-choice-content">${visual}<span>${escapeHtml(choice.text || "")}</span></div>`;
@@ -250,6 +257,7 @@ function updateModalQuestionFrameHeightForReviewSet() {
 
 export {
   renderQuestionContent,
+  buildQuestionHtml,
   renderChoiceContent,
   renderVisual,
   svgWrap,

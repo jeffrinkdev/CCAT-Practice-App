@@ -26,6 +26,7 @@ import {
   difficultyBadge,
 } from "./parsing.js";
 import {
+  buildQuestionHtml,
   renderQuestionContent,
   renderChoiceContent,
   updateQuestionFrameHeightForActiveTest,
@@ -34,6 +35,7 @@ import {
 
 let initialized = false;
 let shellStateCallback = null;
+let questionViewCallback = null;
 
 const SHELL_STATES = {
   start: {
@@ -76,9 +78,12 @@ function syncShellState(nextState) {
   toggleClass(els.summaryScreen, "hidden", nextState.summaryScreenHidden);
   toggleClass(els.stopBtn, "hidden", nextState.stopButtonHidden);
   toggleClass(els.headerRestartBtn, "hidden", nextState.restartButtonHidden);
-  toggleClass(els.timer, "summary-hidden", nextState.timerSummaryHidden);
 
   shellStateCallback?.(nextState);
+}
+
+function syncQuestionView(patch) {
+  questionViewCallback?.(patch);
 }
 
 function hasRequiredElements() {
@@ -152,11 +157,15 @@ function renderQuestion() {
   state.chimed45 = false;
 
   const question = activeQuestions[state.currentIndex];
-  els.timer.classList.remove("yellow", "red");
-  els.questionCounter.textContent = `Question ${state.currentIndex + 1} of ${activeQuestions.length} · ${question.category
-    }`;
 
-  renderQuestionContent(question, els.questionContent);
+  syncQuestionView({
+    timerYellow: false,
+    timerRed: false,
+    counterText: `Question ${state.currentIndex + 1} of ${activeQuestions.length} · ${question.category}`,
+    questionHtml: buildQuestionHtml(question),
+    progressPct: (state.currentIndex / activeQuestions.length) * 100,
+  });
+
   els.answers.innerHTML = "";
 
   question.choices.forEach((choice, index) => {
@@ -170,7 +179,6 @@ function renderQuestion() {
     els.answers.appendChild(button);
   });
 
-  els.progressFill.style.width = `${(state.currentIndex / activeQuestions.length) * 100}%`;
   updateTimer();
 }
 
@@ -207,14 +215,12 @@ function selectAnswer(choiceIndex, button) {
 
 function updateTimer() {
   const remaining = TEST_SECONDS - elapsedTestSeconds();
-  els.timer.textContent = formatSeconds(remaining);
-
+  const timerText = formatSeconds(remaining);
   const questionElapsed = elapsedQuestionSeconds();
-  els.timer.classList.toggle(
-    "yellow",
-    questionElapsed >= QUESTION_YELLOW_SECONDS && questionElapsed < QUESTION_RED_SECONDS,
-  );
-  els.timer.classList.toggle("red", questionElapsed >= QUESTION_RED_SECONDS);
+  const timerYellow = questionElapsed >= QUESTION_YELLOW_SECONDS && questionElapsed < QUESTION_RED_SECONDS;
+  const timerRed = questionElapsed >= QUESTION_RED_SECONDS;
+
+  syncQuestionView({ timerText, timerYellow, timerRed });
 
   updateQuestionTimingBar(questionElapsed);
 
@@ -235,9 +241,11 @@ function updateTimer() {
 }
 
 function updateQuestionTimingBar(seconds) {
-  const percentage = (Math.min(Math.max(seconds, 0), QUESTION_BAR_SECONDS) / QUESTION_BAR_SECONDS) * 100;
-  els.timingPosition.style.left = `${percentage}%`;
-  els.timingPositionText.textContent = `${seconds.toFixed(1)}s / ${QUESTION_BAR_SECONDS}s`;
+  const timingPct = (Math.min(Math.max(seconds, 0), QUESTION_BAR_SECONDS) / QUESTION_BAR_SECONDS) * 100;
+  syncQuestionView({
+    timingPct,
+    timingText: `${seconds.toFixed(1)}s / ${QUESTION_BAR_SECONDS}s`,
+  });
 }
 
 function stopTest() {
@@ -262,16 +270,25 @@ function restartTest() {
   state.currentReviewQuestionIndex = null;
 
   syncShellState(SHELL_STATES.start);
+  syncQuestionView({
+    timerText: "15:00",
+    timerYellow: false,
+    timerRed: false,
+    counterText: "",
+    questionHtml: "",
+    progressPct: 0,
+    timingPct: 0,
+    timingText: `0.0s / ${QUESTION_BAR_SECONDS}s`,
+  });
+
   els.modalBackdrop.classList.add("hidden");
 
+  // keep for live-test compat: timer text is asserted after restart without React
   els.timer.textContent = "15:00";
-  els.timer.classList.remove("yellow", "red", "summary-hidden");
-  els.progressFill.style.width = "0%";
   els.answers.innerHTML = "";
   els.summaryStats.innerHTML = "";
   els.categoryControls.innerHTML = "";
   els.summaryContainer.innerHTML = "";
-  els.questionContent.innerHTML = "";
 }
 
 function finishTest() {
@@ -695,8 +712,9 @@ function bindEvents() {
   });
 }
 
-function initApp(root = document, onShellState) {
+function initApp(root = document, onShellState, onQuestionView) {
   shellStateCallback = onShellState ?? null;
+  questionViewCallback = onQuestionView ?? null;
   refreshElements(root);
 
   if (initialized || !hasRequiredElements()) {
