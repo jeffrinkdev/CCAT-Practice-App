@@ -1,9 +1,36 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
+const DEFAULT_SHELL_STATE = {
+  headerHidden: true,
+  startScreenHidden: false,
+  questionScreenHidden: true,
+  summaryScreenHidden: true,
+  stopButtonHidden: false,
+  restartButtonHidden: true,
+  timerSummaryHidden: false,
+}
+
+function joinClassNames(...parts) {
+  return parts.filter(Boolean).join(' ')
+}
 
 function App() {
+  const [shellState, setShellState] = useState(DEFAULT_SHELL_STATE)
+
   useEffect(() => {
+    window.__ccatReactBridge = {
+      syncShell(nextState) {
+        setShellState((currentState) => ({
+          ...currentState,
+          ...nextState,
+        }))
+      },
+    }
+
     if (window.__ccatLegacyAppMounted) {
-      return
+      return () => {
+        delete window.__ccatReactBridge
+      }
     }
 
     const script = document.createElement('script')
@@ -13,21 +40,36 @@ function App() {
     document.body.appendChild(script)
 
     window.__ccatLegacyAppMounted = true
+
+    return () => {
+      delete window.__ccatReactBridge
+    }
   }, [])
 
   return (
     <>
-      <header id="header" className="app-header hidden">
+      <header id="header" className={joinClassNames('app-header', shellState.headerHidden && 'hidden')}>
         <div className="brand">CCAT Practice Simulator</div>
         <div className="header-actions">
-          <div id="timer" className="timer">
+          <div
+            id="timer"
+            className={joinClassNames('timer', shellState.timerSummaryHidden && 'summary-hidden')}
+          >
             15:00
           </div>
           <div className="stop-holder">
-            <button id="stopBtn" className="secondary-btn" type="button">
+            <button
+              id="stopBtn"
+              className={joinClassNames('secondary-btn', shellState.stopButtonHidden && 'hidden')}
+              type="button"
+            >
               Stop
             </button>
-            <button id="headerRestartBtn" className="secondary-btn hidden" type="button">
+            <button
+              id="headerRestartBtn"
+              className={joinClassNames('secondary-btn', shellState.restartButtonHidden && 'hidden')}
+              type="button"
+            >
               Restart
             </button>
           </div>
@@ -35,7 +77,10 @@ function App() {
       </header>
 
       <main>
-        <section id="startScreen" className="center-screen">
+        <section
+          id="startScreen"
+          className={joinClassNames('center-screen', shellState.startScreenHidden && 'hidden')}
+        >
           <div className="card start-card">
             <h1>CCAT Practice Simulator</h1>
             <p className="muted">
@@ -77,7 +122,7 @@ function App() {
           </div>
         </section>
 
-        <section id="questionScreen" className="hidden">
+        <section id="questionScreen" className={joinClassNames(shellState.questionScreenHidden && 'hidden')}>
           <div className="card">
             <div className="question-meta">
               <span id="questionCounter"></span>
@@ -116,7 +161,7 @@ function App() {
           </div>
         </section>
 
-        <section id="summaryScreen" className="hidden">
+        <section id="summaryScreen" className={joinClassNames(shellState.summaryScreenHidden && 'hidden')}>
           <div className="card">
             <div className="summary-head">
               <h2>Test Summary</h2>

@@ -34,6 +34,52 @@ import {
 
 let initialized = false;
 
+const SHELL_STATES = {
+  start: {
+    headerHidden: true,
+    startScreenHidden: false,
+    questionScreenHidden: true,
+    summaryScreenHidden: true,
+    stopButtonHidden: false,
+    restartButtonHidden: true,
+    timerSummaryHidden: false,
+  },
+  question: {
+    headerHidden: false,
+    startScreenHidden: true,
+    questionScreenHidden: false,
+    summaryScreenHidden: true,
+    stopButtonHidden: false,
+    restartButtonHidden: true,
+    timerSummaryHidden: false,
+  },
+  summary: {
+    headerHidden: false,
+    startScreenHidden: true,
+    questionScreenHidden: true,
+    summaryScreenHidden: false,
+    stopButtonHidden: true,
+    restartButtonHidden: false,
+    timerSummaryHidden: true,
+  },
+};
+
+function toggleClass(element, className, enabled) {
+  element?.classList.toggle(className, enabled);
+}
+
+function syncShellState(nextState) {
+  toggleClass(els.header, "hidden", nextState.headerHidden);
+  toggleClass(els.startScreen, "hidden", nextState.startScreenHidden);
+  toggleClass(els.questionScreen, "hidden", nextState.questionScreenHidden);
+  toggleClass(els.summaryScreen, "hidden", nextState.summaryScreenHidden);
+  toggleClass(els.stopBtn, "hidden", nextState.stopButtonHidden);
+  toggleClass(els.headerRestartBtn, "hidden", nextState.restartButtonHidden);
+  toggleClass(els.timer, "summary-hidden", nextState.timerSummaryHidden);
+
+  window.__ccatReactBridge?.syncShell?.(nextState);
+}
+
 function hasRequiredElements() {
   return Boolean(
     els.header &&
@@ -89,13 +135,7 @@ function startTest() {
   state.testStartedAt = Date.now();
   state.questionStartedAt = Date.now();
 
-  els.startScreen.classList.add("hidden");
-  els.summaryScreen.classList.add("hidden");
-  els.header.classList.remove("hidden");
-  els.timer.classList.remove("summary-hidden");
-  els.stopBtn.classList.remove("hidden");
-  els.headerRestartBtn.classList.add("hidden");
-  els.questionScreen.classList.remove("hidden");
+  syncShellState(SHELL_STATES.question);
 
   updateQuestionFrameHeightForActiveTest();
   renderQuestion();
@@ -220,13 +260,8 @@ function restartTest() {
   state.currentReviewPosition = 0;
   state.currentReviewQuestionIndex = null;
 
-  els.header.classList.add("hidden");
-  els.stopBtn.classList.remove("hidden");
-  els.headerRestartBtn.classList.add("hidden");
-  els.questionScreen.classList.add("hidden");
-  els.summaryScreen.classList.add("hidden");
+  syncShellState(SHELL_STATES.start);
   els.modalBackdrop.classList.add("hidden");
-  els.startScreen.classList.remove("hidden");
 
   els.timer.textContent = "15:00";
   els.timer.classList.remove("yellow", "red", "summary-hidden");
@@ -257,11 +292,7 @@ function finishTest() {
     });
   }
 
-  els.questionScreen.classList.add("hidden");
-  els.stopBtn.classList.add("hidden");
-  els.headerRestartBtn.classList.remove("hidden");
-  els.timer.classList.add("summary-hidden");
-  els.summaryScreen.classList.remove("hidden");
+  syncShellState(SHELL_STATES.summary);
 
   renderSummary();
 }
