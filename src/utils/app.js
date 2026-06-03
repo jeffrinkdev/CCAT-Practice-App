@@ -33,6 +33,7 @@ import {
 } from "./rendering.js";
 
 let initialized = false;
+let shellStateCallback = null;
 
 const SHELL_STATES = {
   start: {
@@ -77,7 +78,7 @@ function syncShellState(nextState) {
   toggleClass(els.headerRestartBtn, "hidden", nextState.restartButtonHidden);
   toggleClass(els.timer, "summary-hidden", nextState.timerSummaryHidden);
 
-  window.__ccatReactBridge?.syncShell?.(nextState);
+  shellStateCallback?.(nextState);
 }
 
 function hasRequiredElements() {
@@ -694,7 +695,8 @@ function bindEvents() {
   });
 }
 
-function initApp(root = document) {
+function initApp(root = document, onShellState) {
+  shellStateCallback = onShellState ?? null;
   refreshElements(root);
 
   if (initialized || !hasRequiredElements()) {

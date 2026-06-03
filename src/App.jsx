@@ -19,20 +19,9 @@ function App() {
   const [shellState, setShellState] = useState(DEFAULT_SHELL_STATE)
 
   useEffect(() => {
-    window.__ccatReactBridge = {
-      syncShell(nextState) {
-        setShellState((currentState) => ({
-          ...currentState,
-          ...nextState,
-        }))
-      },
-    }
-
-    initApp(document)
-
-    return () => {
-      delete window.__ccatReactBridge
-    }
+    initApp(document, (nextState) => {
+      setShellState((currentState) => ({ ...currentState, ...nextState }))
+    })
   }, [])
 
   return (
