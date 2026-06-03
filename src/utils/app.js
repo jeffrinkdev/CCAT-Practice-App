@@ -158,26 +158,33 @@ function renderQuestion() {
 
   const question = activeQuestions[state.currentIndex];
 
+  const choices = question.choices.map((choice, index) => ({
+    index,
+    label: String.fromCharCode(65 + index),
+    contentHtml: renderChoiceContent(choice),
+  }));
+
   syncQuestionView({
     timerYellow: false,
     timerRed: false,
     counterText: `Question ${state.currentIndex + 1} of ${activeQuestions.length} · ${question.category}`,
     questionHtml: buildQuestionHtml(question),
     progressPct: (state.currentIndex / activeQuestions.length) * 100,
+    choices,
+    selectedChoiceIndex: null,
   });
 
-  els.answers.innerHTML = "";
-
-  question.choices.forEach((choice, index) => {
-    const button = document.createElement("button");
-    button.className = "answer-btn";
-    button.type = "button";
-    button.innerHTML = `<span class="answer-label">${String.fromCharCode(65 + index)}</span>${renderChoiceContent(
-      choice,
-    )}`;
-    button.addEventListener("click", () => selectAnswer(index, button));
-    els.answers.appendChild(button);
-  });
+  if (!questionViewCallback) {
+    els.answers.innerHTML = "";
+    question.choices.forEach((choice, index) => {
+      const button = document.createElement("button");
+      button.className = "answer-btn";
+      button.type = "button";
+      button.innerHTML = `<span class="answer-label">${String.fromCharCode(65 + index)}</span>${renderChoiceContent(choice)}`;
+      button.addEventListener("click", () => selectAnswer(index, button));
+      els.answers.appendChild(button);
+    });
+  }
 
   updateTimer();
 }
@@ -192,7 +199,11 @@ function selectAnswer(choiceIndex, button) {
   const question = activeQuestions[state.currentIndex];
   const timeSpentSeconds = elapsedQuestionSeconds();
 
-  button.classList.add("selected");
+  if (questionViewCallback) {
+    syncQuestionView({ selectedChoiceIndex: choiceIndex });
+  } else {
+    button?.classList.add("selected");
+  }
   playTone(660, 0, 0.08);
 
   state.results.push({
@@ -279,6 +290,8 @@ function restartTest() {
     progressPct: 0,
     timingPct: 0,
     timingText: `0.0s / ${QUESTION_BAR_SECONDS}s`,
+    choices: [],
+    selectedChoiceIndex: null,
   });
 
   els.modalBackdrop.classList.add("hidden");
@@ -717,16 +730,14 @@ function initApp(root = document, onShellState, onQuestionView) {
   questionViewCallback = onQuestionView ?? null;
   refreshElements(root);
 
-  if (initialized || !hasRequiredElements()) {
-    return initialized;
+  if (!initialized && hasRequiredElements()) {
+    renderCorpusOptions();
+    bindEvents();
+    loadSelectedCorpus();
+    initialized = true;
   }
 
-  renderCorpusOptions();
-  bindEvents();
-  loadSelectedCorpus();
-  initialized = true;
-
-  return true;
+  return { handleAnswer: (index) => selectAnswer(index) };
 }
 
 if (typeof document !== "undefined") {

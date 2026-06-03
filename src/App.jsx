@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { initApp } from './utils/app.js'
 import { QUESTION_BAR_SECONDS } from './utils/state.js'
 
@@ -21,6 +21,8 @@ const DEFAULT_QUESTION_VIEW = {
   progressPct: 0,
   timingPct: 0,
   timingText: `0.0s / ${QUESTION_BAR_SECONDS}s`,
+  choices: [],
+  selectedChoiceIndex: null,
 }
 
 function joinClassNames(...parts) {
@@ -28,11 +30,12 @@ function joinClassNames(...parts) {
 }
 
 function App() {
+  const appRef = useRef(null)
   const [shellState, setShellState] = useState(DEFAULT_SHELL_STATE)
   const [questionView, setQuestionView] = useState(DEFAULT_QUESTION_VIEW)
 
   useEffect(() => {
-    initApp(
+    appRef.current = initApp(
       document,
       (nextState) => setShellState((cur) => ({ ...cur, ...nextState })),
       (patch) => setQuestionView((cur) => ({ ...cur, ...patch })),
@@ -132,7 +135,17 @@ function App() {
                 dangerouslySetInnerHTML={{ __html: questionView.questionHtml }}
               />
             </div>
-            <div id="answers" className="answers"></div>
+            <div id="answers" className="answers">
+              {questionView.choices.map(({ index, label, contentHtml }) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={joinClassNames('answer-btn', questionView.selectedChoiceIndex === index && 'selected')}
+                  onClick={() => appRef.current?.handleAnswer(index)}
+                  dangerouslySetInnerHTML={{ __html: `<span class="answer-label">${label}</span>${contentHtml}` }}
+                />
+              ))}
+            </div>
             <p className="muted" style={{ margin: '0.9rem 0 0' }}>
               Keyboard: press A, B, C, or D to answer.
             </p>
