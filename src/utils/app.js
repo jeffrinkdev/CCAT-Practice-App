@@ -32,7 +32,6 @@ import {
   setStartViewCallback,
 } from "./parsing.js";
 import {
-  buildQuestionHtml,
   renderQuestionContent,
   renderChoiceContent,
   updateQuestionFrameHeightForActiveTest,
@@ -206,14 +205,16 @@ function renderQuestion() {
   const choices = question.choices.map((choice, index) => ({
     index,
     label: String.fromCharCode(65 + index),
-    contentHtml: renderChoiceContent(choice),
+    text: choice.text || "",
+    visual: choice.visual || null,
   }));
 
   syncQuestionView({
     timerYellow: false,
     timerRed: false,
     counterText: `Question ${state.currentIndex + 1} of ${activeQuestions.length} · ${question.category}`,
-    questionHtml: buildQuestionHtml(question),
+    questionPrompt: question.prompt,
+    questionVisual: question.visual || null,
     progressPct: (state.currentIndex / activeQuestions.length) * 100,
     choices,
     selectedChoiceIndex: null,
@@ -331,7 +332,8 @@ function restartTest() {
     timerYellow: false,
     timerRed: false,
     counterText: "",
-    questionHtml: "",
+    questionPrompt: "",
+    questionVisual: null,
     progressPct: 0,
     timingPct: 0,
     timingText: `0.0s / ${QUESTION_BAR_SECONDS}s`,
@@ -345,7 +347,7 @@ function restartTest() {
     categories: [], activeCategory: "All", sections: [],
   });
 
-  syncModalView({ open: false, title: "", badgesHtml: "", questionHtml: "", answers: [], prevDisabled: true, nextDisabled: true, copyStatus: "" });
+  syncModalView({ open: false, title: "", badges: [], questionPrompt: "", questionVisual: null, answers: [], prevDisabled: true, nextDisabled: true, copyStatus: "" });
 
   els.modalBackdrop?.classList.add("hidden");
 
@@ -589,16 +591,45 @@ function buildModalAnswers(question, result) {
     const classes = ["modal-answer"];
     if (isCorrect) classes.push("correct-choice");
     if (isUser && !result.isCorrect) classes.push("user-wrong-choice");
-    const badges = [];
-    if (isCorrect) badges.push('<span class="modal-answer-marker correct-marker">Correct answer</span>');
-    if (isUser) badges.push('<span class="modal-answer-marker user-marker">Your choice</span>');
+    const markers = [];
+    if (isCorrect) markers.push({ text: "Correct answer", className: "modal-answer-marker correct-marker" });
+    if (isUser) markers.push({ text: "Your choice", className: "modal-answer-marker user-marker" });
     return {
       label: String.fromCharCode(65 + index),
-      contentHtml: renderChoiceContent(choice),
-      badgesHtml: badges.join(""),
+      text: choice.text || "",
+      visual: choice.visual || null,
+      markers,
       className: classes.join(" "),
     };
   });
+}
+
+function buildReviewBadges(question, result) {
+  const badges = [
+    { text: question.category, className: "badge" },
+    buildTimePillData(result.timeSpentSeconds),
+    {
+      text: difficultyLabel(ensureDifficulty(question)),
+      className: `difficulty-badge ${difficultyClass(ensureDifficulty(question))}`,
+    },
+    { text: result.isCorrect ? "Correct" : "Incorrect", className: "badge" },
+  ];
+
+  if (result.timedOut) {
+    badges.push({ text: "Timed out", className: "badge timeout" });
+  }
+  if (result.stoppedEarly) {
+    badges.push({ text: "Stopped before answer", className: "badge" });
+  }
+  if (question.difficultyRationale) {
+    badges.push({ text: question.difficultyRationale, className: "badge" });
+  }
+
+  return badges;
+}
+
+function renderBadgeHtml(badge) {
+  return `<span class="${badge.className}">${escapeHtml(String(badge.text || ""))}</span>`;
 }
 
 function renderReviewModalQuestion(questionIndex) {
@@ -607,15 +638,7 @@ function renderReviewModalQuestion(questionIndex) {
   const question = activeQuestions[questionIndex];
   const result = state.results.find((entry) => entry.questionIndex === questionIndex);
 
-  const badgesHtml = `
-    <span class="badge">${question.category}</span>
-    ${renderTimePill(result.timeSpentSeconds)}
-    ${difficultyBadge(question)}
-    <span class="badge">${result.isCorrect ? "Correct" : "Incorrect"}</span>
-    ${result.timedOut ? '<span class="badge timeout">Timed out</span>' : ""}
-    ${result.stoppedEarly ? '<span class="badge">Stopped before answer</span>' : ""}
-    ${question.difficultyRationale ? `<span class="badge">${escapeHtml(question.difficultyRationale)}</span>` : ""}
-  `;
+  const badges = buildReviewBadges(question, result);
 
   const answers = buildModalAnswers(question, result);
   const prevDisabled = state.currentReviewPosition <= 0;
@@ -624,8 +647,9 @@ function renderReviewModalQuestion(questionIndex) {
   syncModalView({
     open: true,
     title: `Question ${questionIndex + 1} Review`,
-    badgesHtml,
-    questionHtml: buildQuestionHtml(question),
+    badges,
+    questionPrompt: question.prompt,
+    questionVisual: question.visual || null,
     answers,
     prevDisabled,
     nextDisabled,
@@ -640,14 +664,14 @@ function renderReviewModalQuestion(questionIndex) {
 
   els.copyStatus.textContent = "";
   els.modalTitle.textContent = `Question ${questionIndex + 1} Review`;
-  els.modalBadges.innerHTML = badgesHtml;
+  els.modalBadges.innerHTML = badges.map(renderBadgeHtml).join("");
   renderQuestionContent(question, els.modalQuestionContent);
   els.modalAnswers.innerHTML = "";
 
-  answers.forEach(({ label, contentHtml, badgesHtml: answerBadges, className }) => {
+  answers.forEach(({ label, text, visual, markers, className }) => {
     const answer = document.createElement("div");
     answer.className = className;
-    answer.innerHTML = `<div class="modal-answer-main"><strong>${label}.</strong> ${contentHtml}</div><div class="modal-answer-markers">${answerBadges}</div>`;
+    answer.innerHTML = `<div class="modal-answer-main"><strong>${label}.</strong> ${renderChoiceContent({ text, visual })}</div><div class="modal-answer-markers">${markers.map(renderBadgeHtml).join("")}</div>`;
     els.modalAnswers.appendChild(answer);
   });
 

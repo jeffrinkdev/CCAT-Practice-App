@@ -66,13 +66,20 @@ async function loadSelectedCorpus() {
     const loadErrorHtml = `<strong>Unable to load corpus.</strong><br>${escapeHtml(
       error.message,
     )}<br><br>For server-loaded files, place the selected corpus in the same folder as this HTML file and run <code>python3 -m http.server</code>.`;
+    const loadErrorTitle = "Unable to load corpus.";
+    const loadErrorMessage = error.message;
+    const loadErrorHint = "For server-loaded files, place the selected corpus in the same folder as this HTML file and run ";
+    const loadErrorCommand = "python3 -m http.server";
 
     if (startViewCallback) {
       startViewCallback({
         startBtnDisabled: true,
         startBtnLabel: "Load a corpus first",
         loadErrorHidden: false,
-        loadErrorHtml,
+        loadErrorTitle,
+        loadErrorMessage,
+        loadErrorHint,
+        loadErrorCommand,
       });
     } else {
       els.startBtn.disabled = true;

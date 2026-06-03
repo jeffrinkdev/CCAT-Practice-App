@@ -120,10 +120,11 @@ describe('App React integration', () => {
       })
       setQuestionView({
         counterText: 'Question 1 of 3 · Verbal',
-        questionHtml: '<p>Select the best option.</p>',
+        questionPrompt: 'Select the best option.',
+        questionVisual: null,
         choices: [
-          { index: 0, label: 'A', contentHtml: '<span>Alpha</span>' },
-          { index: 1, label: 'B', contentHtml: '<span>Bravo</span>' },
+          { index: 0, label: 'A', text: 'Alpha', visual: null },
+          { index: 1, label: 'B', text: 'Bravo', visual: null },
         ],
       })
       await flush()
@@ -155,8 +156,10 @@ describe('App React integration', () => {
               {
                 questionIndex: 0,
                 isCorrect: true,
-                timePillHtml: '<span>10.2s</span>',
-                difficultyHtml: '<span>D4</span>',
+                timePillText: '10.2s',
+                timePillClassName: 'time-pill',
+                difficultyText: 'D4',
+                difficultyClassName: 'difficulty-badge difficulty-medium',
                 reviewIndexes: [0, 1, 2],
               },
             ],
@@ -176,10 +179,11 @@ describe('App React integration', () => {
       setModalView({
         open: true,
         title: 'Question 1 Review',
-        badgesHtml: '<span class="badge">Verbal</span>',
-        questionHtml: '<p>Review content</p>',
+        badges: [{ text: 'Verbal', className: 'badge' }],
+        questionPrompt: 'Review content',
+        questionVisual: null,
         answers: [
-          { label: 'A', contentHtml: '<span>Alpha</span>', badgesHtml: '', className: 'modal-answer' },
+          { label: 'A', text: 'Alpha', visual: null, markers: [], className: 'modal-answer' },
         ],
         prevDisabled: false,
         nextDisabled: false,

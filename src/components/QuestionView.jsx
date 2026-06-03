@@ -1,5 +1,5 @@
 import { joinClassNames } from '../utils/classNames.js'
-import HtmlContent from './HtmlContent.jsx'
+import VisualView from './VisualView.jsx'
 
 export default function QuestionView({ hidden, questionView, onAnswer }) {
   return (
@@ -9,15 +9,17 @@ export default function QuestionView({ hidden, questionView, onAnswer }) {
           <span id="questionCounter">{questionView.counterText}</span>
         </div>
         <div className="question-text-frame">
-          <div
-            id="questionContent"
-            className="question-content"
-          >
-            <HtmlContent html={questionView.questionHtml} />
+          <div id="questionContent" className="question-content">
+            <div className="question-text">{questionView.questionPrompt}</div>
+            {questionView.questionVisual ? (
+              <div className="visual-stage">
+                <VisualView visual={questionView.questionVisual} />
+              </div>
+            ) : null}
           </div>
         </div>
         <div id="answers" className="answers">
-          {questionView.choices.map(({ index, label, contentHtml }) => (
+          {questionView.choices.map(({ index, label, text, visual }) => (
             <button
               key={index}
               type="button"
@@ -25,7 +27,10 @@ export default function QuestionView({ hidden, questionView, onAnswer }) {
               onClick={() => onAnswer(index)}
             >
               <span className="answer-label">{label}</span>
-              <HtmlContent html={contentHtml} />
+              <div className="answer-choice-content">
+                {visual ? <VisualView visual={visual} width={72} height={72} /> : null}
+                <span>{text || ''}</span>
+              </div>
             </button>
           ))}
         </div>

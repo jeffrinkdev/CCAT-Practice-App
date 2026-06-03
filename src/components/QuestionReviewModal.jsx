@@ -1,5 +1,5 @@
 import { joinClassNames } from '../utils/classNames.js'
-import HtmlContent from './HtmlContent.jsx'
+import VisualView from './VisualView.jsx'
 
 export default function QuestionReviewModal({
   modalView,
@@ -20,7 +20,9 @@ export default function QuestionReviewModal({
           <div>
             <h3 id="modalTitle">{modalView.title}</h3>
             <div id="modalBadges" className="badges">
-              <HtmlContent html={modalView.badgesHtml} />
+              {modalView.badges.map((badge, index) => (
+                <span key={`${badge.text}-${index}`} className={badge.className}>{badge.text}</span>
+              ))}
             </div>
           </div>
           <div className="modal-actions">
@@ -38,21 +40,32 @@ export default function QuestionReviewModal({
 
         <div className="modal-question-frame">
           <div id="modalQuestionContent" className="question-content">
-            <HtmlContent html={modalView.questionHtml} />
+            <div className="question-text">{modalView.questionPrompt}</div>
+            {modalView.questionVisual ? (
+              <div className="visual-stage">
+                <VisualView visual={modalView.questionVisual} />
+              </div>
+            ) : null}
           </div>
         </div>
 
         <div id="modalAnswers">
-          {modalView.answers.map(({ label, contentHtml, badgesHtml, className }, i) => (
+          {modalView.answers.map(({ label, text, visual, markers, className }, i) => (
             <div
               key={i}
               className={className}
             >
               <div className="modal-answer-main">
-                <strong>{label}.</strong> <HtmlContent html={contentHtml} />
+                <strong>{label}.</strong>
+                <div className="answer-choice-content">
+                  {visual ? <VisualView visual={visual} width={72} height={72} /> : null}
+                  <span>{text || ''}</span>
+                </div>
               </div>
               <div className="modal-answer-markers">
-                <HtmlContent html={badgesHtml} />
+                {markers.map((marker, markerIndex) => (
+                  <span key={`${marker.text}-${markerIndex}`} className={marker.className}>{marker.text}</span>
+                ))}
               </div>
             </div>
           ))}

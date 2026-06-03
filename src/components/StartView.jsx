@@ -1,5 +1,4 @@
 import { joinClassNames } from '../utils/classNames.js'
-import HtmlContent from './HtmlContent.jsx'
 
 export default function StartView({ startView, onLoadCorpus, onCorpusChange, onStartTest }) {
   return (
@@ -52,7 +51,12 @@ export default function StartView({ startView, onLoadCorpus, onCorpusChange, onS
           id="loadError"
           className={joinClassNames('load-error', startView.loadErrorHidden && 'hidden')}
         >
-          <HtmlContent html={startView.loadErrorHtml} />
+          <strong>{startView.loadErrorTitle}</strong>
+          <br />
+          {startView.loadErrorMessage}
+          <br />
+          {startView.loadErrorHint}
+          <code>{startView.loadErrorCommand}</code>
         </div>
       </div>
     </section>
