@@ -161,4 +161,118 @@ describe('Live App Integration', () => {
     expect(stateModule.els.summaryScreen.classList.contains('hidden')).toBe(false)
     expect(stateModule.els.questionScreen.classList.contains('hidden')).toBe(true)
   })
+
+  it('closes modal on backdrop click and Escape key', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.startBtn.click()
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    vi.advanceTimersByTime(stateModule.ANSWER_ADVANCE_DELAY_MS + 10)
+    stateModule.els.stopBtn.click()
+
+    const summaryItem = stateModule.els.summaryContainer.querySelector('.summary-item')
+    expect(summaryItem).toBeTruthy()
+    summaryItem.click()
+
+    expect(stateModule.els.modalBackdrop.classList.contains('hidden')).toBe(false)
+
+    stateModule.els.modalBackdrop.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    expect(stateModule.els.modalBackdrop.classList.contains('hidden')).toBe(true)
+
+    summaryItem.click()
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))
+    expect(stateModule.els.modalBackdrop.classList.contains('hidden')).toBe(true)
+  })
+
+  it('navigates review modal with ArrowLeft and ArrowRight', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.startBtn.click()
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    vi.advanceTimersByTime(stateModule.ANSWER_ADVANCE_DELAY_MS + 10)
+    stateModule.els.stopBtn.click()
+
+    const items = stateModule.els.summaryContainer.querySelectorAll('.summary-item')
+    expect(items.length).toBeGreaterThan(2)
+
+    items[1].click()
+    const before = stateModule.state.currentReviewPosition
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }))
+    expect(stateModule.state.currentReviewPosition).toBeGreaterThanOrEqual(before)
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft' }))
+    expect(stateModule.state.currentReviewPosition).toBeGreaterThanOrEqual(0)
+  })
+
+  it('handles Google search and copy prompt actions', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.startBtn.click()
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    vi.advanceTimersByTime(stateModule.ANSWER_ADVANCE_DELAY_MS + 10)
+    stateModule.els.stopBtn.click()
+
+    const summaryItem = stateModule.els.summaryContainer.querySelector('.summary-item')
+    summaryItem.click()
+
+    stateModule.els.googleSearchBtn.click()
+    expect(window.open).toHaveBeenCalled()
+
+    stateModule.els.copyPromptBtn.click()
+    await flushAsyncWork()
+    expect(navigator.clipboard.writeText).toHaveBeenCalled()
+
+    vi.advanceTimersByTime(1900)
+    expect(stateModule.els.copyStatus.textContent).toBe('')
+  })
+
+  it('updates frame heights on window resize in question and modal contexts', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.startBtn.click()
+    window.dispatchEvent(new Event('resize'))
+
+    const questionHeight = document.documentElement.style.getPropertyValue('--question-frame-height')
+    expect(questionHeight).toMatch(/px$/)
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    vi.advanceTimersByTime(stateModule.ANSWER_ADVANCE_DELAY_MS + 10)
+    stateModule.els.stopBtn.click()
+
+    const summaryItem = stateModule.els.summaryContainer.querySelector('.summary-item')
+    summaryItem.click()
+    window.dispatchEvent(new Event('resize'))
+
+    const modalHeight = document.documentElement.style.getPropertyValue('--modal-question-frame-height')
+    expect(modalHeight).toMatch(/px$/)
+  })
+
+  it('restarts test and resets UI state', async () => {
+    const stateModule = await import('../state.js')
+    await import('../app.js')
+    await flushAsyncWork()
+
+    stateModule.els.startBtn.click()
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }))
+    vi.advanceTimersByTime(stateModule.ANSWER_ADVANCE_DELAY_MS + 10)
+    stateModule.els.stopBtn.click()
+
+    expect(stateModule.els.summaryScreen.classList.contains('hidden')).toBe(false)
+    stateModule.els.headerRestartBtn.click()
+
+    expect(stateModule.activeQuestions.length).toBe(0)
+    expect(stateModule.state.results).toEqual([])
+    expect(stateModule.els.startScreen.classList.contains('hidden')).toBe(false)
+    expect(stateModule.els.summaryScreen.classList.contains('hidden')).toBe(true)
+    expect(stateModule.els.timer.textContent).toBe('15:00')
+  })
 })
