@@ -524,6 +524,19 @@ function closeModal() {
   els.modalBackdrop.classList.add("hidden");
 }
 
+function renderCorpusOptions() {
+  els.corpusSelect.innerHTML = "";
+
+  CORPUS_OPTIONS.forEach((optionConfig, index) => {
+    const option = document.createElement("option");
+    option.value = optionConfig.value;
+    option.dataset.type = optionConfig.type;
+    option.textContent = optionConfig.label;
+    option.selected = index === 0;
+    els.corpusSelect.appendChild(option);
+  });
+}
+
 function bindEvents() {
   els.loadCorpusBtn.addEventListener("click", loadSelectedCorpus);
   els.corpusSelect.addEventListener("change", () => {
@@ -577,5 +590,6 @@ function bindEvents() {
   });
 }
 
+renderCorpusOptions();
 bindEvents();
 loadSelectedCorpus();

@@ -15,6 +15,19 @@ const TEST_DISTRIBUTION = {
   Spatial: 16,
 };
 
+const CORPUS_OPTIONS = [
+  {
+    value: "/data/questions-text.txt",
+    type: "txt",
+    label: "Text corpus: questions-text.txt",
+  },
+  {
+    value: "/data/questions-visual.json",
+    type: "json",
+    label: "Mixed visual corpus: questions-visual.json",
+  },
+];
+
 const els = {
   header: document.getElementById("header"),
   timer: document.getElementById("timer"),

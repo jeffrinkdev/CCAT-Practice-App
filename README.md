@@ -37,6 +37,6 @@ npm run preview
 - `index.html`: app shell
 - `public/styles.css`: stylesheet
 - `public/js/`: app logic split by responsibility
-- `CCATQuestions500DifficultyFixed.txt`: text corpus
-- `CCATQuestions500VisualDifficultyFixed.json`: visual/text mixed corpus
+- `public/data/questions-text.txt`: text corpus
+- `public/data/questions-visual.json`: visual/text mixed corpus
 
