@@ -115,42 +115,54 @@ function syncCopyStatus(text) {
 }
 
 function hasRequiredElements() {
-  return Boolean(
-    els.header &&
-    els.timer &&
-    els.startScreen &&
-    els.questionScreen &&
-    els.summaryScreen &&
+  const hasBootstrapElements = Boolean(
     els.corpusSelect &&
     els.corpusFileInput &&
     els.testOrderSelect &&
     els.loadCorpusBtn &&
     els.startBtn &&
     els.corpusStatus &&
-    els.stopBtn &&
-    els.headerRestartBtn &&
-    els.loadError &&
-    els.questionCounter &&
-    els.questionContent &&
-    els.answers &&
-    els.progressFill &&
-    els.timingPosition &&
-    els.timingPositionText &&
-    els.summaryStats &&
-    els.categoryControls &&
-    els.summaryContainer &&
-    els.modalBackdrop &&
-    els.prevReviewBtn &&
-    els.nextReviewBtn &&
-    els.closeModalBtn &&
-    els.googleSearchBtn &&
-    els.copyPromptBtn &&
-    els.copyStatus &&
-    els.modalTitle &&
-    els.modalBadges &&
-    els.modalQuestionContent &&
-    els.modalAnswers,
+    els.loadError,
   );
+
+  if (!hasBootstrapElements) {
+    return false;
+  }
+
+  // Legacy non-React mode still requires all static nodes to be present.
+  if (!shellStateCallback) {
+    return Boolean(
+      els.header &&
+      els.timer &&
+      els.startScreen &&
+      els.questionScreen &&
+      els.summaryScreen &&
+      els.stopBtn &&
+      els.headerRestartBtn &&
+      els.questionCounter &&
+      els.questionContent &&
+      els.answers &&
+      els.progressFill &&
+      els.timingPosition &&
+      els.timingPositionText &&
+      els.summaryStats &&
+      els.categoryControls &&
+      els.summaryContainer &&
+      els.modalBackdrop &&
+      els.prevReviewBtn &&
+      els.nextReviewBtn &&
+      els.closeModalBtn &&
+      els.googleSearchBtn &&
+      els.copyPromptBtn &&
+      els.copyStatus &&
+      els.modalTitle &&
+      els.modalBadges &&
+      els.modalQuestionContent &&
+      els.modalAnswers,
+    );
+  }
+
+  return true;
 }
 
 function startTest() {
@@ -330,14 +342,24 @@ function restartTest() {
 
   syncModalView({ open: false, title: "", badgesHtml: "", questionHtml: "", answers: [], prevDisabled: true, nextDisabled: true, copyStatus: "" });
 
-  els.modalBackdrop.classList.add("hidden");
+  els.modalBackdrop?.classList.add("hidden");
 
   // keep for live-test compat: timer text is asserted after restart without React
-  els.timer.textContent = "15:00";
-  els.answers.innerHTML = "";
-  els.summaryStats.innerHTML = "";
-  els.categoryControls.innerHTML = "";
-  els.summaryContainer.innerHTML = "";
+  if (els.timer) {
+    els.timer.textContent = "15:00";
+  }
+  if (els.answers) {
+    els.answers.innerHTML = "";
+  }
+  if (els.summaryStats) {
+    els.summaryStats.innerHTML = "";
+  }
+  if (els.categoryControls) {
+    els.categoryControls.innerHTML = "";
+  }
+  if (els.summaryContainer) {
+    els.summaryContainer.innerHTML = "";
+  }
 }
 
 function finishTest() {
@@ -597,7 +619,7 @@ function renderReviewModalQuestion(questionIndex) {
 
   if (modalViewCallback) {
     updateModalQuestionFrameHeightForReviewSet();
-    els.closeModalBtn.focus();
+    els.closeModalBtn?.focus();
     return;
   }
 
@@ -617,7 +639,7 @@ function renderReviewModalQuestion(questionIndex) {
   updateReviewNavButtons();
   els.modalBackdrop.classList.remove("hidden");
   updateModalQuestionFrameHeightForReviewSet();
-  els.closeModalBtn.focus();
+  els.closeModalBtn?.focus();
 }
 
 function updateReviewNavButtons() {
@@ -772,7 +794,7 @@ function handleAnswerKey(event) {
   }
 
   const index = key.charCodeAt(0) - 65;
-  const button = els.answers.querySelectorAll(".answer-btn")[index];
+  const button = els.answers?.querySelectorAll(".answer-btn")?.[index];
   if (!button) {
     return;
   }
@@ -784,7 +806,7 @@ function handleAnswerKey(event) {
 function closeModal() {
   syncModalView({ open: false });
   if (!modalViewCallback) {
-    els.modalBackdrop.classList.add("hidden");
+    els.modalBackdrop?.classList.add("hidden");
   }
 }
 
