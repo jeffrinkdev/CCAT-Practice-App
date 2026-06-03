@@ -1,25 +1,34 @@
 import {
   questions,
   activeQuestions,
+  clearActiveQuestions,
+  setActiveQuestions,
   state,
   els,
   ANSWER_ADVANCE_DELAY_MS,
+  QUESTION_BAR_SECONDS,
+  QUESTION_YELLOW_SECONDS,
+  QUESTION_RED_SECONDS,
+  SKIPPED_SECONDS,
+  TEST_SECONDS,
   TEST_QUESTION_COUNT,
   CORPUS_OPTIONS,
   playTone,
   formatSeconds,
   elapsedTestSeconds,
   elapsedQuestionSeconds,
+  escapeHtml,
 } from "./state.js";
 import {
   buildTestQuestions,
   loadSelectedCorpus,
+  difficultyBadge,
 } from "./parsing.js";
 import {
   renderQuestionContent,
   renderChoiceContent,
   updateQuestionFrameHeightForActiveTest,
-  updateModalQuestionFrameHeightForReviewSet, measureFrame,
+  updateModalQuestionFrameHeightForReviewSet,
 } from "./rendering.js";
 
 function startTest() {
@@ -27,7 +36,7 @@ function startTest() {
     return;
   }
 
-  activeQuestions = buildTestQuestions();
+  setActiveQuestions(buildTestQuestions());
   state.currentIndex = 0;
   state.results = [];
   state.stoppedEarly = false;
@@ -159,7 +168,7 @@ function restartTest() {
   }
 
   state.intervalId = null;
-  activeQuestions = [];
+  clearActiveQuestions();
   state.currentIndex = 0;
   state.results = [];
   state.isAdvancing = false;

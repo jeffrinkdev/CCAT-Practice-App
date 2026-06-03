@@ -1,4 +1,4 @@
-import { escapeHtml } from "./state.js";
+import { escapeHtml, questions, activeQuestions, state } from "./state.js";
 
 function renderQuestionContent(question, target) {
   target.innerHTML =

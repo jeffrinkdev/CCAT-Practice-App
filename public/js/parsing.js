@@ -4,10 +4,13 @@ import {
   TEST_DISTRIBUTION,
   TEST_QUESTION_COUNT,
   normalizeCategory,
+  selectedCorpusType,
   letterToIndex,
   countByCategory,
   shuffledCopy,
   escapeHtml,
+  setQuestions,
+  clearQuestions,
 } from "./state.js";
 
 async function loadSelectedCorpus() {
@@ -33,7 +36,7 @@ async function loadSelectedCorpus() {
       text = await response.text();
     }
 
-    questions = type === "json" ? parseJsonCorpus(text) : parseTextCorpus(text);
+    setQuestions(type === "json" ? parseJsonCorpus(text) : parseTextCorpus(text));
 
     if (!questions.length) {
       throw new Error("No questions parsed.");
@@ -48,7 +51,7 @@ async function loadSelectedCorpus() {
       .map(([key, value]) => `${key}: ${value}`)
       .join(" · ")}`;
   } catch (error) {
-    questions = [];
+    clearQuestions();
     els.startBtn.disabled = true;
     els.startBtn.textContent = "Load a corpus first";
     els.loadError.classList.remove("hidden");

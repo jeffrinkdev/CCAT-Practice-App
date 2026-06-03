@@ -166,6 +166,24 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function setQuestions(nextQuestions) {
+  questions.length = 0;
+  questions.push(...nextQuestions);
+}
+
+function clearQuestions() {
+  questions.length = 0;
+}
+
+function setActiveQuestions(nextQuestions) {
+  activeQuestions.length = 0;
+  activeQuestions.push(...nextQuestions);
+}
+
+function clearActiveQuestions() {
+  activeQuestions.length = 0;
+}
+
 export {
   questions,
   activeQuestions,
@@ -190,8 +208,8 @@ export {
   elapsedTestSeconds,
   playTone,
   escapeHtml,
+  setQuestions,
+  clearQuestions,
+  setActiveQuestions,
+  clearActiveQuestions,
 };
-
-// Allow mutation of questions from other modules
-window.questions = questions;
-window.activeQuestions = activeQuestions;
