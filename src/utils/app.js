@@ -36,6 +36,9 @@ import {
 let initialized = false;
 let shellStateCallback = null;
 let questionViewCallback = null;
+let summaryViewCallback = null;
+let modalViewCallback = null;
+let isModalOpen = false;
 
 const SHELL_STATES = {
   start: {
@@ -84,6 +87,23 @@ function syncShellState(nextState) {
 
 function syncQuestionView(patch) {
   questionViewCallback?.(patch);
+}
+
+function syncSummaryView(data) {
+  summaryViewCallback?.(data);
+}
+
+function syncModalView(patch) {
+  if ("open" in patch) isModalOpen = patch.open;
+  modalViewCallback?.(patch);
+}
+
+function syncCopyStatus(text) {
+  if (modalViewCallback) {
+    syncModalView({ copyStatus: text });
+  } else {
+    els.copyStatus.textContent = text;
+  }
 }
 
 function hasRequiredElements() {
@@ -294,6 +314,14 @@ function restartTest() {
     selectedChoiceIndex: null,
   });
 
+  syncSummaryView({
+    correct: 0, total: 0, answered: 0,
+    averageText: "—", averageNoSkipsText: "—",
+    categories: [], activeCategory: "All", sections: [],
+  });
+
+  syncModalView({ open: false, title: "", badgesHtml: "", questionHtml: "", answers: [], prevDisabled: true, nextDisabled: true, copyStatus: "" });
+
   els.modalBackdrop.classList.add("hidden");
 
   // keep for live-test compat: timer text is asserted after restart without React
@@ -328,7 +356,59 @@ function finishTest() {
   renderSummary();
 }
 
+function buildResultItems(results, reviewIndexes) {
+  return results.map((result) => ({
+    questionIndex: result.questionIndex,
+    isCorrect: result.isCorrect,
+    timeSpentSeconds: result.timeSpentSeconds,
+    timePillHtml: renderTimePill(result.timeSpentSeconds),
+    difficultyHtml: difficultyBadge(activeQuestions[result.questionIndex]),
+    reviewIndexes,
+  }));
+}
+
+function buildSummarySections() {
+  if (state.activeCategory === "All") {
+    const reviewIndexes = state.results.map((r) => r.questionIndex);
+    return [{ title: "All Questions — numerical order", items: buildResultItems(state.results, reviewIndexes) }];
+  }
+
+  const results = state.results.filter(
+    (r) => activeQuestions[r.questionIndex].category === state.activeCategory,
+  );
+  const correct = results.filter((r) => r.isCorrect).length;
+  const avg = averageTime(results);
+  const avgNoSkips = averageTime(results.filter((r) => r.timeSpentSeconds >= SKIPPED_SECONDS));
+  const reviewIndexes = results.map((r) => r.questionIndex);
+  return [{
+    title: `${state.activeCategory} — ${correct}/${results.length} · avg ${formatMetricSeconds(avg)} · not skipped avg ${formatMetricSeconds(avgNoSkips)}`,
+    items: buildResultItems(results, reviewIndexes),
+  }];
+}
+
+function buildSummaryViewData() {
+  const correct = state.results.filter((r) => r.isCorrect).length;
+  const total = activeQuestions.length;
+  const answered = state.results.filter((r) => r.choiceIndex !== null).length;
+  const average = averageTime(state.results);
+  const averageNoSkips = averageTime(state.results.filter((r) => r.timeSpentSeconds >= SKIPPED_SECONDS));
+  const categories = ["All", ...Array.from(new Set(activeQuestions.map((q) => q.category)))];
+  return {
+    correct, total, answered,
+    averageText: formatMetricSeconds(average),
+    averageNoSkipsText: formatMetricSeconds(averageNoSkips),
+    categories,
+    activeCategory: state.activeCategory,
+    sections: buildSummarySections(),
+  };
+}
+
 function renderSummary() {
+  if (summaryViewCallback) {
+    syncSummaryView(buildSummaryViewData());
+    return;
+  }
+
   const correct = state.results.filter((result) => result.isCorrect).length;
   const total = activeQuestions.length;
   const answered = state.results.filter((result) => result.choiceIndex !== null).length;
@@ -351,6 +431,11 @@ function renderSummary() {
 }
 
 function renderCategoryControls() {
+  if (summaryViewCallback) {
+    syncSummaryView(buildSummaryViewData());
+    return;
+  }
+
   const categories = ["All", ...Array.from(new Set(activeQuestions.map((question) => question.category)))];
   els.categoryControls.innerHTML = "";
 
@@ -369,6 +454,11 @@ function renderCategoryControls() {
 }
 
 function renderSummaryQuestions() {
+  if (summaryViewCallback) {
+    syncSummaryView(buildSummaryViewData());
+    return;
+  }
+
   els.summaryContainer.innerHTML = "";
 
   if (state.activeCategory === "All") {
@@ -447,15 +537,32 @@ function openReviewModal(questionIndex, reviewIndexes = state.activeReviewIndexe
   renderReviewModalQuestion(questionIndex);
 }
 
+function buildModalAnswers(question, result) {
+  return question.choices.map((choice, index) => {
+    const isCorrect = index === question.correctIndex;
+    const isUser = index === result.choiceIndex;
+    const classes = ["modal-answer"];
+    if (isCorrect) classes.push("correct-choice");
+    if (isUser && !result.isCorrect) classes.push("user-wrong-choice");
+    const badges = [];
+    if (isCorrect) badges.push('<span class="modal-answer-marker correct-marker">Correct answer</span>');
+    if (isUser) badges.push('<span class="modal-answer-marker user-marker">Your choice</span>');
+    return {
+      label: String.fromCharCode(65 + index),
+      contentHtml: renderChoiceContent(choice),
+      badgesHtml: badges.join(""),
+      className: classes.join(" "),
+    };
+  });
+}
+
 function renderReviewModalQuestion(questionIndex) {
   state.currentReviewQuestionIndex = questionIndex;
-  els.copyStatus.textContent = "";
 
   const question = activeQuestions[questionIndex];
   const result = state.results.find((entry) => entry.questionIndex === questionIndex);
 
-  els.modalTitle.textContent = `Question ${questionIndex + 1} Review`;
-  els.modalBadges.innerHTML = `
+  const badgesHtml = `
     <span class="badge">${question.category}</span>
     ${renderTimePill(result.timeSpentSeconds)}
     ${difficultyBadge(question)}
@@ -465,34 +572,37 @@ function renderReviewModalQuestion(questionIndex) {
     ${question.difficultyRationale ? `<span class="badge">${escapeHtml(question.difficultyRationale)}</span>` : ""}
   `;
 
+  const answers = buildModalAnswers(question, result);
+  const prevDisabled = state.currentReviewPosition <= 0;
+  const nextDisabled = state.currentReviewPosition >= state.activeReviewIndexes.length - 1;
+
+  syncModalView({
+    open: true,
+    title: `Question ${questionIndex + 1} Review`,
+    badgesHtml,
+    questionHtml: buildQuestionHtml(question),
+    answers,
+    prevDisabled,
+    nextDisabled,
+    copyStatus: "",
+  });
+
+  if (modalViewCallback) {
+    updateModalQuestionFrameHeightForReviewSet();
+    els.closeModalBtn.focus();
+    return;
+  }
+
+  els.copyStatus.textContent = "";
+  els.modalTitle.textContent = `Question ${questionIndex + 1} Review`;
+  els.modalBadges.innerHTML = badgesHtml;
   renderQuestionContent(question, els.modalQuestionContent);
   els.modalAnswers.innerHTML = "";
 
-  question.choices.forEach((choice, index) => {
+  answers.forEach(({ label, contentHtml, badgesHtml: answerBadges, className }) => {
     const answer = document.createElement("div");
-    const isCorrect = index === question.correctIndex;
-    const isUser = index === result.choiceIndex;
-
-    answer.className = "modal-answer";
-    if (isCorrect) {
-      answer.classList.add("correct-choice");
-    }
-    if (isUser && !result.isCorrect) {
-      answer.classList.add("user-wrong-choice");
-    }
-
-    const badges = [];
-    if (isCorrect) {
-      badges.push('<span class="modal-answer-marker correct-marker">Correct answer</span>');
-    }
-    if (isUser) {
-      badges.push('<span class="modal-answer-marker user-marker">Your choice</span>');
-    }
-
-    answer.innerHTML = `<div class="modal-answer-main"><strong>${String.fromCharCode(65 + index)}.</strong> ${renderChoiceContent(
-      choice,
-    )}</div><div class="modal-answer-markers">${badges.join("")}</div>`;
-
+    answer.className = className;
+    answer.innerHTML = `<div class="modal-answer-main"><strong>${label}.</strong> ${contentHtml}</div><div class="modal-answer-markers">${answerBadges}</div>`;
     els.modalAnswers.appendChild(answer);
   });
 
@@ -503,8 +613,14 @@ function renderReviewModalQuestion(questionIndex) {
 }
 
 function updateReviewNavButtons() {
-  els.prevReviewBtn.disabled = state.currentReviewPosition <= 0;
-  els.nextReviewBtn.disabled = state.currentReviewPosition >= state.activeReviewIndexes.length - 1;
+  const prevDisabled = state.currentReviewPosition <= 0;
+  const nextDisabled = state.currentReviewPosition >= state.activeReviewIndexes.length - 1;
+  if (modalViewCallback) {
+    syncModalView({ prevDisabled, nextDisabled });
+    return;
+  }
+  els.prevReviewBtn.disabled = prevDisabled;
+  els.nextReviewBtn.disabled = nextDisabled;
 }
 
 function showAdjacentReview(direction) {
@@ -599,13 +715,15 @@ async function copyCurrentReviewPrompt() {
 
   try {
     await navigator.clipboard.writeText(prompt);
-    els.copyStatus.textContent = "Copied.";
+    syncCopyStatus("Copied.");
   } catch {
     fallbackCopyText(prompt);
   }
 
   setTimeout(() => {
-    if (els.copyStatus.textContent === "Copied.") {
+    if (modalViewCallback) {
+      syncModalView({ copyStatus: "" });
+    } else if (els.copyStatus.textContent === "Copied.") {
       els.copyStatus.textContent = "";
     }
   }, 1800);
@@ -623,9 +741,9 @@ function fallbackCopyText(text) {
 
   try {
     document.execCommand("copy");
-    els.copyStatus.textContent = "Copied.";
+    syncCopyStatus("Copied.");
   } catch {
-    els.copyStatus.textContent = "Copy failed.";
+    syncCopyStatus("Copy failed.");
   } finally {
     document.body.removeChild(textarea);
   }
@@ -634,7 +752,7 @@ function fallbackCopyText(text) {
 function handleAnswerKey(event) {
   if (
     els.questionScreen.classList.contains("hidden") ||
-    !els.modalBackdrop.classList.contains("hidden") ||
+    isModalOpen ||
     state.isAdvancing
   ) {
     return;
@@ -656,7 +774,15 @@ function handleAnswerKey(event) {
 }
 
 function closeModal() {
-  els.modalBackdrop.classList.add("hidden");
+  syncModalView({ open: false });
+  if (!modalViewCallback) {
+    els.modalBackdrop.classList.add("hidden");
+  }
+}
+
+function handleCategoryChange(category) {
+  state.activeCategory = category;
+  syncSummaryView(buildSummaryViewData());
 }
 
 function renderCorpusOptions() {
@@ -694,7 +820,7 @@ function bindEvents() {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (!els.modalBackdrop.classList.contains("hidden")) {
+    if (isModalOpen) {
       if (event.key === "Escape") {
         closeModal();
         return;
@@ -725,9 +851,11 @@ function bindEvents() {
   });
 }
 
-function initApp(root = document, onShellState, onQuestionView) {
+function initApp(root = document, onShellState, onQuestionView, onSummaryView, onModalView) {
   shellStateCallback = onShellState ?? null;
   questionViewCallback = onQuestionView ?? null;
+  summaryViewCallback = onSummaryView ?? null;
+  modalViewCallback = onModalView ?? null;
   refreshElements(root);
 
   if (!initialized && hasRequiredElements()) {
@@ -737,7 +865,11 @@ function initApp(root = document, onShellState, onQuestionView) {
     initialized = true;
   }
 
-  return { handleAnswer: (index) => selectAnswer(index) };
+  return {
+    handleAnswer: (index) => selectAnswer(index),
+    handleCategoryChange,
+    openReviewModal,
+  };
 }
 
 if (typeof document !== "undefined") {
