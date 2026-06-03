@@ -21,9 +21,11 @@ import {
   escapeHtml,
 } from "./state.js";
 import {
-  buildTestQuestions,
-  loadSelectedCorpus,
   difficultyBadge,
+  buildTestQuestions,
+} from "./testPreparation.js";
+import {
+  loadSelectedCorpus,
   setStartViewCallback,
 } from "./parsing.js";
 import {
