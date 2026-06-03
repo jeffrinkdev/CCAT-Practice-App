@@ -1,8 +1,8 @@
 import { joinClassNames } from '../utils/classNames.js'
 
-export default function QuestionView({ hidden, questionView, onAnswer }) {
+export default function QuestionView({ questionView, onAnswer }) {
   return (
-    <section id="questionScreen" className={joinClassNames(hidden && 'hidden')}>
+    <section id="questionScreen">
       <div className="card">
         <div className="question-meta">
           <span id="questionCounter">{questionView.counterText}</span>

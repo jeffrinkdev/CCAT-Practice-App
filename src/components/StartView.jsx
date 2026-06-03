@@ -1,11 +1,8 @@
 import { joinClassNames } from '../utils/classNames.js'
 
-export default function StartView({ hidden, startView, onLoadCorpus, onCorpusChange, onStartTest }) {
+export default function StartView({ startView, onLoadCorpus, onCorpusChange, onStartTest }) {
   return (
-    <section
-      id="startScreen"
-      className={joinClassNames('center-screen', hidden && 'hidden')}
-    >
+    <section id="startScreen" className="center-screen">
       <div className="card start-card">
         <h1>CCAT Practice Simulator</h1>
         <p className="muted">

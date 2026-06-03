@@ -75,6 +75,10 @@ function App() {
     )
   }, [])
 
+  useEffect(() => {
+    appRef.current?.refreshDomRefs?.(document)
+  })
+
   return (
     <>
       <header id="header" className={joinClassNames('app-header', shellState.headerHidden && 'hidden')}>
@@ -113,30 +117,35 @@ function App() {
       </header>
 
       <main>
-        <StartView
-          hidden={shellState.startScreenHidden}
-          startView={startView}
-          onLoadCorpus={() => appRef.current?.loadCorpus()}
-          onCorpusChange={() => appRef.current?.handleCorpusChange()}
-          onStartTest={() => appRef.current?.startTest()}
-        />
-        <QuestionView
-          hidden={shellState.questionScreenHidden}
-          questionView={questionView}
-          onAnswer={(index) => appRef.current?.handleAnswer(index)}
-        />
-        <SummaryView
-          hidden={shellState.summaryScreenHidden}
-          summaryView={summaryView}
-          modalView={modalView}
-          onCategoryChange={(cat) => appRef.current?.handleCategoryChange(cat)}
-          onOpenReview={(qi, ri) => appRef.current?.openReviewModal(qi, ri)}
-          onPrevReview={() => appRef.current?.prevReview()}
-          onNextReview={() => appRef.current?.nextReview()}
-          onCloseModal={() => appRef.current?.closeModal()}
-          onGoogleSearch={() => appRef.current?.googleSearch()}
-          onCopyPrompt={() => appRef.current?.copyPrompt()}
-        />
+        {!shellState.startScreenHidden && (
+          <StartView
+            startView={startView}
+            onLoadCorpus={() => appRef.current?.loadCorpus()}
+            onCorpusChange={() => appRef.current?.handleCorpusChange()}
+            onStartTest={() => appRef.current?.startTest()}
+          />
+        )}
+
+        {!shellState.questionScreenHidden && (
+          <QuestionView
+            questionView={questionView}
+            onAnswer={(index) => appRef.current?.handleAnswer(index)}
+          />
+        )}
+
+        {!shellState.summaryScreenHidden && (
+          <SummaryView
+            summaryView={summaryView}
+            modalView={modalView}
+            onCategoryChange={(cat) => appRef.current?.handleCategoryChange(cat)}
+            onOpenReview={(qi, ri) => appRef.current?.openReviewModal(qi, ri)}
+            onPrevReview={() => appRef.current?.prevReview()}
+            onNextReview={() => appRef.current?.nextReview()}
+            onCloseModal={() => appRef.current?.closeModal()}
+            onGoogleSearch={() => appRef.current?.googleSearch()}
+            onCopyPrompt={() => appRef.current?.copyPrompt()}
+          />
+        )}
       </main>
     </>
   )

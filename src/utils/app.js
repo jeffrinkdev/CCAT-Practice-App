@@ -794,6 +794,13 @@ function handleAnswerKey(event) {
   }
 
   const index = key.charCodeAt(0) - 65;
+
+  if (questionViewCallback) {
+    event.preventDefault();
+    selectAnswer(index);
+    return;
+  }
+
   const button = els.answers?.querySelectorAll(".answer-btn")?.[index];
   if (!button) {
     return;
@@ -903,6 +910,7 @@ function initApp(root = document, onShellState, onQuestionView, onSummaryView, o
     handleAnswer: (index) => selectAnswer(index),
     handleCategoryChange,
     openReviewModal,
+    refreshDomRefs: (nextRoot = document) => refreshElements(nextRoot),
     loadCorpus: loadSelectedCorpus,
     handleCorpusChange: () => { els.corpusFileInput.value = ""; loadSelectedCorpus(); },
     startTest,

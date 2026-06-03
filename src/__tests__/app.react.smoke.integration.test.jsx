@@ -81,7 +81,7 @@ describe('App React smoke integration', () => {
       startBtn?.click()
       await flush()
     })
-    expect(container.querySelector('#questionScreen')?.classList.contains('hidden')).toBe(false)
+    expect(container.querySelector('#questionScreen')).toBeTruthy()
 
     const firstAnswer = container.querySelector('#answers .answer-btn')
     expect(firstAnswer).toBeTruthy()
@@ -101,8 +101,8 @@ describe('App React smoke integration', () => {
       await flush()
     })
 
-    expect(container.querySelector('#summaryScreen')?.classList.contains('hidden')).toBe(false)
-    expect(container.querySelector('#questionScreen')?.classList.contains('hidden')).toBe(true)
+    expect(container.querySelector('#summaryScreen')).toBeTruthy()
+    expect(container.querySelector('#questionScreen')).toBeFalsy()
     expect(container.querySelector('#summaryStats')?.textContent).toContain('Answered')
   })
 })

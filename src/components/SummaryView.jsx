@@ -1,7 +1,6 @@
 import { joinClassNames } from '../utils/classNames.js'
 
 export default function SummaryView({
-  hidden,
   summaryView,
   modalView,
   onCategoryChange,
@@ -14,7 +13,7 @@ export default function SummaryView({
 }) {
   return (
     <>
-      <section id="summaryScreen" className={joinClassNames(hidden && 'hidden')}>
+      <section id="summaryScreen">
         <div className="card">
           <div className="summary-head">
             <h2>Test Summary</h2>
