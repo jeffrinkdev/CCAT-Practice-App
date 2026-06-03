@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { initApp } from './utils/app.js'
 import { QUESTION_BAR_SECONDS } from './utils/state.js'
+import StartView from './components/StartView.jsx'
+import QuestionView from './components/QuestionView.jsx'
+import SummaryView from './components/SummaryView.jsx'
 
 const DEFAULT_SHELL_STATE = {
   headerHidden: true,
@@ -96,6 +99,7 @@ function App() {
               id="stopBtn"
               className={joinClassNames('secondary-btn', shellState.stopButtonHidden && 'hidden')}
               type="button"
+              onClick={() => appRef.current?.stopTest()}
             >
               Stop
             </button>
@@ -103,6 +107,7 @@ function App() {
               id="headerRestartBtn"
               className={joinClassNames('secondary-btn', shellState.restartButtonHidden && 'hidden')}
               type="button"
+              onClick={() => appRef.current?.restartTest()}
             >
               Restart
             </button>
@@ -111,214 +116,31 @@ function App() {
       </header>
 
       <main>
-        <section
-          id="startScreen"
-          className={joinClassNames('center-screen', shellState.startScreenHidden && 'hidden')}
-        >
-          <div className="card start-card">
-            <h1>CCAT Practice Simulator</h1>
-            <p className="muted">
-              50 questions. 15 minutes. Select a corpus, then start. Text and JSON/visual corpora are supported.
-            </p>
-
-            <div className="corpus-controls">
-              <div className="field">
-                <label htmlFor="corpusSelect">Corpus</label>
-                <select id="corpusSelect"></select>
-              </div>
-
-              <div className="field">
-                <label htmlFor="corpusFileInput">Optional local corpus file</label>
-                <input
-                  id="corpusFileInput"
-                  type="file"
-                  accept=".txt,.json,application/json,text/plain"
-                />
-              </div>
-
-              <div className="field">
-                <label htmlFor="testOrderSelect">Question order</label>
-                <select id="testOrderSelect" defaultValue="progressive">
-                  <option value="progressive">Progressive difficulty: easier to harder</option>
-                  <option value="random">Fully random order</option>
-                </select>
-              </div>
-            </div>
-
-            <button id="loadCorpusBtn" className="secondary-btn" type="button">
-              Load Selected Corpus
-            </button>
-            <button
-              id="startBtn"
-              className="primary-btn"
-              type="button"
-              disabled={startView.startBtnDisabled}
-            >
-              {startView.startBtnLabel}
-            </button>
-            <p id="corpusStatus" className="muted">{startView.corpusStatus}</p>
-            <div
-              id="loadError"
-              className={joinClassNames('load-error', startView.loadErrorHidden && 'hidden')}
-              dangerouslySetInnerHTML={{ __html: startView.loadErrorHtml }}
-            />
-          </div>
-        </section>
-
-        <section id="questionScreen" className={joinClassNames(shellState.questionScreenHidden && 'hidden')}>
-          <div className="card">
-            <div className="question-meta">
-              <span id="questionCounter">{questionView.counterText}</span>
-            </div>
-            <div className="question-text-frame">
-              <div
-                id="questionContent"
-                className="question-content"
-                dangerouslySetInnerHTML={{ __html: questionView.questionHtml }}
-              />
-            </div>
-            <div id="answers" className="answers">
-              {questionView.choices.map(({ index, label, contentHtml }) => (
-                <button
-                  key={index}
-                  type="button"
-                  className={joinClassNames('answer-btn', questionView.selectedChoiceIndex === index && 'selected')}
-                  onClick={() => appRef.current?.handleAnswer(index)}
-                  dangerouslySetInnerHTML={{ __html: `<span class="answer-label">${label}</span>${contentHtml}` }}
-                />
-              ))}
-            </div>
-            <p className="muted" style={{ margin: '0.9rem 0 0' }}>
-              Keyboard: press A, B, C, or D to answer.
-            </p>
-
-            <div className="timing-wrap">
-              <div className="timing-label-row">
-                <span>Question pace</span>
-                <span id="timingPositionText">{questionView.timingText}</span>
-              </div>
-              <div className="timing-bar">
-                <div className="timing-marker marker-skip"></div>
-                <div className="timing-marker marker-18"></div>
-                <div className="timing-marker marker-36"></div>
-                <div className="timing-marker marker-45"></div>
-                <div id="timingPosition" className="timing-position" style={{ left: `${questionView.timingPct}%` }}></div>
-              </div>
-              <div className="timing-scale">
-                <span className="timing-marker-label label-skip">3s</span>
-                <span className="timing-marker-label label-18">18s</span>
-                <span className="timing-marker-label label-36">36s</span>
-                <span className="timing-marker-label label-45">45s</span>
-              </div>
-            </div>
-
-            <div className="progress">
-              <div id="progressFill" className="progress-fill" style={{ width: `${questionView.progressPct}%` }}></div>
-            </div>
-          </div>
-        </section>
-
-        <section id="summaryScreen" className={joinClassNames(shellState.summaryScreenHidden && 'hidden')}>
-          <div className="card">
-            <div className="summary-head">
-              <h2>Test Summary</h2>
-            </div>
-            <div id="summaryStats" className="summary-stats">
-              <div className="stat"><span className="muted">Correct</span><strong>{summaryView.correct} / {summaryView.total}</strong></div>
-              <div className="stat"><span className="muted">Answered</span><strong>{summaryView.answered} / {summaryView.total}</strong></div>
-              <div className="stat"><span className="muted">Average time</span><strong>{summaryView.averageText}</strong></div>
-              <div className="stat"><span className="muted">Average time, not skipped</span><strong>{summaryView.averageNoSkipsText}</strong></div>
-            </div>
-            <div id="categoryControls" className="category-controls">
-              {summaryView.categories.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  className={joinClassNames('category-btn', summaryView.activeCategory === cat && 'active')}
-                  onClick={() => appRef.current?.handleCategoryChange(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-            <p className="muted">Click any question to review your answer, the correct answer, and your time spent.</p>
-            <div id="summaryContainer">
-              {summaryView.sections.map((section) => (
-                <section key={section.title} className="category-section">
-                  <h3 className="category-title">{section.title}</h3>
-                  <div className="summary-grid">
-                    {section.items.map((item) => (
-                      <button
-                        key={item.questionIndex}
-                        type="button"
-                        className={joinClassNames('summary-item', item.isCorrect ? 'correct' : 'incorrect')}
-                        onClick={() => appRef.current?.openReviewModal(item.questionIndex, item.reviewIndexes)}
-                        dangerouslySetInnerHTML={{
-                          __html: `<strong>#${item.questionIndex + 1}</strong><span>${item.isCorrect ? 'Correct' : 'Incorrect'}</span><br>${item.timePillHtml}<br>${item.difficultyHtml}`,
-                        }}
-                      />
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
-          </div>
-        </section>
+        <StartView
+          hidden={shellState.startScreenHidden}
+          startView={startView}
+          onLoadCorpus={() => appRef.current?.loadCorpus()}
+          onCorpusChange={() => appRef.current?.handleCorpusChange()}
+          onStartTest={() => appRef.current?.startTest()}
+        />
+        <QuestionView
+          hidden={shellState.questionScreenHidden}
+          questionView={questionView}
+          onAnswer={(index) => appRef.current?.handleAnswer(index)}
+        />
+        <SummaryView
+          hidden={shellState.summaryScreenHidden}
+          summaryView={summaryView}
+          modalView={modalView}
+          onCategoryChange={(cat) => appRef.current?.handleCategoryChange(cat)}
+          onOpenReview={(qi, ri) => appRef.current?.openReviewModal(qi, ri)}
+          onPrevReview={() => appRef.current?.prevReview()}
+          onNextReview={() => appRef.current?.nextReview()}
+          onCloseModal={() => appRef.current?.closeModal()}
+          onGoogleSearch={() => appRef.current?.googleSearch()}
+          onCopyPrompt={() => appRef.current?.copyPrompt()}
+        />
       </main>
-
-      <div id="modalBackdrop" className={joinClassNames('modal-backdrop', !modalView.open && 'hidden')}>
-        <div className="modal">
-          <div className="modal-header">
-            <div>
-              <h3 id="modalTitle">{modalView.title}</h3>
-              <div id="modalBadges" className="badges" dangerouslySetInnerHTML={{ __html: modalView.badgesHtml }} />
-            </div>
-            <div className="modal-actions">
-              <button id="prevReviewBtn" className="secondary-btn" type="button" disabled={modalView.prevDisabled}>
-                Previous
-              </button>
-              <button id="nextReviewBtn" className="secondary-btn" type="button" disabled={modalView.nextDisabled}>
-                Next
-              </button>
-              <button id="closeModalBtn" className="secondary-btn" type="button">
-                Dismiss
-              </button>
-            </div>
-          </div>
-
-          <div className="modal-question-frame">
-            <div
-              id="modalQuestionContent"
-              className="question-content"
-              dangerouslySetInnerHTML={{ __html: modalView.questionHtml }}
-            />
-          </div>
-
-          <div id="modalAnswers">
-            {modalView.answers.map(({ label, contentHtml, badgesHtml, className }, i) => (
-              <div
-                key={i}
-                className={className}
-                dangerouslySetInnerHTML={{
-                  __html: `<div class="modal-answer-main"><strong>${label}.</strong> ${contentHtml}</div><div class="modal-answer-markers">${badgesHtml}</div>`,
-                }}
-              />
-            ))}
-          </div>
-
-          <div className="modal-footer">
-            <div className="modal-footer-actions">
-              <button id="googleSearchBtn" className="secondary-btn explain-btn" type="button">
-                Explain / Google
-              </button>
-              <button id="copyPromptBtn" className="secondary-btn explain-btn" type="button">
-                Copy Prompt
-              </button>
-              <span id="copyStatus" className="copy-status">{modalView.copyStatus}</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   )
 }

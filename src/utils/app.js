@@ -800,25 +800,27 @@ function renderCorpusOptions() {
 }
 
 function bindEvents() {
-  els.loadCorpusBtn.addEventListener("click", loadSelectedCorpus);
-  els.corpusSelect.addEventListener("change", () => {
-    els.corpusFileInput.value = "";
-    loadSelectedCorpus();
-  });
-  els.corpusFileInput.addEventListener("change", loadSelectedCorpus);
-  els.startBtn.addEventListener("click", startTest);
-  els.stopBtn.addEventListener("click", stopTest);
-  els.headerRestartBtn.addEventListener("click", restartTest);
-  els.prevReviewBtn.addEventListener("click", () => showAdjacentReview(-1));
-  els.nextReviewBtn.addEventListener("click", () => showAdjacentReview(1));
-  els.googleSearchBtn.addEventListener("click", searchCurrentReviewOnGoogle);
-  els.copyPromptBtn.addEventListener("click", copyCurrentReviewPrompt);
-  els.closeModalBtn.addEventListener("click", closeModal);
-  els.modalBackdrop.addEventListener("click", (event) => {
-    if (event.target === els.modalBackdrop) {
-      closeModal();
-    }
-  });
+  if (!shellStateCallback) {
+    els.loadCorpusBtn.addEventListener("click", loadSelectedCorpus);
+    els.corpusSelect.addEventListener("change", () => {
+      els.corpusFileInput.value = "";
+      loadSelectedCorpus();
+    });
+    els.corpusFileInput.addEventListener("change", loadSelectedCorpus);
+    els.startBtn.addEventListener("click", startTest);
+    els.stopBtn.addEventListener("click", stopTest);
+    els.headerRestartBtn.addEventListener("click", restartTest);
+    els.prevReviewBtn.addEventListener("click", () => showAdjacentReview(-1));
+    els.nextReviewBtn.addEventListener("click", () => showAdjacentReview(1));
+    els.googleSearchBtn.addEventListener("click", searchCurrentReviewOnGoogle);
+    els.copyPromptBtn.addEventListener("click", copyCurrentReviewPrompt);
+    els.closeModalBtn.addEventListener("click", closeModal);
+    els.modalBackdrop.addEventListener("click", (event) => {
+      if (event.target === els.modalBackdrop) {
+        closeModal();
+      }
+    });
+  }
 
   document.addEventListener("keydown", (event) => {
     if (isModalOpen) {
@@ -846,7 +848,7 @@ function bindEvents() {
       updateQuestionFrameHeightForActiveTest();
     }
 
-    if (!els.modalBackdrop.classList.contains("hidden")) {
+    if (isModalOpen) {
       updateModalQuestionFrameHeightForReviewSet();
     }
   });
@@ -871,6 +873,16 @@ function initApp(root = document, onShellState, onQuestionView, onSummaryView, o
     handleAnswer: (index) => selectAnswer(index),
     handleCategoryChange,
     openReviewModal,
+    loadCorpus: loadSelectedCorpus,
+    handleCorpusChange: () => { els.corpusFileInput.value = ""; loadSelectedCorpus(); },
+    startTest,
+    stopTest,
+    restartTest,
+    prevReview: () => showAdjacentReview(-1),
+    nextReview: () => showAdjacentReview(1),
+    googleSearch: searchCurrentReviewOnGoogle,
+    copyPrompt: copyCurrentReviewPrompt,
+    closeModal,
   };
 }
 
