@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act } from 'react'
-import { createRoot } from 'react-dom/client'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 
 const initAppMock = vi.fn()
 
@@ -13,26 +13,13 @@ function flush() {
 }
 
 describe('App React integration', () => {
-  let container
-  let root
-
   beforeEach(() => {
     vi.clearAllMocks()
     globalThis.IS_REACT_ACT_ENVIRONMENT = true
-    container = document.createElement('div')
-    document.body.appendChild(container)
   })
 
   afterEach(async () => {
-    if (root) {
-      await act(async () => {
-        root.unmount()
-      })
-      root = null
-    }
-
-    container?.remove()
-    container = null
+    initAppMock.mockReset()
   })
 
   it('wires top-level actions to controller methods', async () => {
@@ -60,11 +47,8 @@ describe('App React integration', () => {
     })
     const { default: App } = await import('../App.jsx')
 
-    await act(async () => {
-      root = createRoot(container)
-      root.render(<App />)
-      await flush()
-    })
+    render(<App />)
+    await waitFor(() => expect(initAppMock).toHaveBeenCalledTimes(1))
 
     await act(async () => {
       setStartView({
@@ -74,11 +58,11 @@ describe('App React integration', () => {
       await flush()
     })
 
-    container.querySelector('#loadCorpusBtn')?.click()
-    container.querySelector('#corpusSelect')?.dispatchEvent(new Event('change', { bubbles: true }))
-    container.querySelector('#startBtn')?.click()
-    container.querySelector('#stopBtn')?.click()
-    container.querySelector('#headerRestartBtn')?.click()
+    fireEvent.click(screen.getByRole('button', { name: 'Load Selected Corpus' }))
+    fireEvent.change(screen.getByLabelText('Corpus'))
+    fireEvent.click(screen.getByRole('button', { name: 'Start Test' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Stop' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Restart' }))
 
     expect(controller.loadCorpus).toHaveBeenCalledTimes(1)
     expect(controller.handleCorpusChange).toHaveBeenCalledTimes(1)
@@ -120,12 +104,8 @@ describe('App React integration', () => {
     })
 
     const { default: App } = await import('../App.jsx')
-
-    await act(async () => {
-      root = createRoot(container)
-      root.render(<App />)
-      await flush()
-    })
+    const { container } = render(<App />)
+    await waitFor(() => expect(initAppMock).toHaveBeenCalledTimes(1))
 
     await act(async () => {
       setStartView({
@@ -149,10 +129,10 @@ describe('App React integration', () => {
       await flush()
     })
 
-    expect(container.querySelector('#questionCounter')?.textContent).toContain('Question 1 of 3')
+    expect(screen.getByText(/Question 1 of 3/)).toBeInTheDocument()
     expect(container.querySelectorAll('#answers .answer-btn')).toHaveLength(2)
 
-    container.querySelectorAll('#answers .answer-btn')[1]?.click()
+    fireEvent.click(container.querySelectorAll('#answers .answer-btn')[1])
     expect(controller.handleAnswer).toHaveBeenCalledWith(1)
 
     await act(async () => {
@@ -186,10 +166,10 @@ describe('App React integration', () => {
       await flush()
     })
 
-    container.querySelectorAll('#categoryControls .category-btn')[1]?.click()
+    fireEvent.click(screen.getByRole('button', { name: 'Verbal' }))
     expect(controller.handleCategoryChange).toHaveBeenCalledWith('Verbal')
 
-    container.querySelector('.summary-item')?.click()
+    fireEvent.click(container.querySelector('.summary-item'))
     expect(controller.openReviewModal).toHaveBeenCalledWith(0, [0, 1, 2])
 
     await act(async () => {
@@ -208,11 +188,11 @@ describe('App React integration', () => {
       await flush()
     })
 
-    container.querySelector('#prevReviewBtn')?.click()
-    container.querySelector('#nextReviewBtn')?.click()
-    container.querySelector('#googleSearchBtn')?.click()
-    container.querySelector('#copyPromptBtn')?.click()
-    container.querySelector('#closeModalBtn')?.click()
+    fireEvent.click(screen.getByRole('button', { name: 'Previous' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Next' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Explain / Google' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Copy Prompt' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Dismiss' }))
 
     expect(controller.prevReview).toHaveBeenCalledTimes(1)
     expect(controller.nextReview).toHaveBeenCalledTimes(1)
