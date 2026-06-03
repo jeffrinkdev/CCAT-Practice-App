@@ -22,6 +22,9 @@ import {
 } from "./state.js";
 import {
   difficultyBadge,
+  difficultyClass,
+  difficultyLabel,
+  ensureDifficulty,
   buildTestQuestions,
 } from "./testPreparation.js";
 import {
@@ -393,10 +396,20 @@ function buildResultItems(results, reviewIndexes) {
     questionIndex: result.questionIndex,
     isCorrect: result.isCorrect,
     timeSpentSeconds: result.timeSpentSeconds,
-    timePillHtml: renderTimePill(result.timeSpentSeconds),
-    difficultyHtml: difficultyBadge(activeQuestions[result.questionIndex]),
+    ...buildTimePillData(result.timeSpentSeconds),
+    difficultyText: difficultyLabel(ensureDifficulty(activeQuestions[result.questionIndex])),
+    difficultyClassName: `difficulty-badge ${difficultyClass(ensureDifficulty(activeQuestions[result.questionIndex]))}`,
     reviewIndexes,
   }));
+}
+
+function buildTimePillData(seconds) {
+  if (seconds < SKIPPED_SECONDS) {
+    return { timePillText: "Skipped", timePillClassName: "time-pill skipped" };
+  }
+
+  const className = seconds >= QUESTION_RED_SECONDS ? "time-pill red" : seconds >= QUESTION_YELLOW_SECONDS ? "time-pill yellow" : "time-pill";
+  return { timePillText: `${seconds.toFixed(1)}s`, timePillClassName: className };
 }
 
 function buildSummarySections() {

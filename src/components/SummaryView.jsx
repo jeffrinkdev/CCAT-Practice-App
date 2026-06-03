@@ -49,10 +49,14 @@ export default function SummaryView({
                       type="button"
                       className={joinClassNames('summary-item', item.isCorrect ? 'correct' : 'incorrect')}
                       onClick={() => onOpenReview(item.questionIndex, item.reviewIndexes)}
-                      dangerouslySetInnerHTML={{
-                        __html: `<strong>#${item.questionIndex + 1}</strong><span>${item.isCorrect ? 'Correct' : 'Incorrect'}</span><br>${item.timePillHtml}<br>${item.difficultyHtml}`,
-                      }}
-                    />
+                    >
+                      <strong>#{item.questionIndex + 1}</strong>
+                      <span>{item.isCorrect ? 'Correct' : 'Incorrect'}</span>
+                      <br />
+                      <span className={item.timePillClassName}>{item.timePillText}</span>
+                      <br />
+                      <span className={item.difficultyClassName}>{item.difficultyText}</span>
+                    </button>
                   ))}
                 </div>
               </section>
