@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CCAT Practice Simulator</title>
+<link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+<header id="header" class="app-header hidden"><div class="brand">CCAT Practice Simulator</div><div class="header-actions"><div id="timer" class="timer">15:00</div><div class="stop-holder"><button id="stopBtn" class="secondary-btn" type="button">Stop</button><button id="headerRestartBtn" class="secondary-btn hidden" type="button">Restart</button></div></div></header>
+<main>
+<section id="startScreen" class="center-screen"><div class="card start-card">
+<h1>CCAT Practice Simulator</h1>
+<p class="muted">50 questions. 15 minutes. Select a corpus, then start. Text and JSON/visual corpora are supported.</p>
+<div class="corpus-controls">
+  <div class="field"><label for="corpusSelect">Corpus</label><select id="corpusSelect"><option value="CCATQuestions500DifficultyFixed.txt" data-type="txt">Text corpus fixed: CCATQuestions500DifficultyFixed.txt</option><option value="CCATQuestions500VisualDifficultyFixed.json" data-type="json">Mixed visual corpus with difficulty: CCATQuestions500VisualDifficultyFixed.json</option></select></div>
+  <div class="field"><label for="corpusFileInput">Optional local corpus file</label><input id="corpusFileInput" type="file" accept=".txt,.json,application/json,text/plain" /></div>
+  <div class="field">
+    <label for="testOrderSelect">Question order</label>
+    <select id="testOrderSelect">
+      <option value="progressive" selected>Progressive difficulty: easier to harder</option>
+      <option value="random">Fully random order</option>
+    </select>
+  </div>
+</div>
+<button id="loadCorpusBtn" class="secondary-btn" type="button">Load Selected Corpus</button>
+<button id="startBtn" class="primary-btn" disabled>Load a corpus first</button>
+<p id="corpusStatus" class="muted"></p>
+<div id="loadError" class="load-error hidden"></div>
+</div></section>
+
+<section id="questionScreen" class="hidden"><div class="card">
+<div class="question-meta"><span id="questionCounter"></span></div>
+<div class="question-text-frame"><div id="questionContent" class="question-content"></div></div>
+<div id="answers" class="answers"></div>
+<p class="muted" style="margin:0.9rem 0 0;">Keyboard: press A, B, C, or D to answer.</p>
+<div class="timing-wrap"><div class="timing-label-row"><span>Question pace</span><span id="timingPositionText">0.0s / 60s</span></div><div class="timing-bar"><div class="timing-marker marker-skip"></div><div class="timing-marker marker-18"></div><div class="timing-marker marker-36"></div><div class="timing-marker marker-45"></div><div id="timingPosition" class="timing-position"></div></div><div class="timing-scale"><span class="timing-marker-label label-skip">3s</span><span class="timing-marker-label label-18">18s</span><span class="timing-marker-label label-36">36s</span><span class="timing-marker-label label-45">45s</span></div></div>
+<div class="progress"><div id="progressFill" class="progress-fill"></div></div>
+</div></section>
+
+<section id="summaryScreen" class="hidden"><div class="card"><div class="summary-head"><h2>Test Summary</h2></div><div id="summaryStats" class="summary-stats"></div><div id="categoryControls" class="category-controls"></div><p class="muted">Click any question to review your answer, the correct answer, and your time spent.</p><div id="summaryContainer"></div></div></section>
+</main>
+
+<div id="modalBackdrop" class="modal-backdrop hidden"><div class="modal"><div class="modal-header"><div><h3 id="modalTitle"></h3><div id="modalBadges" class="badges"></div></div><div class="modal-actions"><button id="prevReviewBtn" class="secondary-btn" type="button">Previous</button><button id="nextReviewBtn" class="secondary-btn" type="button">Next</button><button id="closeModalBtn" class="secondary-btn" type="button">Dismiss</button></div></div><div class="modal-question-frame"><div id="modalQuestionContent" class="question-content"></div></div><div id="modalAnswers"></div><div class="modal-footer"><div class="modal-footer-actions"><button id="googleSearchBtn" class="secondary-btn explain-btn" type="button">Explain / Google</button><button id="copyPromptBtn" class="secondary-btn explain-btn" type="button">Copy Prompt</button><span id="copyStatus" class="copy-status"></span></div></div></div></div>
+<script src="src/js/state.js"></script>
+<script src="src/js/parsing.js"></script>
+<script src="src/js/rendering.js"></script>
+<script src="src/js/app.js"></script>
+</body>
+</html>
