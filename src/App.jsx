@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { initApp } from './utils/app.js'
 
 const DEFAULT_SHELL_STATE = {
   headerHidden: true,
@@ -27,19 +28,7 @@ function App() {
       },
     }
 
-    if (window.__ccatLegacyAppMounted) {
-      return () => {
-        delete window.__ccatReactBridge
-      }
-    }
-
-    const script = document.createElement('script')
-    script.type = 'module'
-    script.src = '/js/app.js'
-    script.dataset.ccatApp = 'true'
-    document.body.appendChild(script)
-
-    window.__ccatLegacyAppMounted = true
+    initApp(document)
 
     return () => {
       delete window.__ccatReactBridge

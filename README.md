@@ -38,7 +38,13 @@ npm run preview
 - `src/App.jsx`: React-rendered app shell
 - `src/main.jsx`: React entry point
 - `src/index.css`: application stylesheet
-- `public/js/`: existing app logic, kept intact while the UI is moved onto a React root
+- `src/utils/`: app logic split by responsibility (state/parsing/rendering/runtime)
 - `public/data/questions-text.txt`: text corpus
 - `public/data/questions-visual.json`: visual/text mixed corpus
+
+## Migration Note
+
+- Legacy `public/js/` has been retired.
+- Runtime initialization now starts from `src/App.jsx` and calls `initApp` from `src/utils/app.js`.
+- Tests now run from `src/__tests__/`.
 
