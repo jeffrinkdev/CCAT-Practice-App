@@ -24,6 +24,7 @@ import {
   buildTestQuestions,
   loadSelectedCorpus,
   difficultyBadge,
+  setStartViewCallback,
 } from "./parsing.js";
 import {
   buildQuestionHtml,
@@ -851,11 +852,12 @@ function bindEvents() {
   });
 }
 
-function initApp(root = document, onShellState, onQuestionView, onSummaryView, onModalView) {
+function initApp(root = document, onShellState, onQuestionView, onSummaryView, onModalView, onStartView) {
   shellStateCallback = onShellState ?? null;
   questionViewCallback = onQuestionView ?? null;
   summaryViewCallback = onSummaryView ?? null;
   modalViewCallback = onModalView ?? null;
+  setStartViewCallback(onStartView ?? null);
   refreshElements(root);
 
   if (!initialized && hasRequiredElements()) {

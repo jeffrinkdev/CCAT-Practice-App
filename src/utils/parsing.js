@@ -13,8 +13,18 @@ import {
   clearQuestions,
 } from "./state.js";
 
+let startViewCallback = null;
+
+export function setStartViewCallback(fn) {
+  startViewCallback = fn ?? null;
+}
+
 async function loadSelectedCorpus() {
-  els.loadError.classList.add("hidden");
+  if (startViewCallback) {
+    startViewCallback({ loadErrorHidden: true });
+  } else {
+    els.loadError.classList.add("hidden");
+  }
 
   try {
     let text;
@@ -43,21 +53,38 @@ async function loadSelectedCorpus() {
     }
 
     questions.forEach(ensureDifficulty);
-    els.startBtn.disabled = false;
-    els.startBtn.textContent = "Start Test";
 
     const counts = countByCategory(questions);
-    els.corpusStatus.textContent = `Loaded ${questions.length} questions · ${Object.entries(counts)
+    const corpusStatus = `Loaded ${questions.length} questions · ${Object.entries(counts)
       .map(([key, value]) => `${key}: ${value}`)
       .join(" · ")}`;
+
+    if (startViewCallback) {
+      startViewCallback({ startBtnDisabled: false, startBtnLabel: "Start Test", corpusStatus });
+    } else {
+      els.startBtn.disabled = false;
+      els.startBtn.textContent = "Start Test";
+      els.corpusStatus.textContent = corpusStatus;
+    }
   } catch (error) {
     clearQuestions();
-    els.startBtn.disabled = true;
-    els.startBtn.textContent = "Load a corpus first";
-    els.loadError.classList.remove("hidden");
-    els.loadError.innerHTML = `<strong>Unable to load corpus.</strong><br>${escapeHtml(
+    const loadErrorHtml = `<strong>Unable to load corpus.</strong><br>${escapeHtml(
       error.message,
     )}<br><br>For server-loaded files, place the selected corpus in the same folder as this HTML file and run <code>python3 -m http.server</code>.`;
+
+    if (startViewCallback) {
+      startViewCallback({
+        startBtnDisabled: true,
+        startBtnLabel: "Load a corpus first",
+        loadErrorHidden: false,
+        loadErrorHtml,
+      });
+    } else {
+      els.startBtn.disabled = true;
+      els.startBtn.textContent = "Load a corpus first";
+      els.loadError.classList.remove("hidden");
+      els.loadError.innerHTML = loadErrorHtml;
+    }
   }
 }
 

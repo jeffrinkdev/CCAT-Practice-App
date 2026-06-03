@@ -44,6 +44,14 @@ const DEFAULT_MODAL_VIEW = {
   copyStatus: '',
 }
 
+const DEFAULT_START_VIEW = {
+  startBtnDisabled: true,
+  startBtnLabel: 'Load a corpus first',
+  corpusStatus: '',
+  loadErrorHidden: true,
+  loadErrorHtml: '',
+}
+
 function joinClassNames(...parts) {
   return parts.filter(Boolean).join(' ')
 }
@@ -54,6 +62,7 @@ function App() {
   const [questionView, setQuestionView] = useState(DEFAULT_QUESTION_VIEW)
   const [summaryView, setSummaryView] = useState(DEFAULT_SUMMARY_VIEW)
   const [modalView, setModalView] = useState(DEFAULT_MODAL_VIEW)
+  const [startView, setStartView] = useState(DEFAULT_START_VIEW)
 
   useEffect(() => {
     appRef.current = initApp(
@@ -62,6 +71,7 @@ function App() {
       (patch) => setQuestionView((cur) => ({ ...cur, ...patch })),
       (data) => setSummaryView((cur) => ({ ...cur, ...data })),
       (patch) => setModalView((cur) => ({ ...cur, ...patch })),
+      (patch) => setStartView((cur) => ({ ...cur, ...patch })),
     )
   }, [])
 
@@ -138,11 +148,20 @@ function App() {
             <button id="loadCorpusBtn" className="secondary-btn" type="button">
               Load Selected Corpus
             </button>
-            <button id="startBtn" className="primary-btn" type="button" disabled>
-              Load a corpus first
+            <button
+              id="startBtn"
+              className="primary-btn"
+              type="button"
+              disabled={startView.startBtnDisabled}
+            >
+              {startView.startBtnLabel}
             </button>
-            <p id="corpusStatus" className="muted"></p>
-            <div id="loadError" className="load-error hidden"></div>
+            <p id="corpusStatus" className="muted">{startView.corpusStatus}</p>
+            <div
+              id="loadError"
+              className={joinClassNames('load-error', startView.loadErrorHidden && 'hidden')}
+              dangerouslySetInnerHTML={{ __html: startView.loadErrorHtml }}
+            />
           </div>
         </section>
 
