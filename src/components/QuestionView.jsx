@@ -1,4 +1,5 @@
 import { joinClassNames } from '../utils/classNames.js'
+import HtmlContent from './HtmlContent.jsx'
 
 export default function QuestionView({ hidden, questionView, onAnswer }) {
   return (
@@ -11,8 +12,9 @@ export default function QuestionView({ hidden, questionView, onAnswer }) {
           <div
             id="questionContent"
             className="question-content"
-            dangerouslySetInnerHTML={{ __html: questionView.questionHtml }}
-          />
+          >
+            <HtmlContent html={questionView.questionHtml} />
+          </div>
         </div>
         <div id="answers" className="answers">
           {questionView.choices.map(({ index, label, contentHtml }) => (
@@ -21,8 +23,10 @@ export default function QuestionView({ hidden, questionView, onAnswer }) {
               type="button"
               className={joinClassNames('answer-btn', questionView.selectedChoiceIndex === index && 'selected')}
               onClick={() => onAnswer(index)}
-              dangerouslySetInnerHTML={{ __html: `<span class="answer-label">${label}</span>${contentHtml}` }}
-            />
+            >
+              <span className="answer-label">{label}</span>
+              <HtmlContent html={contentHtml} />
+            </button>
           ))}
         </div>
         <p className="muted" style={{ margin: '0.9rem 0 0' }}>

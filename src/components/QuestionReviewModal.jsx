@@ -1,4 +1,5 @@
 import { joinClassNames } from '../utils/classNames.js'
+import HtmlContent from './HtmlContent.jsx'
 
 export default function QuestionReviewModal({
   modalView,
@@ -18,7 +19,9 @@ export default function QuestionReviewModal({
         <div className="modal-header">
           <div>
             <h3 id="modalTitle">{modalView.title}</h3>
-            <div id="modalBadges" className="badges" dangerouslySetInnerHTML={{ __html: modalView.badgesHtml }} />
+            <div id="modalBadges" className="badges">
+              <HtmlContent html={modalView.badgesHtml} />
+            </div>
           </div>
           <div className="modal-actions">
             <button id="prevReviewBtn" className="secondary-btn" type="button" disabled={modalView.prevDisabled} onClick={onPrevReview}>
@@ -34,11 +37,9 @@ export default function QuestionReviewModal({
         </div>
 
         <div className="modal-question-frame">
-          <div
-            id="modalQuestionContent"
-            className="question-content"
-            dangerouslySetInnerHTML={{ __html: modalView.questionHtml }}
-          />
+          <div id="modalQuestionContent" className="question-content">
+            <HtmlContent html={modalView.questionHtml} />
+          </div>
         </div>
 
         <div id="modalAnswers">
@@ -46,10 +47,14 @@ export default function QuestionReviewModal({
             <div
               key={i}
               className={className}
-              dangerouslySetInnerHTML={{
-                __html: `<div class="modal-answer-main"><strong>${label}.</strong> ${contentHtml}</div><div class="modal-answer-markers">${badgesHtml}</div>`,
-              }}
-            />
+            >
+              <div className="modal-answer-main">
+                <strong>{label}.</strong> <HtmlContent html={contentHtml} />
+              </div>
+              <div className="modal-answer-markers">
+                <HtmlContent html={badgesHtml} />
+              </div>
+            </div>
           ))}
         </div>
 
