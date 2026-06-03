@@ -1,0 +1,4571 @@
+1. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 14, 25, 36, 47, 58, ___?
+A) 58
+B) 84
+C) 69
+D) 80
+
+2. Verbal
+DIFFICULTY: 4/10
+TIMID : SHY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) bottle : ancient
+B) massive : huge
+C) major : minor
+D) temporary : permanent
+
+3. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Biased
+B) Hostile
+C) Objective
+D) Partisan
+
+4. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points South
+Frame 2: Arrow points East
+Frame 3: Arrow points North
+What is Frame 4?
+A) Arrow points South
+B) Arrow points North
+C) Arrow points West
+D) Arrow points East
+
+5. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 10. If two of the numbers are 15 and 6, what is the third number?
+A) 10
+B) 7
+C) 9
+D) 11
+
+6. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Exhaustive
+B) Careless
+C) Partial
+D) Reckless
+
+7. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 12
+B) 16
+C) 8
+D) 6
+
+8. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 4, 12, 36, 108, 324, ___?
+A) 975
+B) 1019
+C) 324
+D) 972
+
+9. Verbal
+DIFFICULTY: 4/10
+METICULOUS : CAREFUL :: ______ : ______
+Which choice shows the same synonym relationship?
+A) create : destroy
+B) valid : invalid
+C) thunder : polite
+D) hollow : empty
+
+10. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Right
+Frame 2: Top-Right
+Frame 3: Top-Left
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Right corner
+C) Top-Left corner
+D) Bottom-Left corner
+
+11. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points North
+Frame 2: Arrow points West
+Frame 3: Arrow points South
+What is Frame 4?
+A) Arrow points East
+B) Arrow points West
+C) Arrow points South
+D) Arrow points North
+
+12. Numeric / Logic
+DIFFICULTY: 4/10
+What is 25% of 60 plus 30% of 60?
+A) 36
+B) 30
+C) 39
+D) 33
+
+13. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 7 parts concentrate to 5 parts water. If you use 42 ml of concentrate, how many ml of water are needed?
+A) 37 ml
+B) 30 ml
+C) 25 ml
+D) 35 ml
+
+14. Numeric / Logic
+DIFFICULTY: 4/10
+What is 30% of 60 plus 20% of 60?
+A) 36
+B) 30
+C) 27
+D) 33
+
+15. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 5-sided, 6-sided, 7-sided
+Row 2: 6-sided, 7-sided, 8-sided
+Row 3: 7-sided, 8-sided, [ ? ]
+A) 9-sided shape
+B) 7-sided shape
+C) 6-sided shape
+D) 10-sided shape
+
+16. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 18. If two of the numbers are 16 and 7, what is the third number?
+A) 33
+B) 31
+C) 18
+D) 29
+
+17. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small square ➔ 2 small squares ➔ [ ? ]
+A) 1 small square
+B) 3 small squares
+C) 4 small crosses
+D) A blank square
+
+18. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Superficial
+B) Thorough
+C) Brief
+D) Cursory
+
+19. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 6, 12, 24, 48, 96, ___?
+A) 194
+B) 192
+C) 246
+D) 96
+
+20. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Sturdy
+B) Robust
+C) Faulty
+D) Sound
+
+21. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Sound
+B) Faulty
+C) Robust
+D) Sturdy
+
+22. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Cursory
+B) Brief
+C) Superficial
+D) Thorough
+
+23. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Cursory
+B) Exhaustive
+C) Meticulous
+D) Thorough
+
+24. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 5-sided shape
+B) 7-sided shape
+C) 4-sided shape
+D) 8-sided shape
+
+25. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Exhaustive
+B) Reckless
+C) Partial
+D) Careless
+
+26. Verbal
+DIFFICULTY: 4/10
+MASSIVE : HUGE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) calm : agitated
+B) fabric : logical
+C) vivid : bright
+D) congenial : hostile
+
+27. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ▲
+Frame 2: ▼
+Frame 3: ▲
+What is Frame 4?
+A) ◄
+B) ▲
+C) ▼
+D) ►
+
+28. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Rhombus
+B) Diamond
+C) Regular hexagon
+D) Parallelogram
+
+29. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Sound
+B) Optimal
+C) Robust
+D) Faulty
+
+30. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 12
+B) 10
+C) 8
+D) 6
+
+31. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $250 and sells it for $300. What is the profit percentage based on the original cost?
+A) 50%
+B) 15%
+C) 20%
+D) 25%
+
+32. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) q
+B) b
+C) p
+D) d
+
+33. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Bottom-Left corner
+B) Top-Left corner
+C) Bottom-Right corner
+D) Top-Right corner
+
+34. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Exhaustive
+B) Reckless
+C) Partial
+D) Careless
+
+35. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small cross ➔ 2 small crosses ➔ [ ? ]
+A) A blank square
+B) 1 small cross
+C) 3 small crosses
+D) 4 small crosses
+
+36. Verbal
+DIFFICULTY: 4/10
+SERENE : CALM :: ______ : ______
+Which choice shows the same synonym relationship?
+A) ancient : modern
+B) blue : quickly
+C) rapid : swift
+D) temporary : permanent
+
+37. Verbal
+DIFFICULTY: 5/10
+MAJOR : MINOR :: ______ : ______
+Which choice shows the same opposite relationship?
+A) transparent : opaque
+B) serene : calm
+C) timid : shy
+D) thunder : polite
+
+38. Verbal
+DIFFICULTY: 5/10
+VICTORY : DEFEAT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) calm : agitated
+B) brief : concise
+C) objective : neutral
+D) cloud : integer
+
+39. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Hostile
+B) Biased
+C) Objective
+D) Partisan
+
+40. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 31, 34, 37, 40, 43, ___?
+A) 43
+B) 60
+C) 49
+D) 46
+
+41. Verbal
+DIFFICULTY: 5/10
+TRANSPARENT : OPAQUE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) robust : sturdy
+B) paper : brave
+C) meticulous : careful
+D) ancient : modern
+
+42. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 25%. The sale price is $112. What was the original price?
+A) $160
+B) $140
+C) $112
+D) $150
+
+43. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 8, 16, 32, 64, 128, ___?
+A) 314
+B) 128
+C) 256
+D) 258
+
+44. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ▲
+Frame 2: ▼
+Frame 3: ▲
+What is Frame 4?
+A) ▼
+B) ▲
+C) ◄
+D) ►
+
+45. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Useful
+B) Insightful
+C) Profound
+D) Hollow
+
+46. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 6 parts water. If you use 15 ml of concentrate, how many ml of water are needed?
+A) 36 ml
+B) 24 ml
+C) 30 ml
+D) 33 ml
+
+47. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 19. If two of the numbers are 5 and 9, what is the third number?
+A) 43
+B) 19
+C) 45
+D) 41
+
+48. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 40%. The sale price is $72. What was the original price?
+A) $110
+B) $72
+C) $130
+D) $120
+
+49. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 6 parts water. If you use 15 ml of concentrate, how many ml of water are needed?
+A) 33 ml
+B) 24 ml
+C) 30 ml
+D) 36 ml
+
+50. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Parallelogram
+B) Regular hexagon
+C) Rhombus
+D) Diamond
+
+51. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 4 o'clock
+Frame 2: Hand points to 6 o'clock
+Frame 3: Hand points to 8 o'clock
+What is Frame 4?
+A) 11 o'clock
+B) 10 o'clock
+C) 12 o'clock
+D) 1 o'clock
+
+52. Verbal
+DIFFICULTY: 4/10
+MASSIVE : HUGE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) thunder : polite
+B) transparent : opaque
+C) timid : shy
+D) calm : agitated
+
+53. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small cross ➔ 2 small crosses ➔ [ ? ]
+A) 1 small cross
+B) 4 small crosses
+C) 3 small crosses
+D) A blank square
+
+54. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 22. If two of the numbers are 11 and 11, what is the third number?
+A) 22
+B) 42
+C) 46
+D) 44
+
+55. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) b
+B) d
+C) q
+D) p
+
+56. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 2 parts concentrate to 2 parts water. If you use 24 ml of concentrate, how many ml of water are needed?
+A) 24 ml
+B) 32 ml
+C) 22 ml
+D) 26 ml
+
+57. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 5-sided shape
+B) 4-sided shape
+C) 7-sided shape
+D) 8-sided shape
+
+58. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points East
+Frame 2: Arrow points North
+Frame 3: Arrow points West
+What is Frame 4?
+A) Arrow points South
+B) Arrow points West
+C) Arrow points North
+D) Arrow points East
+
+59. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Exhaustive
+B) Cursory
+C) Meticulous
+D) Thorough
+
+60. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) d
+B) p
+C) q
+D) b
+
+61. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ◄
+Frame 2: ►
+Frame 3: ◄
+What is Frame 4?
+A) ▼
+B) ◄
+C) ▲
+D) ►
+
+62. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) 3 small dots
+B) 4 small crosses
+C) 1 small dot
+D) A blank square
+
+63. Verbal
+DIFFICULTY: 4/10
+CURSORY : BRIEF :: ______ : ______
+Which choice shows the same synonym relationship?
+A) elated : joyful
+B) paper : brave
+C) victory : defeat
+D) temporary : permanent
+
+64. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small cross ➔ 2 small crosses ➔ [ ? ]
+A) A blank square
+B) 4 small crosses
+C) 1 small cross
+D) 3 small crosses
+
+65. Verbal
+DIFFICULTY: 5/10
+ABUNDANT : SCARCE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) frugal : thrifty
+B) bottle : ancient
+C) timid : shy
+D) transparent : opaque
+
+66. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Left
+Frame 2: Top-Right
+Frame 3: Bottom-Right
+What is Frame 4?
+A) Bottom-Left corner
+B) Top-Right corner
+C) Top-Left corner
+D) Bottom-Right corner
+
+67. Numeric / Logic
+DIFFICULTY: 4/10
+If 3 workers can prepare 30 items in one hour, how many items can 7 of these workers prepare in one hour?
+A) 80
+B) 60
+C) 70
+D) 90
+
+68. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 20. If two of the numbers are 13 and 14, what is the third number?
+A) 20
+B) 31
+C) 35
+D) 33
+
+69. Numeric / Logic
+DIFFICULTY: 4/10
+What is 30% of 80 plus 10% of 120?
+A) 39
+B) 42
+C) 33
+D) 36
+
+70. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $200 and sells it for $280. What is the profit percentage based on the original cost?
+A) 45%
+B) 40%
+C) 35%
+D) 80%
+
+71. Verbal
+DIFFICULTY: 5/10
+GENEROUS : STINGY :: ______ : ______
+Which choice shows the same opposite relationship?
+A) rapid : swift
+B) scarce : rare
+C) abundant : scarce
+D) planet : careful
+
+72. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Objective
+B) Hostile
+C) Biased
+D) Partisan
+
+73. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Rhombus
+B) Regular hexagon
+C) Diamond
+D) Parallelogram
+
+74. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Refute
+B) Corroborate
+C) Confirm
+D) Validate
+
+75. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ▲
+Frame 2: ▼
+Frame 3: ▲
+What is Frame 4?
+A) ►
+B) ◄
+C) ▲
+D) ▼
+
+76. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Sturdy
+B) Robust
+C) Faulty
+D) Sound
+
+77. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Parallelogram
+B) Rhombus
+C) Regular hexagon
+D) Diamond
+
+78. Numeric / Logic
+DIFFICULTY: 4/10
+If 9 workers can prepare 81 items in one hour, how many items can 11 of these workers prepare in one hour?
+A) 117
+B) 108
+C) 90
+D) 99
+
+79. Numeric / Logic
+DIFFICULTY: 4/10
+What is 20% of 150 plus 40% of 80?
+A) 68
+B) 62
+C) 59
+D) 65
+
+80. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Confirm
+B) Refute
+C) Validate
+D) Corroborate
+
+81. Verbal
+DIFFICULTY: 4/10
+WEARY : TIRED :: ______ : ______
+Which choice shows the same synonym relationship?
+A) major : minor
+B) rigid : stiff
+C) temporary : permanent
+D) lamp : justice
+
+82. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 8, 16, 32, 64, 128, ___?
+A) 256
+B) 258
+C) 296
+D) 128
+
+83. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 12
+B) 16
+C) 8
+D) 6
+
+84. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 5, 10, 20, 40, 80, ___?
+A) 179
+B) 80
+C) 162
+D) 160
+
+85. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $120 and sells it for $150. What is the profit percentage based on the original cost?
+A) 30%
+B) 20%
+C) 35%
+D) 25%
+
+86. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 7-sided shape
+B) 8-sided shape
+C) 11-sided shape
+D) 10-sided shape
+
+87. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Cursory
+B) Thorough
+C) Superficial
+D) Brief
+
+88. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Impartial
+B) Neutral
+C) Objective
+D) Biased
+
+89. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 23, 33, 43, 53, 63, ___?
+A) 83
+B) 73
+C) 63
+D) 82
+
+90. Verbal
+DIFFICULTY: 4/10
+BRIEF : CONCISE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) timid : shy
+B) expand : contract
+C) blue : quickly
+D) victory : defeat
+
+91. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $100 and sells it for $110. What is the profit percentage based on the original cost?
+A) 15%
+B) 20%
+C) 10%
+D) 5%
+
+92. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 7-sided shape
+B) 8-sided shape
+C) 11-sided shape
+D) 10-sided shape
+
+93. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 30%. The sale price is $28. What was the original price?
+A) $40
+B) $50
+C) $30
+D) $28
+
+94. Numeric / Logic
+DIFFICULTY: 4/10
+If 7 workers can prepare 63 items in one hour, how many items can 7 of these workers prepare in one hour?
+A) 81
+B) 72
+C) 54
+D) 63
+
+95. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Empty
+B) Vacuous
+C) Hollow
+D) Substantial
+
+96. Verbal
+DIFFICULTY: 5/10
+VICTORY : DEFEAT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) obscure : unclear
+B) obedient : defiant
+C) thunder : polite
+D) brief : concise
+
+97. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points East
+Frame 2: Arrow points North
+Frame 3: Arrow points West
+What is Frame 4?
+A) Arrow points South
+B) Arrow points West
+C) Arrow points East
+D) Arrow points North
+
+98. Verbal
+DIFFICULTY: 4/10
+ROBUST : STURDY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) abundant : scarce
+B) rapid : swift
+C) major : minor
+D) mirror : hungry
+
+99. Verbal
+DIFFICULTY: 5/10
+VALID : INVALID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) paper : brave
+B) frugal : thrifty
+C) timid : shy
+D) generous : stingy
+
+100. Verbal
+DIFFICULTY: 4/10
+SCARCE : RARE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) valid : invalid
+B) cursory : brief
+C) victory : defeat
+D) table : river
+
+101. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 6, 18, 54, 162, 486, ___?
+A) 1478
+B) 486
+C) 1458
+D) 1461
+
+102. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 16
+B) 8
+C) 12
+D) 6
+
+103. Verbal
+DIFFICULTY: 4/10
+CANDID : HONEST :: ______ : ______
+Which choice shows the same synonym relationship?
+A) abundant : scarce
+B) calm : agitated
+C) table : river
+D) timid : shy
+
+104. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Fleeting
+B) Transient
+C) Ephemeral
+D) Perpetual
+
+105. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Left corner
+B) Bottom-Right corner
+C) Bottom-Left corner
+D) Top-Right corner
+
+106. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points South
+Frame 2: Arrow points West
+Frame 3: Arrow points North
+What is Frame 4?
+A) Arrow points East
+B) Arrow points West
+C) Arrow points North
+D) Arrow points South
+
+107. Verbal
+DIFFICULTY: 4/10
+FRAGILE : DELICATE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) cursory : brief
+B) flexible : rigid
+C) pencil : distant
+D) temporary : permanent
+
+108. Verbal
+DIFFICULTY: 5/10
+ANCIENT : MODERN :: ______ : ______
+Which choice shows the same opposite relationship?
+A) major : minor
+B) cursory : brief
+C) obscure : unclear
+D) paper : brave
+
+109. Verbal
+DIFFICULTY: 5/10
+CALM : AGITATED :: ______ : ______
+Which choice shows the same opposite relationship?
+A) mirror : hungry
+B) robust : sturdy
+C) transparent : opaque
+D) vivid : bright
+
+110. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points West
+Frame 2: Arrow points North
+Frame 3: Arrow points East
+What is Frame 4?
+A) Arrow points North
+B) Arrow points West
+C) Arrow points East
+D) Arrow points South
+
+111. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 4-sided shape
+B) 5-sided shape
+C) 7-sided shape
+D) 8-sided shape
+
+112. Numeric / Logic
+DIFFICULTY: 4/10
+What is 30% of 60 plus 20% of 60?
+A) 27
+B) 36
+C) 33
+D) 30
+
+113. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Top-Left
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Right corner
+B) Top-Left corner
+C) Bottom-Left corner
+D) Bottom-Right corner
+
+114. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $150 and sells it for $180. What is the profit percentage based on the original cost?
+A) 30%
+B) 20%
+C) 25%
+D) 15%
+
+115. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Copious
+B) Abundant
+C) Plentiful
+D) Scant
+
+116. Numeric / Logic
+DIFFICULTY: 4/10
+What is 30% of 150 plus 50% of 60?
+A) 78
+B) 72
+C) 75
+D) 81
+
+117. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $80 and sells it for $96. What is the profit percentage based on the original cost?
+A) 20%
+B) 15%
+C) 16%
+D) 25%
+
+118. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 4 parts concentrate to 6 parts water. If you use 32 ml of concentrate, how many ml of water are needed?
+A) 42 ml
+B) 54 ml
+C) 48 ml
+D) 52 ml
+
+119. Verbal
+DIFFICULTY: 5/10
+ANCIENT : MODERN :: ______ : ______
+Which choice shows the same opposite relationship?
+A) abundant : scarce
+B) mirror : hungry
+C) vivid : bright
+D) rapid : swift
+
+120. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 2, 4, 8, 16, 32, ___?
+A) 124
+B) 66
+C) 64
+D) 32
+
+121. Verbal
+DIFFICULTY: 4/10
+MASSIVE : HUGE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) valid : invalid
+B) weary : tired
+C) window : honest
+D) generous : stingy
+
+122. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Confirm
+B) Corroborate
+C) Refute
+D) Validate
+
+123. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Cursory
+B) Thorough
+C) Exhaustive
+D) Meticulous
+
+124. Numeric / Logic
+DIFFICULTY: 4/10
+What is 25% of 150 plus 50% of 80?
+A) 83
+B) 77
+C) 74
+D) 80
+
+125. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 11. If two of the numbers are 7 and 8, what is the third number?
+A) 18
+B) 11
+C) 16
+D) 20
+
+126. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Left
+Frame 2: Top-Right
+Frame 3: Bottom-Right
+What is Frame 4?
+A) Bottom-Left corner
+B) Top-Left corner
+C) Top-Right corner
+D) Bottom-Right corner
+
+127. Verbal
+DIFFICULTY: 5/10
+FLEXIBLE : RIGID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) serene : calm
+B) optimistic : pessimistic
+C) thunder : polite
+D) elated : joyful
+
+128. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 6, 14, 22, 30, 38, ___?
+A) 38
+B) 46
+C) 54
+D) 61
+
+129. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points West
+Frame 2: Arrow points North
+Frame 3: Arrow points East
+What is Frame 4?
+A) Arrow points North
+B) Arrow points East
+C) Arrow points West
+D) Arrow points South
+
+130. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Brief
+B) Cursory
+C) Superficial
+D) Thorough
+
+131. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) Σ
+B) W
+C) E
+D) M
+
+132. Numeric / Logic
+DIFFICULTY: 4/10
+What is 40% of 90 plus 20% of 80?
+A) 58
+B) 55
+C) 49
+D) 52
+
+133. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 2 parts concentrate to 4 parts water. If you use 24 ml of concentrate, how many ml of water are needed?
+A) 52 ml
+B) 50 ml
+C) 44 ml
+D) 48 ml
+
+134. Numeric / Logic
+DIFFICULTY: 4/10
+If 8 workers can prepare 96 items in one hour, how many items can 6 of these workers prepare in one hour?
+A) 72
+B) 96
+C) 84
+D) 60
+
+135. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) p
+B) b
+C) q
+D) d
+
+136. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 5-sided shape
+B) 4-sided shape
+C) 7-sided shape
+D) 8-sided shape
+
+137. Numeric / Logic
+DIFFICULTY: 4/10
+If 4 workers can prepare 32 items in one hour, how many items can 5 of these workers prepare in one hour?
+A) 56
+B) 48
+C) 32
+D) 40
+
+138. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $80 and sells it for $120. What is the profit percentage based on the original cost?
+A) 40%
+B) 45%
+C) 55%
+D) 50%
+
+139. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Left
+Frame 2: Bottom-Right
+Frame 3: Top-Right
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Right corner
+C) Top-Left corner
+D) Bottom-Left corner
+
+140. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $50 and sells it for $60. What is the profit percentage based on the original cost?
+A) 20%
+B) 15%
+C) 25%
+D) 10%
+
+141. Numeric / Logic
+DIFFICULTY: 4/10
+If 7 workers can prepare 77 items in one hour, how many items can 10 of these workers prepare in one hour?
+A) 99
+B) 121
+C) 132
+D) 110
+
+142. Verbal
+DIFFICULTY: 4/10
+OBSCURE : UNCLEAR :: ______ : ______
+Which choice shows the same synonym relationship?
+A) pencil : distant
+B) transparent : opaque
+C) serene : calm
+D) create : destroy
+
+143. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Fleeting
+B) Transient
+C) Perpetual
+D) Ephemeral
+
+144. Verbal
+DIFFICULTY: 5/10
+GENEROUS : STINGY :: ______ : ______
+Which choice shows the same opposite relationship?
+A) fragile : delicate
+B) fabric : logical
+C) diligent : hardworking
+D) create : destroy
+
+145. Verbal
+DIFFICULTY: 5/10
+CALM : AGITATED :: ______ : ______
+Which choice shows the same opposite relationship?
+A) fabric : logical
+B) temporary : permanent
+C) obscure : unclear
+D) brief : concise
+
+146. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ◄
+Frame 2: ►
+Frame 3: ◄
+What is Frame 4?
+A) ▲
+B) ▼
+C) ►
+D) ◄
+
+147. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ▲
+Frame 2: ▼
+Frame 3: ▲
+What is Frame 4?
+A) ▲
+B) ◄
+C) ►
+D) ▼
+
+148. Verbal
+DIFFICULTY: 5/10
+GENEROUS : STINGY :: ______ : ______
+Which choice shows the same opposite relationship?
+A) weary : tired
+B) fabric : logical
+C) meticulous : careful
+D) major : minor
+
+149. Numeric / Logic
+DIFFICULTY: 4/10
+What is 25% of 120 plus 10% of 80?
+A) 44
+B) 35
+C) 41
+D) 38
+
+150. Verbal
+DIFFICULTY: 5/10
+FLEXIBLE : RIGID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) calm : agitated
+B) timid : shy
+C) candid : honest
+D) lamp : justice
+
+151. Verbal
+DIFFICULTY: 4/10
+OBSCURE : UNCLEAR :: ______ : ______
+Which choice shows the same synonym relationship?
+A) hollow : empty
+B) cloud : integer
+C) expand : contract
+D) create : destroy
+
+152. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 8, 16, 32, 64, 128, ___?
+A) 128
+B) 258
+C) 302
+D) 256
+
+153. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 4 parts water. If you use 36 ml of concentrate, how many ml of water are needed?
+A) 48 ml
+B) 44 ml
+C) 51 ml
+D) 52 ml
+
+154. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 6
+B) 4
+C) 12
+D) 8
+
+155. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 7 parts concentrate to 4 parts water. If you use 56 ml of concentrate, how many ml of water are needed?
+A) 39 ml
+B) 36 ml
+C) 32 ml
+D) 28 ml
+
+156. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Exhaustive
+B) Cursory
+C) Thorough
+D) Meticulous
+
+157. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 23. If two of the numbers are 7 and 6, what is the third number?
+A) 58
+B) 23
+C) 56
+D) 54
+
+158. Verbal
+DIFFICULTY: 5/10
+FLEXIBLE : RIGID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) abundant : scarce
+B) robust : sturdy
+C) vivid : bright
+D) lamp : justice
+
+159. Verbal
+DIFFICULTY: 5/10
+ANCIENT : MODERN :: ______ : ______
+Which choice shows the same opposite relationship?
+A) weary : tired
+B) rapid : swift
+C) garden : triangle
+D) victory : defeat
+
+160. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 32, 42, 52, 62, 72, ___?
+A) 72
+B) 82
+C) 108
+D) 92
+
+161. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Left
+Frame 2: Top-Right
+Frame 3: Bottom-Right
+What is Frame 4?
+A) Top-Left corner
+B) Top-Right corner
+C) Bottom-Left corner
+D) Bottom-Right corner
+
+162. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $80 and sells it for $88. What is the profit percentage based on the original cost?
+A) 15%
+B) 10%
+C) 8%
+D) 5%
+
+163. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 10, 22, 34, 46, 58, ___?
+A) 77
+B) 58
+C) 82
+D) 70
+
+164. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 6, 18, 54, 162, 486, ___?
+A) 1461
+B) 1458
+C) 486
+D) 1489
+
+165. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Diamond
+B) Rhombus
+C) Regular hexagon
+D) Parallelogram
+
+166. Numeric / Logic
+DIFFICULTY: 4/10
+If 6 workers can prepare 30 items in one hour, how many items can 11 of these workers prepare in one hour?
+A) 55
+B) 60
+C) 50
+D) 65
+
+167. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 2 parts concentrate to 7 parts water. If you use 14 ml of concentrate, how many ml of water are needed?
+A) 49 ml
+B) 56 ml
+C) 42 ml
+D) 51 ml
+
+168. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 8
+B) 6
+C) 12
+D) 4
+
+169. Verbal
+DIFFICULTY: 4/10
+OBJECTIVE : NEUTRAL :: ______ : ______
+Which choice shows the same synonym relationship?
+A) expand : contract
+B) weary : tired
+C) thunder : polite
+D) victory : defeat
+
+170. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Fleeting
+B) Ephemeral
+C) Transient
+D) Perpetual
+
+171. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) b
+B) q
+C) d
+D) p
+
+172. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Left
+Frame 2: Bottom-Left
+Frame 3: Bottom-Right
+What is Frame 4?
+A) Top-Right corner
+B) Top-Left corner
+C) Bottom-Right corner
+D) Bottom-Left corner
+
+173. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 10
+B) 12
+C) 6
+D) 8
+
+174. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 5 parts water. If you use 21 ml of concentrate, how many ml of water are needed?
+A) 30 ml
+B) 35 ml
+C) 38 ml
+D) 40 ml
+
+175. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $50 and sells it for $55. What is the profit percentage based on the original cost?
+A) 5%
+B) 20%
+C) 15%
+D) 10%
+
+176. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Meticulous
+B) Cursory
+C) Exhaustive
+D) Thorough
+
+177. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Regular hexagon
+B) Diamond
+C) Parallelogram
+D) Rhombus
+
+178. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $250 and sells it for $275. What is the profit percentage based on the original cost?
+A) 5%
+B) 10%
+C) 25%
+D) 15%
+
+179. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) M
+B) Σ
+C) W
+D) E
+
+180. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 7, 14, 28, 56, 112, ___?
+A) 226
+B) 224
+C) 112
+D) 265
+
+181. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Validate
+B) Confirm
+C) Refute
+D) Corroborate
+
+182. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Sound
+B) Faulty
+C) Optimal
+D) Robust
+
+183. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 28, 33, 38, 43, 48, ___?
+A) 48
+B) 58
+C) 53
+D) 67
+
+184. Verbal
+DIFFICULTY: 4/10
+CANDID : HONEST :: ______ : ______
+Which choice shows the same synonym relationship?
+A) calm : agitated
+B) meticulous : careful
+C) blue : quickly
+D) optimistic : pessimistic
+
+185. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 20%. The sale price is $64. What was the original price?
+A) $80
+B) $90
+C) $70
+D) $64
+
+186. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 2, 14, 26, 38, 50, ___?
+A) 50
+B) 62
+C) 65
+D) 74
+
+187. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 27. If two of the numbers are 31 and 26, what is the third number?
+A) 22
+B) 26
+C) 24
+D) 27
+
+188. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ◄
+Frame 2: ►
+Frame 3: ◄
+What is Frame 4?
+A) ▼
+B) ◄
+C) ►
+D) ▲
+
+189. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Reckless
+B) Partial
+C) Exhaustive
+D) Careless
+
+190. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Faulty
+B) Sound
+C) Robust
+D) Optimal
+
+191. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) p
+B) q
+C) d
+D) b
+
+192. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) E
+B) W
+C) M
+D) Σ
+
+193. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Robust
+B) Faulty
+C) Sound
+D) Optimal
+
+194. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Reckless
+B) Partial
+C) Careless
+D) Exhaustive
+
+195. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Cursory
+B) Thorough
+C) Brief
+D) Superficial
+
+196. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 2 parts concentrate to 7 parts water. If you use 10 ml of concentrate, how many ml of water are needed?
+A) 35 ml
+B) 28 ml
+C) 37 ml
+D) 42 ml
+
+197. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small square ➔ 2 small squares ➔ [ ? ]
+A) A blank square
+B) 3 small squares
+C) 4 small crosses
+D) 1 small square
+
+198. Verbal
+DIFFICULTY: 4/10
+FRUGAL : THRIFTY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) abundant : scarce
+B) vivid : bright
+C) planet : careful
+D) valid : invalid
+
+199. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small slash ➔ 2 small slashs ➔ [ ? ]
+A) 3 small slashs
+B) 1 small slash
+C) 4 small crosses
+D) A blank square
+
+200. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Exhaustive
+B) Thorough
+C) Cursory
+D) Meticulous
+
+201. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 8 o'clock
+Frame 2: Hand points to 10 o'clock
+Frame 3: Hand points to 12 o'clock
+What is Frame 4?
+A) 2 o'clock
+B) 3 o'clock
+C) 5 o'clock
+D) 4 o'clock
+
+202. Numeric / Logic
+DIFFICULTY: 4/10
+If 9 workers can prepare 36 items in one hour, how many items can 5 of these workers prepare in one hour?
+A) 20
+B) 28
+C) 24
+D) 16
+
+203. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 18, 20, 22, 24, 26, ___?
+A) 28
+B) 44
+C) 26
+D) 30
+
+204. Verbal
+DIFFICULTY: 4/10
+SCARCE : RARE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) brief : concise
+B) thunder : polite
+C) increase : decrease
+D) flexible : rigid
+
+205. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) 1 small dot
+B) 3 small dots
+C) A blank square
+D) 4 small crosses
+
+206. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $150 and sells it for $180. What is the profit percentage based on the original cost?
+A) 20%
+B) 15%
+C) 30%
+D) 25%
+
+207. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Top-Left
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Bottom-Right corner
+B) Top-Left corner
+C) Top-Right corner
+D) Bottom-Left corner
+
+208. Numeric / Logic
+DIFFICULTY: 4/10
+What is 50% of 90 plus 50% of 120?
+A) 108
+B) 105
+C) 111
+D) 102
+
+209. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Top-Left
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Right corner
+C) Top-Left corner
+D) Bottom-Left corner
+
+210. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Left
+Frame 2: Top-Left
+Frame 3: Top-Right
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Left corner
+C) Top-Left corner
+D) Bottom-Right corner
+
+211. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 8
+B) 6
+C) 10
+D) 12
+
+212. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Right
+Frame 2: Bottom-Left
+Frame 3: Top-Left
+What is Frame 4?
+A) Bottom-Left corner
+B) Top-Right corner
+C) Bottom-Right corner
+D) Top-Left corner
+
+213. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Biased
+B) Impartial
+C) Objective
+D) Neutral
+
+214. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $120 and sells it for $144. What is the profit percentage based on the original cost?
+A) 24%
+B) 15%
+C) 20%
+D) 25%
+
+215. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Insightful
+B) Hollow
+C) Useful
+D) Profound
+
+216. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 10
+B) 8
+C) 12
+D) 6
+
+217. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 12
+B) 4
+C) 8
+D) 6
+
+218. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Exhaustive
+B) Meticulous
+C) Cursory
+D) Thorough
+
+219. Verbal
+DIFFICULTY: 5/10
+CREATE : DESTROY :: ______ : ______
+Which choice shows the same opposite relationship?
+A) scarce : rare
+B) music : wooden
+C) congenial : hostile
+D) meticulous : careful
+
+220. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 10%. The sale price is $90. What was the original price?
+A) $120
+B) $90
+C) $110
+D) $100
+
+221. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 8-sided shape
+B) 10-sided shape
+C) 11-sided shape
+D) 7-sided shape
+
+222. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) b
+B) p
+C) q
+D) d
+
+223. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 32, 39, 46, 53, 60, ___?
+A) 74
+B) 60
+C) 67
+D) 69
+
+224. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $200 and sells it for $280. What is the profit percentage based on the original cost?
+A) 40%
+B) 35%
+C) 45%
+D) 80%
+
+225. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Thorough
+B) Meticulous
+C) Exhaustive
+D) Cursory
+
+226. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Objective
+B) Hostile
+C) Partisan
+D) Biased
+
+227. Numeric / Logic
+DIFFICULTY: 4/10
+If 8 workers can prepare 88 items in one hour, how many items can 12 of these workers prepare in one hour?
+A) 121
+B) 143
+C) 132
+D) 154
+
+228. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Biased
+B) Objective
+C) Impartial
+D) Neutral
+
+229. Numeric / Logic
+DIFFICULTY: 4/10
+What is 20% of 100 plus 25% of 60?
+A) 41
+B) 38
+C) 32
+D) 35
+
+230. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small square ➔ 2 small squares ➔ [ ? ]
+A) A blank square
+B) 1 small square
+C) 4 small crosses
+D) 3 small squares
+
+231. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $100 and sells it for $110. What is the profit percentage based on the original cost?
+A) 15%
+B) 20%
+C) 10%
+D) 5%
+
+232. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Robust
+B) Faulty
+C) Sound
+D) Sturdy
+
+233. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Partisan
+B) Hostile
+C) Objective
+D) Biased
+
+234. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 12
+B) 8
+C) 10
+D) 6
+
+235. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 3 parts water. If you use 30 ml of concentrate, how many ml of water are needed?
+A) 37 ml
+B) 30 ml
+C) 27 ml
+D) 33 ml
+
+236. Verbal
+DIFFICULTY: 5/10
+CONGENIAL : HOSTILE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) expand : contract
+B) massive : huge
+C) blue : quickly
+D) candid : honest
+
+237. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Partisan
+B) Biased
+C) Hostile
+D) Objective
+
+238. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Optimal
+B) Faulty
+C) Sound
+D) Robust
+
+239. Numeric / Logic
+DIFFICULTY: 4/10
+What is 10% of 120 plus 20% of 100?
+A) 29
+B) 35
+C) 38
+D) 32
+
+240. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Gargantuan
+B) Immense
+C) Colossal
+D) Diminutive
+
+241. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points North
+Frame 2: Arrow points West
+Frame 3: Arrow points South
+What is Frame 4?
+A) Arrow points South
+B) Arrow points West
+C) Arrow points East
+D) Arrow points North
+
+242. Numeric / Logic
+DIFFICULTY: 4/10
+If 8 workers can prepare 88 items in one hour, how many items can 9 of these workers prepare in one hour?
+A) 99
+B) 121
+C) 110
+D) 88
+
+243. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 21. If two of the numbers are 13 and 28, what is the third number?
+A) 20
+B) 21
+C) 22
+D) 24
+
+244. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Copious
+B) Abundant
+C) Plentiful
+D) Scant
+
+245. Verbal
+DIFFICULTY: 5/10
+OBEDIENT : DEFIANT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) objective : neutral
+B) fabric : logical
+C) weary : tired
+D) increase : decrease
+
+246. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 7-sided shape
+B) 8-sided shape
+C) 4-sided shape
+D) 5-sided shape
+
+247. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 12
+B) 16
+C) 6
+D) 8
+
+248. Numeric / Logic
+DIFFICULTY: 4/10
+What is 50% of 80 plus 40% of 100?
+A) 86
+B) 77
+C) 83
+D) 80
+
+249. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 4-sided, 5-sided, 6-sided
+Row 2: 5-sided, 6-sided, 7-sided
+Row 3: 6-sided, 7-sided, [ ? ]
+A) 5-sided shape
+B) 9-sided shape
+C) 6-sided shape
+D) 8-sided shape
+
+250. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) W
+B) E
+C) M
+D) Σ
+
+251. Verbal
+DIFFICULTY: 4/10
+CURSORY : BRIEF :: ______ : ______
+Which choice shows the same synonym relationship?
+A) bottle : ancient
+B) expand : contract
+C) obedient : defiant
+D) meticulous : careful
+
+252. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) 1 small dot
+B) 4 small crosses
+C) 3 small dots
+D) A blank square
+
+253. Numeric / Logic
+DIFFICULTY: 4/10
+If 9 workers can prepare 72 items in one hour, how many items can 7 of these workers prepare in one hour?
+A) 56
+B) 48
+C) 72
+D) 64
+
+254. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points South
+Frame 2: Arrow points West
+Frame 3: Arrow points North
+What is Frame 4?
+A) Arrow points North
+B) Arrow points East
+C) Arrow points West
+D) Arrow points South
+
+255. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 8-sided shape
+B) 4-sided shape
+C) 5-sided shape
+D) 7-sided shape
+
+256. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 6 parts concentrate to 3 parts water. If you use 36 ml of concentrate, how many ml of water are needed?
+A) 24 ml
+B) 21 ml
+C) 15 ml
+D) 18 ml
+
+257. Verbal
+DIFFICULTY: 5/10
+CONGENIAL : HOSTILE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) obscure : unclear
+B) garden : triangle
+C) weary : tired
+D) victory : defeat
+
+258. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 11 o'clock
+Frame 2: Hand points to 2 o'clock
+Frame 3: Hand points to 5 o'clock
+What is Frame 4?
+A) 10 o'clock
+B) 9 o'clock
+C) 11 o'clock
+D) 8 o'clock
+
+259. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Bottom-Left corner
+B) Bottom-Right corner
+C) Top-Right corner
+D) Top-Left corner
+
+260. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 5-sided shape
+B) 4-sided shape
+C) 8-sided shape
+D) 7-sided shape
+
+261. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 5-sided, 6-sided, 7-sided
+Row 2: 6-sided, 7-sided, 8-sided
+Row 3: 7-sided, 8-sided, [ ? ]
+A) 10-sided shape
+B) 7-sided shape
+C) 6-sided shape
+D) 9-sided shape
+
+262. Verbal
+DIFFICULTY: 5/10
+VICTORY : DEFEAT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) bottle : ancient
+B) weary : tired
+C) expand : contract
+D) objective : neutral
+
+263. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 8 o'clock
+Frame 2: Hand points to 10 o'clock
+Frame 3: Hand points to 12 o'clock
+What is Frame 4?
+A) 3 o'clock
+B) 5 o'clock
+C) 4 o'clock
+D) 2 o'clock
+
+264. Numeric / Logic
+DIFFICULTY: 4/10
+If 6 workers can prepare 60 items in one hour, how many items can 12 of these workers prepare in one hour?
+A) 110
+B) 120
+C) 130
+D) 140
+
+265. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Rhombus
+B) Parallelogram
+C) Diamond
+D) Regular hexagon
+
+266. Verbal
+DIFFICULTY: 4/10
+HOLLOW : EMPTY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) ancient : modern
+B) rigid : stiff
+C) window : honest
+D) generous : stingy
+
+267. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 2 o'clock
+Frame 2: Hand points to 6 o'clock
+Frame 3: Hand points to 10 o'clock
+What is Frame 4?
+A) 3 o'clock
+B) 5 o'clock
+C) 4 o'clock
+D) 2 o'clock
+
+268. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 11. If two of the numbers are 14 and 15, what is the third number?
+A) 2
+B) 6
+C) 4
+D) 11
+
+269. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $50 and sells it for $55. What is the profit percentage based on the original cost?
+A) 20%
+B) 10%
+C) 15%
+D) 5%
+
+270. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $80 and sells it for $88. What is the profit percentage based on the original cost?
+A) 5%
+B) 15%
+C) 8%
+D) 10%
+
+271. Numeric / Logic
+DIFFICULTY: 4/10
+If 5 workers can prepare 45 items in one hour, how many items can 12 of these workers prepare in one hour?
+A) 117
+B) 108
+C) 126
+D) 99
+
+272. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $50 and sells it for $62. What is the profit percentage based on the original cost?
+A) 20%
+B) 30%
+C) 25%
+D) 12%
+
+273. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 7 parts water. If you use 33 ml of concentrate, how many ml of water are needed?
+A) 80 ml
+B) 84 ml
+C) 70 ml
+D) 77 ml
+
+274. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Hollow
+B) Insightful
+C) Useful
+D) Profound
+
+275. Numeric / Logic
+DIFFICULTY: 4/10
+If 6 workers can prepare 24 items in one hour, how many items can 12 of these workers prepare in one hour?
+A) 52
+B) 48
+C) 56
+D) 44
+
+276. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Perpetual
+B) Fleeting
+C) Transient
+D) Ephemeral
+
+277. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Left corner
+C) Top-Left corner
+D) Bottom-Right corner
+
+278. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 1 o'clock
+Frame 2: Hand points to 3 o'clock
+Frame 3: Hand points to 5 o'clock
+What is Frame 4?
+A) 7 o'clock
+B) 8 o'clock
+C) 10 o'clock
+D) 9 o'clock
+
+279. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) p
+B) d
+C) q
+D) b
+
+280. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 10
+B) 8
+C) 6
+D) 12
+
+281. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 25%. The sale price is $180. What was the original price?
+A) $180
+B) $250
+C) $240
+D) $230
+
+282. Numeric / Logic
+DIFFICULTY: 4/10
+If 3 workers can prepare 24 items in one hour, how many items can 8 of these workers prepare in one hour?
+A) 72
+B) 64
+C) 80
+D) 56
+
+283. Numeric / Logic
+DIFFICULTY: 4/10
+What is 25% of 100 plus 25% of 40?
+A) 32
+B) 38
+C) 41
+D) 35
+
+284. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) d
+B) p
+C) b
+D) q
+
+285. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points North
+Frame 2: Arrow points West
+Frame 3: Arrow points South
+What is Frame 4?
+A) Arrow points East
+B) Arrow points South
+C) Arrow points North
+D) Arrow points West
+
+286. Verbal
+DIFFICULTY: 4/10
+DILIGENT : HARDWORKING :: ______ : ______
+Which choice shows the same synonym relationship?
+A) valid : invalid
+B) vivid : bright
+C) generous : stingy
+D) fabric : logical
+
+287. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $200 and sells it for $250. What is the profit percentage based on the original cost?
+A) 30%
+B) 20%
+C) 50%
+D) 25%
+
+288. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 8, 16, 32, 64, 128, ___?
+A) 128
+B) 256
+C) 258
+D) 316
+
+289. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Biased
+B) Neutral
+C) Objective
+D) Impartial
+
+290. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 6 o'clock
+Frame 2: Hand points to 10 o'clock
+Frame 3: Hand points to 2 o'clock
+What is Frame 4?
+A) 7 o'clock
+B) 6 o'clock
+C) 8 o'clock
+D) 9 o'clock
+
+291. Numeric / Logic
+DIFFICULTY: 4/10
+What is 20% of 60 plus 20% of 40?
+A) 17
+B) 23
+C) 20
+D) 26
+
+292. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small triangle ➔ 2 small triangles ➔ [ ? ]
+A) 3 small triangles
+B) 4 small crosses
+C) 1 small triangle
+D) A blank square
+
+293. Numeric / Logic
+DIFFICULTY: 4/10
+If 3 workers can prepare 27 items in one hour, how many items can 10 of these workers prepare in one hour?
+A) 108
+B) 81
+C) 90
+D) 99
+
+294. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 2 o'clock
+Frame 2: Hand points to 6 o'clock
+Frame 3: Hand points to 10 o'clock
+What is Frame 4?
+A) 4 o'clock
+B) 2 o'clock
+C) 3 o'clock
+D) 5 o'clock
+
+295. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Ephemeral
+B) Transient
+C) Perpetual
+D) Fleeting
+
+296. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) E
+B) W
+C) Σ
+D) M
+
+297. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) Σ
+B) M
+C) E
+D) W
+
+298. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Immense
+B) Colossal
+C) Diminutive
+D) Gargantuan
+
+299. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small square ➔ 2 small squares ➔ [ ? ]
+A) 3 small squares
+B) A blank square
+C) 4 small crosses
+D) 1 small square
+
+300. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 5, 15, 45, 135, 405, ___?
+A) 1215
+B) 1218
+C) 1260
+D) 405
+
+301. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 5-sided, 6-sided, 7-sided
+Row 2: 6-sided, 7-sided, 8-sided
+Row 3: 7-sided, 8-sided, [ ? ]
+A) 7-sided shape
+B) 9-sided shape
+C) 10-sided shape
+D) 6-sided shape
+
+302. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points South
+Frame 2: Arrow points East
+Frame 3: Arrow points North
+What is Frame 4?
+A) Arrow points East
+B) Arrow points North
+C) Arrow points South
+D) Arrow points West
+
+303. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Optimal
+B) Sound
+C) Faulty
+D) Robust
+
+304. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 28, 40, 52, 64, 76, ___?
+A) 100
+B) 76
+C) 94
+D) 88
+
+305. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 9 o'clock
+Frame 2: Hand points to 12 o'clock
+Frame 3: Hand points to 3 o'clock
+What is Frame 4?
+A) 8 o'clock
+B) 9 o'clock
+C) 6 o'clock
+D) 7 o'clock
+
+306. Verbal
+DIFFICULTY: 4/10
+SERENE : CALM :: ______ : ______
+Which choice shows the same synonym relationship?
+A) needle : abstract
+B) congenial : hostile
+C) obscure : unclear
+D) victory : defeat
+
+307. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Refute
+B) Validate
+C) Confirm
+D) Corroborate
+
+308. Verbal
+DIFFICULTY: 5/10
+FLEXIBLE : RIGID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) scarce : rare
+B) optimistic : pessimistic
+C) obscure : unclear
+D) engine : soft
+
+309. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 3, 9, 27, 81, 243, ___?
+A) 732
+B) 729
+C) 770
+D) 243
+
+310. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Hollow
+B) Useful
+C) Insightful
+D) Profound
+
+311. Numeric / Logic
+DIFFICULTY: 4/10
+If 7 workers can prepare 49 items in one hour, how many items can 8 of these workers prepare in one hour?
+A) 63
+B) 56
+C) 49
+D) 70
+
+312. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Bottom-Right corner
+B) Top-Right corner
+C) Bottom-Left corner
+D) Top-Left corner
+
+313. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 2 o'clock
+Frame 2: Hand points to 4 o'clock
+Frame 3: Hand points to 6 o'clock
+What is Frame 4?
+A) 9 o'clock
+B) 8 o'clock
+C) 11 o'clock
+D) 10 o'clock
+
+314. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 5-sided shape
+B) 7-sided shape
+C) 8-sided shape
+D) 4-sided shape
+
+315. Verbal
+DIFFICULTY: 4/10
+OBJECTIVE : NEUTRAL :: ______ : ______
+Which choice shows the same synonym relationship?
+A) major : minor
+B) fragile : delicate
+C) music : wooden
+D) transparent : opaque
+
+316. Numeric / Logic
+DIFFICULTY: 4/10
+If 4 workers can prepare 44 items in one hour, how many items can 8 of these workers prepare in one hour?
+A) 110
+B) 88
+C) 99
+D) 77
+
+317. Verbal
+DIFFICULTY: 5/10
+VALID : INVALID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) pencil : distant
+B) frugal : thrifty
+C) temporary : permanent
+D) rapid : swift
+
+318. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Useful
+B) Profound
+C) Hollow
+D) Insightful
+
+319. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ◄
+Frame 2: ►
+Frame 3: ◄
+What is Frame 4?
+A) ◄
+B) ▼
+C) ►
+D) ▲
+
+320. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 11. If two of the numbers are 14 and 16, what is the third number?
+A) 5
+B) 1
+C) 3
+D) 11
+
+321. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 8, 24, 72, 216, 648, ___?
+A) 648
+B) 1979
+C) 1947
+D) 1944
+
+322. Numeric / Logic
+DIFFICULTY: 4/10
+What is 40% of 90 plus 20% of 60?
+A) 45
+B) 54
+C) 51
+D) 48
+
+323. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 8-sided shape
+B) 11-sided shape
+C) 10-sided shape
+D) 7-sided shape
+
+324. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 6, 12, 24, 48, 96, ___?
+A) 215
+B) 194
+C) 96
+D) 192
+
+325. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Impartial
+B) Objective
+C) Neutral
+D) Biased
+
+326. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 8, 24, 72, 216, 648, ___?
+A) 648
+B) 1974
+C) 1947
+D) 1944
+
+327. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Careless
+B) Reckless
+C) Exhaustive
+D) Partial
+
+328. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Superficial
+B) Cursory
+C) Brief
+D) Thorough
+
+329. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Confirm
+B) Refute
+C) Validate
+D) Corroborate
+
+330. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 8
+B) 4
+C) 6
+D) 12
+
+331. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 3 parts water. If you use 36 ml of concentrate, how many ml of water are needed?
+A) 36 ml
+B) 45 ml
+C) 39 ml
+D) 33 ml
+
+332. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $150 and sells it for $210. What is the profit percentage based on the original cost?
+A) 45%
+B) 40%
+C) 35%
+D) 60%
+
+333. Verbal
+DIFFICULTY: 4/10
+HOLLOW : EMPTY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) transparent : opaque
+B) massive : huge
+C) needle : abstract
+D) valid : invalid
+
+334. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small slash ➔ 2 small slashs ➔ [ ? ]
+A) 4 small crosses
+B) 3 small slashs
+C) 1 small slash
+D) A blank square
+
+335. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 25%. The sale price is $45. What was the original price?
+A) $50
+B) $70
+C) $60
+D) $45
+
+336. Verbal
+DIFFICULTY: 5/10
+TRANSPARENT : OPAQUE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) paper : brave
+B) fragile : delicate
+C) increase : decrease
+D) rapid : swift
+
+337. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Left corner
+C) Top-Left corner
+D) Bottom-Right corner
+
+338. Verbal
+DIFFICULTY: 5/10
+OBEDIENT : DEFIANT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) meticulous : careful
+B) congenial : hostile
+C) elated : joyful
+D) bottle : ancient
+
+339. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Confirm
+B) Validate
+C) Corroborate
+D) Refute
+
+340. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 12
+B) 6
+C) 8
+D) 4
+
+341. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 5 parts concentrate to 3 parts water. If you use 50 ml of concentrate, how many ml of water are needed?
+A) 30 ml
+B) 33 ml
+C) 35 ml
+D) 27 ml
+
+342. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 6
+B) 12
+C) 16
+D) 8
+
+343. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $100 and sells it for $120. What is the profit percentage based on the original cost?
+A) 20%
+B) 30%
+C) 25%
+D) 15%
+
+344. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points East
+Frame 2: Arrow points North
+Frame 3: Arrow points West
+What is Frame 4?
+A) Arrow points North
+B) Arrow points West
+C) Arrow points South
+D) Arrow points East
+
+345. Verbal
+DIFFICULTY: 4/10
+TIMID : SHY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) generous : stingy
+B) major : minor
+C) engine : soft
+D) scarce : rare
+
+346. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 16, 19, 22, 25, 28, ___?
+A) 31
+B) 28
+C) 34
+D) 40
+
+347. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small slash ➔ 2 small slashs ➔ [ ? ]
+A) 4 small crosses
+B) A blank square
+C) 3 small slashs
+D) 1 small slash
+
+348. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) E
+B) M
+C) Σ
+D) W
+
+349. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 7 parts concentrate to 3 parts water. If you use 56 ml of concentrate, how many ml of water are needed?
+A) 21 ml
+B) 27 ml
+C) 31 ml
+D) 24 ml
+
+350. Verbal
+DIFFICULTY: 4/10
+DILIGENT : HARDWORKING :: ______ : ______
+Which choice shows the same synonym relationship?
+A) garden : triangle
+B) fragile : delicate
+C) transparent : opaque
+D) abundant : scarce
+
+351. Numeric / Logic
+DIFFICULTY: 4/10
+What is 10% of 120 plus 10% of 40?
+A) 22
+B) 16
+C) 13
+D) 19
+
+352. Verbal
+DIFFICULTY: 5/10
+VALID : INVALID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) robust : sturdy
+B) transparent : opaque
+C) scarce : rare
+D) music : wooden
+
+353. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Right
+Frame 2: Top-Right
+Frame 3: Top-Left
+What is Frame 4?
+A) Top-Right corner
+B) Top-Left corner
+C) Bottom-Left corner
+D) Bottom-Right corner
+
+354. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 40, 44, 48, 52, 56, ___?
+A) 64
+B) 56
+C) 68
+D) 60
+
+355. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 5-sided, 6-sided, 7-sided
+Row 2: 6-sided, 7-sided, 8-sided
+Row 3: 7-sided, 8-sided, [ ? ]
+A) 10-sided shape
+B) 6-sided shape
+C) 9-sided shape
+D) 7-sided shape
+
+356. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 14. If two of the numbers are 13 and 21, what is the third number?
+A) 14
+B) 8
+C) 10
+D) 6
+
+357. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Abundant
+B) Plentiful
+C) Copious
+D) Scant
+
+358. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Left
+Frame 2: Bottom-Right
+Frame 3: Top-Right
+What is Frame 4?
+A) Top-Left corner
+B) Bottom-Right corner
+C) Top-Right corner
+D) Bottom-Left corner
+
+359. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Biased
+B) Partisan
+C) Objective
+D) Hostile
+
+360. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Sound
+B) Robust
+C) Faulty
+D) Sturdy
+
+361. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 37, 41, 45, 49, 53, ___?
+A) 61
+B) 53
+C) 57
+D) 63
+
+362. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 25, 37, 49, 61, 73, ___?
+A) 85
+B) 97
+C) 73
+D) 90
+
+363. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 8
+B) 4
+C) 12
+D) 6
+
+364. Verbal
+DIFFICULTY: 5/10
+CALM : AGITATED :: ______ : ______
+Which choice shows the same opposite relationship?
+A) robust : sturdy
+B) fabric : logical
+C) fragile : delicate
+D) ancient : modern
+
+365. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) A blank square
+B) 3 small dots
+C) 1 small dot
+D) 4 small crosses
+
+366. Verbal
+DIFFICULTY: 4/10
+ROBUST : STURDY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) obedient : defiant
+B) fabric : logical
+C) generous : stingy
+D) cursory : brief
+
+367. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 20%. The sale price is $64. What was the original price?
+A) $90
+B) $64
+C) $70
+D) $80
+
+368. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Impartial
+B) Biased
+C) Neutral
+D) Objective
+
+369. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: b
+Frame 2: d
+Frame 3: b
+What is Frame 4?
+A) b
+B) p
+C) q
+D) d
+
+370. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 6
+B) 8
+C) 12
+D) 4
+
+371. Numeric / Logic
+DIFFICULTY: 4/10
+What is 40% of 90 plus 10% of 50?
+A) 41
+B) 38
+C) 44
+D) 47
+
+372. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 6
+B) 8
+C) 12
+D) 16
+
+373. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Sound
+B) Optimal
+C) Robust
+D) Faulty
+
+374. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) 4 small crosses
+B) 3 small dots
+C) A blank square
+D) 1 small dot
+
+375. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 4 parts concentrate to 7 parts water. If you use 32 ml of concentrate, how many ml of water are needed?
+A) 49 ml
+B) 56 ml
+C) 60 ml
+D) 63 ml
+
+376. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 23. If two of the numbers are 6 and 14, what is the third number?
+A) 49
+B) 47
+C) 23
+D) 51
+
+377. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 28. If two of the numbers are 28 and 13, what is the third number?
+A) 45
+B) 41
+C) 43
+D) 28
+
+378. Verbal
+DIFFICULTY: 4/10
+SERENE : CALM :: ______ : ______
+Which choice shows the same synonym relationship?
+A) thunder : polite
+B) expand : contract
+C) create : destroy
+D) fragile : delicate
+
+379. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 27, 37, 47, 57, 67, ___?
+A) 67
+B) 77
+C) 87
+D) 81
+
+380. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Substantial
+B) Vacuous
+C) Empty
+D) Hollow
+
+381. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) A blank square
+B) 3 small dots
+C) 1 small dot
+D) 4 small crosses
+
+382. Verbal
+DIFFICULTY: 5/10
+FLEXIBLE : RIGID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) diligent : hardworking
+B) cloud : integer
+C) weary : tired
+D) create : destroy
+
+383. Verbal
+DIFFICULTY: 4/10
+CURSORY : BRIEF :: ______ : ______
+Which choice shows the same synonym relationship?
+A) victory : defeat
+B) abundant : scarce
+C) planet : careful
+D) candid : honest
+
+384. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 3, 9, 27, 81, 243, ___?
+A) 729
+B) 732
+C) 772
+D) 243
+
+385. Verbal
+DIFFICULTY: 5/10
+CONGENIAL : HOSTILE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) candid : honest
+B) calm : agitated
+C) music : wooden
+D) rigid : stiff
+
+386. Verbal
+DIFFICULTY: 5/10
+VICTORY : DEFEAT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) table : river
+B) massive : huge
+C) objective : neutral
+D) flexible : rigid
+
+387. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 7-sided shape
+B) 11-sided shape
+C) 10-sided shape
+D) 8-sided shape
+
+388. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 31, 34, 37, 40, 43, ___?
+A) 49
+B) 59
+C) 43
+D) 46
+
+389. Verbal
+DIFFICULTY: 4/10
+SERENE : CALM :: ______ : ______
+Which choice shows the same synonym relationship?
+A) ancient : modern
+B) diligent : hardworking
+C) create : destroy
+D) mirror : hungry
+
+390. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Profound
+B) Insightful
+C) Hollow
+D) Useful
+
+391. Verbal
+DIFFICULTY: 4/10
+The bridge was closed after inspectors found the supports were ______.
+A) Optimal
+B) Faulty
+C) Robust
+D) Sound
+
+392. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) 4 small crosses
+B) 3 small dots
+C) 1 small dot
+D) A blank square
+
+393. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Scant
+B) Plentiful
+C) Abundant
+D) Copious
+
+394. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Partial
+B) Exhaustive
+C) Reckless
+D) Careless
+
+395. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 30%. The sale price is $28. What was the original price?
+A) $40
+B) $30
+C) $50
+D) $28
+
+396. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 25%. The sale price is $150. What was the original price?
+A) $150
+B) $200
+C) $190
+D) $210
+
+397. Numeric / Logic
+DIFFICULTY: 4/10
+If 8 workers can prepare 56 items in one hour, how many items can 5 of these workers prepare in one hour?
+A) 42
+B) 35
+C) 28
+D) 49
+
+398. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 40%. The sale price is $90. What was the original price?
+A) $150
+B) $160
+C) $90
+D) $140
+
+399. Verbal
+DIFFICULTY: 4/10
+FRAGILE : DELICATE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) flexible : rigid
+B) music : wooden
+C) scarce : rare
+D) create : destroy
+
+400. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Vacuous
+B) Hollow
+C) Empty
+D) Substantial
+
+401. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points West
+Frame 2: Arrow points South
+Frame 3: Arrow points East
+What is Frame 4?
+A) Arrow points South
+B) Arrow points North
+C) Arrow points West
+D) Arrow points East
+
+402. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $80 and sells it for $100. What is the profit percentage based on the original cost?
+A) 20%
+B) 35%
+C) 25%
+D) 30%
+
+403. Verbal
+DIFFICULTY: 4/10
+CANDID : HONEST :: ______ : ______
+Which choice shows the same synonym relationship?
+A) scarce : rare
+B) flexible : rigid
+C) planet : careful
+D) major : minor
+
+404. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 21, 33, 45, 57, 69, ___?
+A) 81
+B) 69
+C) 93
+D) 92
+
+405. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many edges does the finished cube have?
+A) 6
+B) 16
+C) 12
+D) 8
+
+406. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Hostile
+B) Partisan
+C) Objective
+D) Biased
+
+407. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 7, 21, 63, 189, 567, ___?
+A) 567
+B) 1701
+C) 1728
+D) 1704
+
+408. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 11-sided shape
+B) 7-sided shape
+C) 10-sided shape
+D) 8-sided shape
+
+409. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 8
+B) 12
+C) 6
+D) 4
+
+410. Verbal
+DIFFICULTY: 5/10
+CREATE : DESTROY :: ______ : ______
+Which choice shows the same opposite relationship?
+A) planet : careful
+B) obedient : defiant
+C) candid : honest
+D) fragile : delicate
+
+411. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 10%. The sale price is $135. What was the original price?
+A) $140
+B) $160
+C) $135
+D) $150
+
+412. Verbal
+DIFFICULTY: 4/10
+The memo was ______, containing many words but little substance.
+A) Profound
+B) Hollow
+C) Useful
+D) Insightful
+
+413. Numeric / Logic
+DIFFICULTY: 4/10
+What is 10% of 80 plus 30% of 60?
+A) 32
+B) 23
+C) 29
+D) 26
+
+414. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Sound
+B) Faulty
+C) Robust
+D) Sturdy
+
+415. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 8 o'clock
+Frame 2: Hand points to 10 o'clock
+Frame 3: Hand points to 12 o'clock
+What is Frame 4?
+A) 3 o'clock
+B) 5 o'clock
+C) 2 o'clock
+D) 4 o'clock
+
+416. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small dot ➔ 2 small dots ➔ [ ? ]
+A) 1 small dot
+B) 3 small dots
+C) 4 small crosses
+D) A blank square
+
+417. Numeric / Logic
+DIFFICULTY: 4/10
+If 4 workers can prepare 28 items in one hour, how many items can 8 of these workers prepare in one hour?
+A) 49
+B) 56
+C) 70
+D) 63
+
+418. Verbal
+DIFFICULTY: 4/10
+ROBUST : STURDY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) create : destroy
+B) window : honest
+C) obscure : unclear
+D) transparent : opaque
+
+419. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 19. If two of the numbers are 25 and 12, what is the third number?
+A) 19
+B) 18
+C) 22
+D) 20
+
+420. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 25%. The sale price is $112. What was the original price?
+A) $140
+B) $150
+C) $160
+D) $112
+
+421. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 7, 21, 63, 189, 567, ___?
+A) 1701
+B) 1704
+C) 1718
+D) 567
+
+422. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Right corner
+B) Bottom-Right corner
+C) Bottom-Left corner
+D) Top-Left corner
+
+423. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 10%. The sale price is $54. What was the original price?
+A) $60
+B) $54
+C) $50
+D) $70
+
+424. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 26. If two of the numbers are 7 and 8, what is the third number?
+A) 61
+B) 65
+C) 63
+D) 26
+
+425. Verbal
+DIFFICULTY: 4/10
+DILIGENT : HARDWORKING :: ______ : ______
+Which choice shows the same synonym relationship?
+A) bottle : ancient
+B) ancient : modern
+C) expand : contract
+D) obscure : unclear
+
+426. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Left
+Frame 2: Top-Left
+Frame 3: Top-Right
+What is Frame 4?
+A) Top-Left corner
+B) Top-Right corner
+C) Bottom-Left corner
+D) Bottom-Right corner
+
+427. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points North
+Frame 2: Arrow points West
+Frame 3: Arrow points South
+What is Frame 4?
+A) Arrow points West
+B) Arrow points South
+C) Arrow points East
+D) Arrow points North
+
+428. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 5 o'clock
+Frame 2: Hand points to 7 o'clock
+Frame 3: Hand points to 9 o'clock
+What is Frame 4?
+A) 12 o'clock
+B) 1 o'clock
+C) 2 o'clock
+D) 11 o'clock
+
+429. Verbal
+DIFFICULTY: 5/10
+The auditor performed an ______ review of every transaction.
+A) Reckless
+B) Exhaustive
+C) Careless
+D) Partial
+
+430. Verbal
+DIFFICULTY: 5/10
+TEMPORARY : PERMANENT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) candid : honest
+B) weary : tired
+C) planet : careful
+D) flexible : rigid
+
+431. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Right
+Frame 2: Top-Right
+Frame 3: Top-Left
+What is Frame 4?
+A) Top-Left corner
+B) Bottom-Left corner
+C) Bottom-Right corner
+D) Top-Right corner
+
+432. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 7, 21, 63, 189, 567, ___?
+A) 1701
+B) 567
+C) 1755
+D) 1704
+
+433. Verbal
+DIFFICULTY: 5/10
+GENEROUS : STINGY :: ______ : ______
+Which choice shows the same opposite relationship?
+A) blue : quickly
+B) candid : honest
+C) obedient : defiant
+D) weary : tired
+
+434. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points West
+Frame 2: Arrow points North
+Frame 3: Arrow points East
+What is Frame 4?
+A) Arrow points West
+B) Arrow points South
+C) Arrow points North
+D) Arrow points East
+
+435. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 25%. The sale price is $60. What was the original price?
+A) $80
+B) $90
+C) $70
+D) $60
+
+436. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points West
+Frame 2: Arrow points North
+Frame 3: Arrow points East
+What is Frame 4?
+A) Arrow points West
+B) Arrow points North
+C) Arrow points East
+D) Arrow points South
+
+437. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Right
+Frame 2: Bottom-Right
+Frame 3: Bottom-Left
+What is Frame 4?
+A) Top-Right corner
+B) Top-Left corner
+C) Bottom-Left corner
+D) Bottom-Right corner
+
+438. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 26. If two of the numbers are 7 and 11, what is the third number?
+A) 62
+B) 26
+C) 60
+D) 58
+
+439. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ◄
+Frame 2: ►
+Frame 3: ◄
+What is Frame 4?
+A) ◄
+B) ►
+C) ▼
+D) ▲
+
+440. Numeric / Logic
+DIFFICULTY: 4/10
+What is 30% of 150 plus 20% of 50?
+A) 58
+B) 52
+C) 61
+D) 55
+
+441. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 18. If two of the numbers are 6 and 10, what is the third number?
+A) 36
+B) 18
+C) 38
+D) 40
+
+442. Verbal
+DIFFICULTY: 4/10
+WEARY : TIRED :: ______ : ______
+Which choice shows the same synonym relationship?
+A) lamp : justice
+B) scarce : rare
+C) abundant : scarce
+D) valid : invalid
+
+443. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 6-sided, 7-sided, 8-sided
+Row 2: 7-sided, 8-sided, 9-sided
+Row 3: 8-sided, 9-sided, [ ? ]
+A) 11-sided shape
+B) 10-sided shape
+C) 7-sided shape
+D) 8-sided shape
+
+444. Numeric / Logic
+DIFFICULTY: 4/10
+If 7 workers can prepare 70 items in one hour, how many items can 8 of these workers prepare in one hour?
+A) 90
+B) 70
+C) 80
+D) 100
+
+445. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Corroborate
+B) Confirm
+C) Validate
+D) Refute
+
+446. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ◄
+Frame 2: ►
+Frame 3: ◄
+What is Frame 4?
+A) ◄
+B) ▲
+C) ►
+D) ▼
+
+447. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 13. If two of the numbers are 9 and 16, what is the third number?
+A) 16
+B) 14
+C) 12
+D) 13
+
+448. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Biased
+B) Objective
+C) Hostile
+D) Partisan
+
+449. Verbal
+DIFFICULTY: 4/10
+VIVID : BRIGHT :: ______ : ______
+Which choice shows the same synonym relationship?
+A) fabric : logical
+B) expand : contract
+C) candid : honest
+D) abundant : scarce
+
+450. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) M
+B) E
+C) W
+D) Σ
+
+451. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 14, 17, 20, 23, 26, ___?
+A) 32
+B) 26
+C) 29
+D) 34
+
+452. Verbal
+DIFFICULTY: 5/10
+ABUNDANT : SCARCE :: ______ : ______
+Which choice shows the same opposite relationship?
+A) generous : stingy
+B) serene : calm
+C) blue : quickly
+D) rapid : swift
+
+453. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 3-sided, 4-sided, 5-sided
+Row 2: 4-sided, 5-sided, 6-sided
+Row 3: 5-sided, 6-sided, [ ? ]
+A) 7-sided shape
+B) 5-sided shape
+C) 8-sided shape
+D) 4-sided shape
+
+454. Verbal
+DIFFICULTY: 4/10
+BRIEF : CONCISE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) abundant : scarce
+B) hollow : empty
+C) calm : agitated
+D) window : honest
+
+455. Verbal
+DIFFICULTY: 5/10
+VICTORY : DEFEAT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) scarce : rare
+B) diligent : hardworking
+C) ancient : modern
+D) window : honest
+
+456. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small cross ➔ 2 small crosses ➔ [ ? ]
+A) 1 small cross
+B) A blank square
+C) 3 small crosses
+D) 4 small crosses
+
+457. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Immense
+B) Colossal
+C) Gargantuan
+D) Diminutive
+
+458. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Top-Left
+Frame 2: Top-Right
+Frame 3: Bottom-Right
+What is Frame 4?
+A) Top-Right corner
+B) Top-Left corner
+C) Bottom-Right corner
+D) Bottom-Left corner
+
+459. Numeric / Logic
+DIFFICULTY: 4/10
+If 8 workers can prepare 80 items in one hour, how many items can 10 of these workers prepare in one hour?
+A) 90
+B) 100
+C) 120
+D) 110
+
+460. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 29. If two of the numbers are 13 and 7, what is the third number?
+A) 65
+B) 69
+C) 67
+D) 29
+
+461. Numeric / Logic
+DIFFICULTY: 4/10
+What is 20% of 80 plus 40% of 120?
+A) 61
+B) 67
+C) 64
+D) 70
+
+462. Spatial
+DIFFICULTY: 3/10
+A 3x3 grid changes by count across each row.
+Row 1: 1 small dot ➔ 2 small dots ➔ 3 small dots
+Row 2: 1 small cross ➔ 2 small crosses ➔ 3 small crosses
+Row 3: 1 small triangle ➔ 2 small triangles ➔ [ ? ]
+A) A blank square
+B) 1 small triangle
+C) 3 small triangles
+D) 4 small crosses
+
+463. Numeric / Logic
+DIFFICULTY: 4/10
+What is 40% of 60 plus 10% of 120?
+A) 39
+B) 42
+C) 33
+D) 36
+
+464. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: ▲
+Frame 2: ▼
+Frame 3: ▲
+What is Frame 4?
+A) ▼
+B) ◄
+C) ►
+D) ▲
+
+465. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 4 o'clock
+Frame 2: Hand points to 7 o'clock
+Frame 3: Hand points to 10 o'clock
+What is Frame 4?
+A) 1 o'clock
+B) 4 o'clock
+C) 2 o'clock
+D) 3 o'clock
+
+466. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 3 o'clock
+Frame 2: Hand points to 6 o'clock
+Frame 3: Hand points to 9 o'clock
+What is Frame 4?
+A) 1 o'clock
+B) 12 o'clock
+C) 2 o'clock
+D) 3 o'clock
+
+467. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 12
+B) 6
+C) 10
+D) 8
+
+468. Verbal
+DIFFICULTY: 4/10
+The manager remained ______ during the dispute and listened to both sides.
+A) Partisan
+B) Biased
+C) Objective
+D) Hostile
+
+469. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 4-sided, 5-sided, 6-sided
+Row 2: 5-sided, 6-sided, 7-sided
+Row 3: 6-sided, 7-sided, [ ? ]
+A) 9-sided shape
+B) 8-sided shape
+C) 5-sided shape
+D) 6-sided shape
+
+470. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many vertices does the finished cube have?
+A) 12
+B) 6
+C) 10
+D) 8
+
+471. Verbal
+DIFFICULTY: 5/10
+OPTIMISTIC : PESSIMISTIC :: ______ : ______
+Which choice shows the same opposite relationship?
+A) congenial : hostile
+B) rigid : stiff
+C) hollow : empty
+D) garden : triangle
+
+472. Numeric / Logic
+DIFFICULTY: 3/10
+What number comes next in the sequence: 32, 34, 36, 38, 40, ___?
+A) 44
+B) 42
+C) 51
+D) 40
+
+473. Verbal
+DIFFICULTY: 5/10
+OPTIMISTIC : PESSIMISTIC :: ______ : ______
+Which choice shows the same opposite relationship?
+A) elated : joyful
+B) cursory : brief
+C) expand : contract
+D) table : river
+
+474. Spatial
+DIFFICULTY: 3/10
+Imagine a clock face with a single hand.
+Frame 1: Hand points to 5 o'clock
+Frame 2: Hand points to 7 o'clock
+Frame 3: Hand points to 9 o'clock
+What is Frame 4?
+A) 12 o'clock
+B) 11 o'clock
+C) 1 o'clock
+D) 2 o'clock
+
+475. Spatial
+DIFFICULTY: 3/10
+Which figure cannot be made by joining exactly two identical equilateral triangles along one full edge?
+A) Rhombus
+B) Diamond
+C) Regular hexagon
+D) Parallelogram
+
+476. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points West
+Frame 2: Arrow points South
+Frame 3: Arrow points East
+What is Frame 4?
+A) Arrow points South
+B) Arrow points East
+C) Arrow points North
+D) Arrow points West
+
+477. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 22. If two of the numbers are 9 and 22, what is the third number?
+A) 35
+B) 22
+C) 37
+D) 33
+
+478. Verbal
+DIFFICULTY: 5/10
+VALID : INVALID :: ______ : ______
+Which choice shows the same opposite relationship?
+A) abundant : scarce
+B) timid : shy
+C) obscure : unclear
+D) planet : careful
+
+479. Numeric / Logic
+DIFFICULTY: 4/10
+The average of three numbers is 30. If two of the numbers are 21 and 30, what is the third number?
+A) 39
+B) 41
+C) 37
+D) 30
+
+480. Spatial
+DIFFICULTY: 3/10
+A pattern alternates by reflection.
+Frame 1: M
+Frame 2: W
+Frame 3: M
+What is Frame 4?
+A) Σ
+B) W
+C) E
+D) M
+
+481. Verbal
+DIFFICULTY: 4/10
+VIVID : BRIGHT :: ______ : ______
+Which choice shows the same synonym relationship?
+A) table : river
+B) calm : agitated
+C) frugal : thrifty
+D) transparent : opaque
+
+482. Numeric / Logic
+DIFFICULTY: 5/10
+An item is discounted by 20%. The sale price is $48. What was the original price?
+A) $70
+B) $60
+C) $50
+D) $48
+
+483. Spatial
+DIFFICULTY: 3/10
+A 3x3 matrix increases the number of sides by 1 across each row and down each column.
+Row 1: 4-sided, 5-sided, 6-sided
+Row 2: 5-sided, 6-sided, 7-sided
+Row 3: 6-sided, 7-sided, [ ? ]
+A) 9-sided shape
+B) 5-sided shape
+C) 6-sided shape
+D) 8-sided shape
+
+484. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points South
+Frame 2: Arrow points East
+Frame 3: Arrow points North
+What is Frame 4?
+A) Arrow points South
+B) Arrow points East
+C) Arrow points West
+D) Arrow points North
+
+485. Verbal
+DIFFICULTY: 4/10
+Which of the following words does NOT belong with the others?
+A) Confirm
+B) Corroborate
+C) Validate
+D) Refute
+
+486. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 6, 18, 54, 162, 486, ___?
+A) 1461
+B) 486
+C) 1478
+D) 1458
+
+487. Spatial
+DIFFICULTY: 3/10
+An arrow rotates by the same amount each frame.
+Frame 1: Arrow points South
+Frame 2: Arrow points East
+Frame 3: Arrow points North
+What is Frame 4?
+A) Arrow points West
+B) Arrow points North
+C) Arrow points South
+D) Arrow points East
+
+488. Numeric / Logic
+DIFFICULTY: 4/10
+What number comes next in the sequence: 6, 12, 24, 48, 96, ___?
+A) 231
+B) 194
+C) 96
+D) 192
+
+489. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 5 parts water. If you use 27 ml of concentrate, how many ml of water are needed?
+A) 40 ml
+B) 50 ml
+C) 48 ml
+D) 45 ml
+
+490. Verbal
+DIFFICULTY: 4/10
+HOLLOW : EMPTY :: ______ : ______
+Which choice shows the same synonym relationship?
+A) table : river
+B) brief : concise
+C) valid : invalid
+D) victory : defeat
+
+491. Numeric / Logic
+DIFFICULTY: 5/10
+A mixture requires 3 parts concentrate to 5 parts water. If you use 27 ml of concentrate, how many ml of water are needed?
+A) 48 ml
+B) 50 ml
+C) 45 ml
+D) 40 ml
+
+492. Spatial
+DIFFICULTY: 3/10
+If a flat net folds into a standard cube, how many faces does the finished cube have?
+A) 12
+B) 4
+C) 6
+D) 8
+
+493. Verbal
+DIFFICULTY: 5/10
+His ______ explanation skipped several important details.
+A) Exhaustive
+B) Cursory
+C) Meticulous
+D) Thorough
+
+494. Spatial
+DIFFICULTY: 3/10
+A dot moves around the corners of a square.
+Frame 1: Bottom-Right
+Frame 2: Top-Right
+Frame 3: Top-Left
+What is Frame 4?
+A) Bottom-Left corner
+B) Top-Left corner
+C) Top-Right corner
+D) Bottom-Right corner
+
+495. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $100 and sells it for $125. What is the profit percentage based on the original cost?
+A) 35%
+B) 20%
+C) 25%
+D) 30%
+
+496. Numeric / Logic
+DIFFICULTY: 7/10
+Alice can complete a task in 8 hours. Bob can complete the same task in 12 hours. How long will it take them working together?
+A) 5.8 hours
+B) 12 hours
+C) 8 hours
+D) 4.8 hours
+
+497. Verbal
+DIFFICULTY: 4/10
+MASSIVE : HUGE :: ______ : ______
+Which choice shows the same synonym relationship?
+A) pencil : distant
+B) valid : invalid
+C) brief : concise
+D) create : destroy
+
+498. Numeric / Logic
+DIFFICULTY: 4/10
+What is 10% of 120 plus 20% of 40?
+A) 17
+B) 23
+C) 20
+D) 26
+
+499. Numeric / Logic
+DIFFICULTY: 5/10
+A vendor buys an item for $200 and sells it for $300. What is the profit percentage based on the original cost?
+A) 45%
+B) 55%
+C) 50%
+D) 100%
+
+500. Verbal
+DIFFICULTY: 5/10
+OBEDIENT : DEFIANT :: ______ : ______
+Which choice shows the same opposite relationship?
+A) ancient : modern
+B) candid : honest
+C) massive : huge
+D) window : honest
+
+ANSWER KEY:
+C, B, C, C, C, A, A, D, D, D, A, D, B, B, A, B, B, B, B, C, B, D, A, B, A, C, C, C, D, C, C, D, B, A, C, C, A, A, C, D, D, D, C, A, D, C, A, D, C, B, B, C, C, D, B, A, C, A, B, A, D, A, A, D, D, A, C, D, D, B, C, A, B, A, D, C, C, D, B, B, B, A, A, D, D, D, B, D, B, A, C, D, A, D, D, B, A, B, D, B, C, C, D, D, A, A, A, A, C, D, C, D, D, B, D, C, A, C, A, C, B, C, A, B, A, A, B, B, D, D, B, D, D, A, D, C, D, D, C, A, D, C, C, D, B, C, D, D, D, A, A, D, A, A, C, B, C, A, D, B, C, B, D, B, C, A, A, B, B, D, C, A, D, B, D, B, A, B, C, B, C, B, C, B, A, B, C, C, C, A, C, B, B, D, B, A, B, B, A, C, A, A, A, A, B, A, A, B, B, D, A, B, A, C, B, B, D, C, C, D, B, D, C, A, D, A, C, A, D, D, C, B, C, B, B, A, D, B, D, D, C, A, C, D, D, A, A, D, D, A, D, C, A, B, D, D, D, D, D, D, D, C, D, B, D, B, D, C, B, D, B, C, D, A, B, A, C, A, B, B, C, B, D, A, A, B, D, B, A, B, C, A, C, B, C, B, D, C, A, A, B, D, C, D, C, C, A, B, B, A, B, D, B, B, B, B, C, C, C, C, D, D, C, D, D, D, C, D, B, C, A, B, B, B, C, C, C, B, D, B, A, B, A, C, D, A, C, D, D, B, B, B, C, D, C, B, D, A, C, C, C, A, D, D, B, D, D, B, D, A, A, C, D, B, B, A, C, D, B, A, B, D, D, A, B, D, C, D, B, C, B, B, A, B, A, B, B, A, C, D, B, C, A, A, C, C, B, C, C, B, D, B, D, B, C, B, B, C, D, B, A, D, A, C, D, D, C, D, B, D, B, A, C, B, A, D, B, C, B, D, C, B, B, C, D, C, B, B, C, C, C, A, A, B, C, C, D, D, B, C, C, C, D, A, A, B, D, C, B, D, A, B, C, B, C, C, A, A, A, B, C, B, D, C, D, D, A, D, D, B, C, C, B, A, C, D, C, C, C, A
