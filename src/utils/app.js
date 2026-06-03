@@ -40,6 +40,7 @@ let questionViewCallback = null;
 let summaryViewCallback = null;
 let modalViewCallback = null;
 let isModalOpen = false;
+let currentShellState = null;
 
 const SHELL_STATES = {
   start: {
@@ -75,7 +76,13 @@ function toggleClass(element, className, enabled) {
   element?.classList.toggle(className, enabled);
 }
 
+function isQuestionScreenVisible() {
+  return Boolean(currentShellState && !currentShellState.questionScreenHidden);
+}
+
 function syncShellState(nextState) {
+  currentShellState = { ...nextState };
+
   toggleClass(els.header, "hidden", nextState.headerHidden);
   toggleClass(els.startScreen, "hidden", nextState.startScreenHidden);
   toggleClass(els.questionScreen, "hidden", nextState.questionScreenHidden);
@@ -752,7 +759,7 @@ function fallbackCopyText(text) {
 
 function handleAnswerKey(event) {
   if (
-    els.questionScreen.classList.contains("hidden") ||
+    !isQuestionScreenVisible() ||
     isModalOpen ||
     state.isAdvancing
   ) {
@@ -844,7 +851,7 @@ function bindEvents() {
   });
 
   window.addEventListener("resize", () => {
-    if (!els.questionScreen.classList.contains("hidden")) {
+    if (isQuestionScreenVisible()) {
       updateQuestionFrameHeightForActiveTest();
     }
 
@@ -859,6 +866,7 @@ function initApp(root = document, onShellState, onQuestionView, onSummaryView, o
   questionViewCallback = onQuestionView ?? null;
   summaryViewCallback = onSummaryView ?? null;
   modalViewCallback = onModalView ?? null;
+  currentShellState = { ...SHELL_STATES.start };
   setStartViewCallback(onStartView ?? null);
   refreshElements(root);
 
