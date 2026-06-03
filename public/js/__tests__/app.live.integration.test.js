@@ -103,7 +103,7 @@ describe('Live App Integration', () => {
 
     Object.assign(navigator, {
       clipboard: {
-        writeText: vi.fn(async () => {}),
+        writeText: vi.fn(async () => { }),
       },
     })
   })

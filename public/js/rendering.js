@@ -57,8 +57,7 @@ function polygonPoints(sides, cx, cy, radius, rotation = -Math.PI / 2) {
   return Array.from(
     { length: sides },
     (_, index) =>
-      `${cx + radius * Math.cos(rotation + (2 * Math.PI * index) / sides)},${
-        cy + radius * Math.sin(rotation + (2 * Math.PI * index) / sides)
+      `${cx + radius * Math.cos(rotation + (2 * Math.PI * index) / sides)},${cy + radius * Math.sin(rotation + (2 * Math.PI * index) / sides)
       }`,
   ).join(" ");
 }
@@ -77,15 +76,13 @@ function svgBasic(shape, filled = false, width = 90, height = 90) {
   let inner = "";
 
   if (shape === "circle" || shape === "oval") {
-    inner = `<ellipse cx="${width / 2}" cy="${height / 2}" rx="${width * 0.28}" ry="${
-      shape === "oval" ? height * 0.2 : height * 0.28
-    }" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
+    inner = `<ellipse cx="${width / 2}" cy="${height / 2}" rx="${width * 0.28}" ry="${shape === "oval" ? height * 0.2 : height * 0.28
+      }" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
   } else if (shape === "square") {
     inner = `<rect x="${width * 0.25}" y="${height * 0.25}" width="${width * 0.5}" height="${height * 0.5}" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
   } else if (shape === "diamond") {
-    inner = `<polygon points="${width / 2},${height * 0.18} ${width * 0.82},${height / 2} ${
-      width / 2
-    },${height * 0.82} ${width * 0.18},${height / 2}" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
+    inner = `<polygon points="${width / 2},${height * 0.18} ${width * 0.82},${height / 2} ${width / 2
+      },${height * 0.82} ${width * 0.18},${height / 2}" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
   } else if (shape === "triangle") {
     inner = `<polygon points="${polygonPoints(3, width / 2, height / 2, Math.min(width, height) * 0.34)}" fill="${fill}" stroke="${stroke}" stroke-width="4"/>`;
   } else {
@@ -98,10 +95,8 @@ function svgBasic(shape, filled = false, width = 90, height = 90) {
 function svgArrow(direction, width = 90, height = 90) {
   const rotation = { N: 0, E: 90, S: 180, W: 270 }[direction] || 0;
   return svgWrap(
-    `<g transform="translate(${width / 2} ${height / 2}) rotate(${rotation})"><line x1="0" y1="${
-      height * 0.25
-    }" x2="0" y2="${-height * 0.18}" stroke="#111827" stroke-width="6" stroke-linecap="round"/><polygon points="0,${
-      -height * 0.34
+    `<g transform="translate(${width / 2} ${height / 2}) rotate(${rotation})"><line x1="0" y1="${height * 0.25
+    }" x2="0" y2="${-height * 0.18}" stroke="#111827" stroke-width="6" stroke-linecap="round"/><polygon points="0,${-height * 0.34
     } ${-width * 0.14},${-height * 0.12} ${width * 0.14},${-height * 0.12}" fill="#111827"/></g>`,
     width,
     height,
@@ -118,8 +113,7 @@ function svgDotCell(position, width = 90, height = 90) {
 
   const point = map[position] || [0.5, 0.5];
   return svgWrap(
-    `<rect x="8" y="8" width="${width - 16}" height="${height - 16}" fill="none" stroke="#111827" stroke-width="3"/><circle cx="${
-      width * point[0]
+    `<rect x="8" y="8" width="${width - 16}" height="${height - 16}" fill="none" stroke="#111827" stroke-width="3"/><circle cx="${width * point[0]
     }" cy="${height * point[1]}" r="${Math.min(width, height) * 0.08}" fill="#111827"/>`,
     width,
     height,
@@ -137,8 +131,8 @@ function svgSequence(svgItems, labels = null) {
     .map((svg, index) => {
       const label = labels
         ? `<text x="45" y="108" font-size="13" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif">${escapeHtml(
-            labels[index] || "",
-          )}</text>`
+          labels[index] || "",
+        )}</text>`
         : "";
 
       return `<g transform="translate(${index * cellWidth} 0)">${svg.replace(/^<svg[^>]*>|<\/svg>$/g, "")}${label}</g>`;
