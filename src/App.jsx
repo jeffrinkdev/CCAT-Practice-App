@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { initApp } from './utils/app.js'
 import { QUESTION_BAR_SECONDS } from './utils/state.js'
+import { joinClassNames } from './utils/classNames.js'
 import StartView from './components/StartView.jsx'
 import QuestionView from './components/QuestionView.jsx'
 import SummaryView from './components/SummaryView.jsx'
@@ -53,10 +54,6 @@ const DEFAULT_START_VIEW = {
   corpusStatus: '',
   loadErrorHidden: true,
   loadErrorHtml: '',
-}
-
-function joinClassNames(...parts) {
-  return parts.filter(Boolean).join(' ')
 }
 
 function App() {

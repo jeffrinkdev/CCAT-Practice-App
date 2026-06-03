@@ -1,6 +1,4 @@
-function joinClassNames(...parts) {
-  return parts.filter(Boolean).join(' ')
-}
+import { joinClassNames } from '../utils/classNames.js'
 
 export default function StartView({ hidden, startView, onLoadCorpus, onCorpusChange, onStartTest }) {
   return (
