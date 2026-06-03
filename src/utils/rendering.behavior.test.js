@@ -59,7 +59,7 @@ describe('rendering.js behavior coverage', () => {
   })
 
   it('renders question and choice content with escaping', async () => {
-    const rendering = await import('../utils/rendering.js')
+    const rendering = await import('./rendering.js')
 
     const target = document.createElement('div')
     rendering.renderQuestionContent(question('x < y & z', null), target)
@@ -75,7 +75,7 @@ describe('rendering.js behavior coverage', () => {
   })
 
   it('covers renderVisual switch branches', async () => {
-    const rendering = await import('../utils/rendering.js')
+    const rendering = await import('./rendering.js')
 
     expect(rendering.renderVisual(null)).toBe('')
     expect(rendering.renderVisual({ kind: 'polygon', sides: 6 })).toContain('<polygon')
@@ -99,7 +99,7 @@ describe('rendering.js behavior coverage', () => {
   })
 
   it('covers primitive SVG helpers', async () => {
-    const rendering = await import('../utils/rendering.js')
+    const rendering = await import('./rendering.js')
 
     expect(rendering.svgWrap('<g/>', 10, 20)).toContain('viewBox="0 0 10 20"')
     expect(rendering.polygonPoints(3, 10, 10, 5).split(' ').length).toBe(3)
@@ -126,8 +126,8 @@ describe('rendering.js behavior coverage', () => {
   })
 
   it('measures frame and updates question frame height', async () => {
-    const rendering = await import('../utils/rendering.js')
-    const state = await import('../utils/state.js')
+    const rendering = await import('./rendering.js')
+    const state = await import('./state.js')
 
     const measured = rendering.measureFrame([question('a'), question('b')], 300)
     expect(measured).toBeGreaterThan(0)
@@ -151,8 +151,8 @@ describe('rendering.js behavior coverage', () => {
   })
 
   it('updates modal frame height from both review index sources', async () => {
-    const rendering = await import('../utils/rendering.js')
-    const stateModule = await import('../utils/state.js')
+    const rendering = await import('./rendering.js')
+    const stateModule = await import('./state.js')
 
     stateModule.clearActiveQuestions()
     stateModule.setActiveQuestions([

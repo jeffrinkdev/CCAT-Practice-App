@@ -80,8 +80,8 @@ describe('parsing.js behavior coverage', () => {
       vi.fn(async () => ({ ok: true, status: 200, text: async () => JSON.stringify(payload) }))
     )
 
-    const parsing = await import('../utils/parsing.js')
-    const state = await import('../utils/state.js')
+    const parsing = await import('./parsing.js')
+    const state = await import('./state.js')
 
     await parsing.loadSelectedCorpus()
 
@@ -102,8 +102,8 @@ describe('parsing.js behavior coverage', () => {
       get: () => [fileLike],
     })
 
-    const parsing = await import('../utils/parsing.js')
-    const state = await import('../utils/state.js')
+    const parsing = await import('./parsing.js')
+    const state = await import('./state.js')
 
     await parsing.loadSelectedCorpus()
 
@@ -117,8 +117,8 @@ describe('parsing.js behavior coverage', () => {
       vi.fn(async () => ({ ok: false, status: 404, text: async () => '' }))
     )
 
-    const parsing = await import('../utils/parsing.js')
-    const state = await import('../utils/state.js')
+    const parsing = await import('./parsing.js')
+    const state = await import('./state.js')
 
     await parsing.loadSelectedCorpus()
 
@@ -130,7 +130,7 @@ describe('parsing.js behavior coverage', () => {
   })
 
   it('covers difficulty helpers and rationale branches', async () => {
-    const parsing = await import('../utils/parsing.js')
+    const parsing = await import('./parsing.js')
 
     const json = JSON.stringify([
       {
@@ -147,7 +147,7 @@ describe('parsing.js behavior coverage', () => {
   })
 
   it('covers parseTextCorpus error branch for missing choices', async () => {
-    const parsing = await import('../utils/parsing.js')
+    const parsing = await import('./parsing.js')
 
     const badText = `1. Category\nPrompt only no choices\n\nANSWER KEY: A`
     expect(() => parsing.parseTextCorpus(badText)).toThrow('missing choices')

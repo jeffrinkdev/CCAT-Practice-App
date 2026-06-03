@@ -37,7 +37,7 @@ describe('testPreparation.js behavior coverage', () => {
   })
 
   it('covers difficulty helpers and rationale branches', async () => {
-    const preparation = await import('../utils/testPreparation.js')
+    const preparation = await import('./testPreparation.js')
 
     const qNumeric = { category: 'Numeric / Logic', prompt: 'workers working together', visual: null }
     const qVerbal = { category: 'Verbal', prompt: 'What is the opposite relationship?', visual: null }
@@ -66,9 +66,9 @@ describe('testPreparation.js behavior coverage', () => {
   })
 
   it('covers clone/shuffle and buildTestQuestions for both ordering modes', async () => {
-    const parsing = await import('../utils/parsing.js')
-    const preparation = await import('../utils/testPreparation.js')
-    const state = await import('../utils/state.js')
+    const parsing = await import('./parsing.js')
+    const preparation = await import('./testPreparation.js')
+    const state = await import('./state.js')
 
     const corpus = []
     for (let i = 1; i <= 20; i += 1) corpus.push(makeQuestion(i, 'Numeric / Logic', { difficulty: 3 + (i % 4) }))
