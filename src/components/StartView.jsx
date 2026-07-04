@@ -50,14 +50,8 @@ export default function StartView({ startView, onLoadCorpus, onCorpusChange, onS
         <div
           id="loadError"
           className={joinClassNames('load-error', startView.loadErrorHidden && 'hidden')}
-        >
-          <strong>{startView.loadErrorTitle}</strong>
-          <br />
-          {startView.loadErrorMessage}
-          <br />
-          {startView.loadErrorHint}
-          <code>{startView.loadErrorCommand}</code>
-        </div>
+          dangerouslySetInnerHTML={{ __html: startView.loadErrorHtml }}
+        />
       </div>
     </section>
   )

@@ -21,8 +21,7 @@ const DEFAULT_QUESTION_VIEW = {
   timerYellow: false,
   timerRed: false,
   counterText: '',
-  questionPrompt: '',
-  questionVisual: null,
+  questionHtml: '',
   progressPct: 0,
   timingPct: 0,
   timingText: `0.0s / ${QUESTION_BAR_SECONDS}s`,
@@ -41,9 +40,8 @@ const DEFAULT_SUMMARY_VIEW = {
 const DEFAULT_MODAL_VIEW = {
   open: false,
   title: '',
-  badges: [],
-  questionPrompt: '',
-  questionVisual: null,
+  badgesHtml: '',
+  questionHtml: '',
   answers: [],
   prevDisabled: true,
   nextDisabled: true,
@@ -55,10 +53,7 @@ const DEFAULT_START_VIEW = {
   startBtnLabel: 'Load a corpus first',
   corpusStatus: '',
   loadErrorHidden: true,
-  loadErrorTitle: '',
-  loadErrorMessage: '',
-  loadErrorHint: '',
-  loadErrorCommand: '',
+  loadErrorHtml: '',
 }
 
 function App() {
